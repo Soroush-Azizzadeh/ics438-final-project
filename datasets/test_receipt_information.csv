@@ -1,8 +1,1508 @@
 text,json,Name of the Vendor,Category of the Vendor,items
-"<UNKNOWN> PURCHASE **
-Panda Express #2150
-Honclulu, HI
-(808)956-7229
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
+6/9/2023 11:02:50 AM
+-TO GO-
+Order: 260527
+Server: LamTan T
+1 Plate
+10.60
+FRIED RICE-1/2
+FRIED <UNKNOWN>
+STR BN CKN BRST
+ORANGE CKN
+1 XTRA ENTREE
+1.50
+VEG SPRING <UNKNOWN>
+<UNKNOWN>
+12.10
+TAX
+0.57
+Total
+12.67
+Visa
+12.67
+Acct XXXXXXXX9212
+<UNKNOWN> 060248
+*Card details below
+EMV: Contactless
+APL: VISA DEBIT
+AID: A0000000031010
+Panda Rewards has arrived!
+<UNKNOWN>
+Sign Up at <UNKNOWN>
+*
+* Enter Unique Rewards Code to earn *
+PANDA POINTS on this order!
+*
+*Code valid for 7 days from purchase*
+Unique Rewards Code:
+558844128417
+WE'D LOVE TC HEAR FROM YOU!
+Share your thoughts and receive
+a Free Small A La Carte Entree
+*
+w/purchase of a 2-entree Plate.
+*
+<UNKNOWN> 2 days, go to
+*
+<UNKNOWN>
+<UNKNOWN>
+*
+<UNKNOWN>
+*
+*
+*
+Survey Code:
+<UNKNOWN>
+*
+*
+Email <UNKNOWN> quired to receive coupon
+*
+*
+*General Manager with $100K potential
+Join the Panda team!
+PandaCareers.com","{
+  ""ReceiptInfo"": {
+    ""merchant"": ""Panda Express #2150"",
+    ""address"": """",
+    ""city"": ""Honolulu"",
+    ""state"": ""HI"",
+    ""phoneNumber"": ""(808)956-7229"",
+    ""tax"": 0.57,
+    ""total"": 12.67,
+    ""receiptDate"": ""6/9/2023"",
+    ""receiptTime"": ""11:02:50 AM"",
+    ""ITEMS"": [
+      {
+        ""description"": ""1 Plate"",
+        ""quantity"": 1,
+        ""unitPrice"": 10.60,
+        ""totalPrice"": 10.60,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""quantity"": 1,
+        ""unitPrice"": 1.50,
+        ""totalPrice"": 1.50,
+        ""discountAmount"": 0.0
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""quantity"": 1,
+        ""unitPrice"": 0.0,
+        ""totalPrice"": 0.0,
+        ""discountAmount"": 0.0
+      }
+    ]
+  }
+}",Panda Express #2150,Restaurant,"[
+      {
+        ""description"": ""1 Plate"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""FRIED RICE-1/2, STR BN CKN BRST, ORANGE CKN"",
+       ""category"": restaurant
+      },
+      {
+        ""description"": ""1 XTRA ENTREE"",
+        ""category"": restaurant
+      },
+      {
+        ""description"": ""VEG SPRING"",
+        ""category"": restaurant
+      }
+    ]"
+"<UNKNOWN> PURCHASE **\n
+Panda Express #2150\n
+Honclulu, HI\n
+(808)956-7229\n
 6/9/2023 11:02:50 AM
 -TO GO-
 Order: 260527
