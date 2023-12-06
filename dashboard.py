@@ -28,11 +28,11 @@ vendors_classification_df = pd.read_csv('https://raw.githubusercontent.com/Sorou
 
 vendor_name_count = vendors_classification_df['Vendor Name'].value_counts()
 vendor_name_count_df = vendor_name_count.reset_index()
-vendor_name_count_df.columns = ['Vendor Name', 'Count']
+vendor_name_count_df.columns = ['Vendor Name', 'Number of Receipts']
 
 vendor_category_count = vendors_classification_df['Category'].value_counts()
 vendor_category_count_df = vendor_category_count.reset_index()
-vendor_category_count_df.columns = ['Vendor Category', 'Count']
+vendor_category_count_df.columns = ['Vendor Category', 'Number of Receipts']
 
 vendors_classification_df = vendors_classification_df[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
@@ -85,27 +85,6 @@ hours = [
     dbc.DropdownMenuItem("Hour 23 to 24"),
 ]
 
-
-# Function to create a collapsible section
-def create_collapsible_section(title, subsections):
-    return dbc.Card(
-        [
-            dbc.CardHeader(
-                html.H2(
-                    dbc.Button(
-                        title,
-                        color="link",
-                        id=f"group-{title}-toggle",
-                    )
-                )
-            ),
-            dbc.Collapse(
-                dbc.CardBody(subsections),
-                id=f"collapse-{title}",
-            ),
-        ]
-    )
-
 # Receipt Info Section -> Modal Component
 receipt_info_modal_body_style = {
     'maxWidth': '2000px',
@@ -124,6 +103,33 @@ receipt_info_modal = dbc.Modal(
             is_open=False
         )
 
+
+###########################################################################
+###########################################################################
+################################# SIDEBAR #################################
+###########################################################################
+########################################################################### 
+# Function to create a collapsible section
+def create_collapsible_section(title, subsections):
+    return dbc.Card(
+        [
+            dbc.CardHeader(
+                html.H2(
+                    dbc.Button(
+                        title,
+                        color="link",
+                        id=f"group-{title}-toggle",
+                        style={"color": "inherit", "textDecoration": "none"}
+                    )
+                )
+            ),
+            dbc.Collapse(
+                dbc.CardBody(subsections),
+                id=f"collapse-{title}",
+            ),
+        ]
+    )
+
 # Sidebar Header
 sidebar_header = dcc.Link(
     html.H2("Sidebar", className="display-4"),
@@ -136,9 +142,12 @@ receipts_analysis = create_collapsible_section(
     "Receipts Analysis",
     dbc.Nav(
             [
-                dbc.NavLink("Process Table", href="/receipts-analysis/process-table", id="process-table"),
-                dbc.NavLink("Vendors Count", href="/receipts-analysis/vendors-count", id="vendors-count"),
-                dbc.NavLink("Categories Count", href="/receipts-analysis/categories-count", id="categories-count"),
+                dbc.NavLink("Process Table", href="/receipts-analysis/process-table", id="process-table",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Vendors Count", href="/receipts-analysis/vendors-count", id="vendors-count",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Categories Count", href="/receipts-analysis/categories-count", id="categories-count",
+                            style={"color": "inherit"}),
                 ],
             vertical=True,
             pills=True,
@@ -150,8 +159,10 @@ vendors_analysis = create_collapsible_section(
     "Vendors Analysis",
     dbc.Nav(
             [
-                dbc.NavLink("Based on Vendors Name", href="/vendors-analysis/vendors-names", id="vendors-names"),
-                dbc.NavLink("Based on Vendors Categories", href="/vendors-analysis/vendors-categories", id="vendors-categories")            ],
+                dbc.NavLink("Based on Vendors Name", href="/vendors-analysis/vendors-names", id="vendors-names",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Based on Vendors Categories", href="/vendors-analysis/vendors-categories", id="vendors-categories",
+                            style={"color": "inherit"})            ],
             vertical=True,
             pills=True,
         )
@@ -162,8 +173,10 @@ items_analysis = create_collapsible_section(
     "Items Analysis",
     dbc.Nav(
             [
-                dbc.NavLink("Based on Items Name", href="/items-analysis/items-names", id="items-names"),
-                dbc.NavLink("Based on Items Categories", href="/items-analysis/items-categories", id="items-categories")
+                dbc.NavLink("Based on Items Name", href="/items-analysis/items-names", id="items-names",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Based on Items Categories", href="/items-analysis/items-categories", id="items-categories",
+                            style={"color": "inherit"})
             ],
             vertical=True,
             pills=True,
@@ -177,9 +190,9 @@ custom_time_analysis = dbc.Card(
                 html.H2(
                     dbc.Button(
                         'Custom Time',
-                        color="link",
                         href="/purchase-time-analysis/custom-time",
-                        id="time-analysis-custom-time"
+                        id="time-analysis-custom-time",
+                        style={"border":"none", "background-color":"transparent", "color": "inherit", "textDecoration": "none"}
                     )
                 )
             )
@@ -191,10 +204,14 @@ hourly_analysis = create_collapsible_section(
     "Hourly Analysis",
     dbc.Nav(
             [
-                dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/hourly/vendors-comparison", id="time-analysis-hourly-vendors-comparison"),
-                dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/hourly/categories-comparison", id="time-analysis-hourly-categories-comparison"),
-                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/hourly/individual-vendor", id="time-analysis-hourly-individual-vendor"),
-                dbc.NavLink("Individual Category", href="/purchase-time-analysis/hourly/individual-category", id="time-analysis-hourly-individual-category")
+                dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/hourly/vendors-comparison", id="time-analysis-hourly-vendors-comparison",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/hourly/categories-comparison", id="time-analysis-hourly-categories-comparison",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/hourly/individual-vendor", id="time-analysis-hourly-individual-vendor",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Individual Category", href="/purchase-time-analysis/hourly/individual-category", id="time-analysis-hourly-individual-category",
+                            style={"color": "inherit"})
             ],
             vertical=True,
             pills=True,
@@ -206,10 +223,14 @@ weekday_analysis = create_collapsible_section(
     "Weekday vs Weekend Analysis",
     dbc.Nav(
             [
-                dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/weekday/vendors-comparison", id="time-analysis-weekday-vendors-comparison"),
-                dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/weekday/categories-comparison", id="time-analysis-weekday-categories-comparison"),
-                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/weekday/individual-vendor", id="time-analysis-weekday-individual-vendor"),
-                dbc.NavLink("Individual Category", href="/purchase-time-analysis/weekday/individual-category", id="time-analysis-weekday-individual-category")
+                dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/weekday/vendors-comparison", id="time-analysis-weekday-vendors-comparison",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/weekday/categories-comparison", id="time-analysis-weekday-categories-comparison",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/weekday/individual-vendor", id="time-analysis-weekday-individual-vendor",
+                            style={"color": "inherit"}),
+                dbc.NavLink("Individual Category", href="/purchase-time-analysis/weekday/individual-category", id="time-analysis-weekday-individual-category",
+                            style={"color": "inherit"})
             ],
             vertical=True,
             pills=True,
@@ -259,18 +280,40 @@ receipts_process_table_content = dbc.Container([
         html.Div('Receipts Process Table', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
-    html.Div(className='row', children=[
-        dash_table.DataTable(
-            id='receipt_process_table',
-            data=receipts_info_df.to_dict('records'),
-            page_size=11,
-            style_table={'overflowX': 'auto'},
-            style_data={
-                'whiteSpace': 'normal',
-                'height': 'auto',
-                'lineHeight': '15px'
-            })
-    ]),
+    # html.Div(className='row', children=[
+    #     dash_table.DataTable(
+    #         id='receipt_process_table',
+    #         data=receipts_info_df.to_dict('records'),
+    #         page_size=11,
+    #         style_table={'overflowX': 'auto'},
+    #         style_data={
+    #             'whiteSpace': 'normal',
+    #             'height': 'auto',
+    #             'lineHeight': '15px'
+    #         })
+    # ]),
+    # receipt_info_modal,
+
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                id='receipt_process_table',
+                data=receipts_info_df.to_dict('records'),
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                style_cell={
+                    'maxWidth': '50px',
+                    'maxHeight': '20px',
+                    'overflow': 'hidden',
+                    'textOverflow': 'ellipsis',
+                    'whiteSpace': 'normal'}
+                )
+        ]),
+    ], style={
+        'margin-bottom': '100px'}),
+
     receipt_info_modal
 ])
 
@@ -582,7 +625,7 @@ vendors_comparison_hourly_content = dbc.Container([
     # PURCHASE TIME for all vendors
     ##########################################
     dbc.Row([
-        html.Div('Purchase Time Analysis for all the Vendors', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Hourly Purchase Time Analysis - Vendors Comparison', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
@@ -636,7 +679,7 @@ categories_comparison_hourly_content = dbc.Container([
     # PURCHASE TIME for all categories
     ##########################################
     dbc.Row([
-        html.Div('Purchase Time Analysis for all categories', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Hourly Purchase Time Analysis - Categories Comparison', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
@@ -690,7 +733,7 @@ individual_vendor_hourly_content = dbc.Container([
     # PURCHASE TIME for each vendor separately
     ##########################################
     dbc.Row([
-        html.Div('Purchase Time Analysis for each vendor separately', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Hourly Purchase Time Analysis - Vendor-Specific', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
@@ -744,7 +787,7 @@ individual_category_hourly_content = dbc.Container([
     # PURCHASE TIME for each category separately
     ##########################################
     dbc.Row([
-        html.Div('Purchase Time Analysis for each category separately', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Hourly Purchase Time Analysis - Category-Specific', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
@@ -798,7 +841,7 @@ vendors_comparison_weekday_content = dbc.Container([
     # PURCHASE WEEKDAY for all vendors
     ##########################################
     dbc.Row([
-        html.Div('Purchase Weekday Analysis for all the Vendors', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Weekday vs. Weekend Purchase Time Analysis - Vendors Comparison', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
@@ -855,7 +898,7 @@ categories_comparison_weekday_content = dbc.Container([
     # PURCHASE WEEKDAY for all categories
     ##########################################
     dbc.Row([
-        html.Div('Purchase Weekday Analysis for all categories', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Weekday vs. Weekend Purchase Time Analysis - Categories Comparison', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
@@ -911,7 +954,7 @@ individual_vendor_weekday_content = dbc.Container([
     # PURCHASE WEEKDAY for each vendor separately
     ##########################################
     dbc.Row([
-        html.Div('Purchase Weekday Analysis for each vendor separately', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Weekday vs. Weekend Purchase Time Analysis - Vendor-Specific', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
@@ -966,7 +1009,7 @@ individual_category_weekday_content = dbc.Container([
     # PURCHASE WEEKDAY for each category separately
     ##########################################
     dbc.Row([
-        html.Div('Purchase Weekday Analysis for each category separately', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Weekday vs. Weekend Purchase Time Analysis - Category-Specific', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
     
     dbc.Row([
