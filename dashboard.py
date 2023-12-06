@@ -25,6 +25,15 @@ receipts_info_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizza
 vendors_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_vendors_dataset.csv')
 
 vendors_classification_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_category.csv')
+
+vendor_name_count = vendors_classification_df['Vendor Name'].value_counts()
+vendor_name_count_df = vendor_name_count.reset_index()
+vendor_name_count_df.columns = ['Vendor Name', 'Count']
+
+vendor_category_count = vendors_classification_df['Category'].value_counts()
+vendor_category_count_df = vendor_category_count.reset_index()
+vendor_category_count_df.columns = ['Vendor Category', 'Count']
+
 vendors_classification_df = vendors_classification_df[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
 vendors_time_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
@@ -47,9 +56,6 @@ items_df = items_df[['Item Name', 'Unit Price ($)', 'Discount ($)', 'Tax ($)']]
 
 items_classification_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_items_dataset.csv')
 items_classification_df = items_classification_df[['Item Category', 'Unit Price ($)', 'Discount ($)', 'Tax ($)']]
-
-# Initialize the app - incorporate css
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # Hour Items for the dropdown
 hours = [
@@ -126,21 +132,19 @@ sidebar_header = dcc.Link(
 )
 
 # Receipts Info Section
-receipts_info = dbc.Card(
-        [
-            dbc.CardHeader(
-                html.H2(
-                    dbc.Button(
-                        'Receipts Info',
-                        color="link",
-                        href="/receipts-info/",
-                        id="receipts-info"
-                    )
-                )
-            )
-        ]
-    )
-    
+receipts_analysis = create_collapsible_section(
+    "Receipts Analysis",
+    dbc.Nav(
+            [
+                dbc.NavLink("Process Table", href="/receipts-analysis/process-table", id="process-table"),
+                dbc.NavLink("Vendors Count", href="/receipts-analysis/vendors-count", id="vendors-count"),
+                dbc.NavLink("Categories Count", href="/receipts-analysis/categories-count", id="categories-count"),
+                ],
+            vertical=True,
+            pills=True,
+        )
+)
+
 # Vendors Analysis Section
 vendors_analysis = create_collapsible_section(
     "Vendors Analysis",
@@ -226,53 +230,38 @@ purchase_time_analysis = create_collapsible_section(
         )
 )
 
-# Map Section
-map_analysis = dbc.Card(
-        [
-            dbc.CardHeader(
-                html.H2(
-                    dbc.Button(
-                        'Map',
-                        color="link",
-                        href="/map/",
-                        id="map"
-                    )
-                )
-            )
-        ]
-    )
 
 # Define the sidebar layout
 sidebar = dbc.Col(
     [sidebar_header,
      html.Hr(),
-     receipts_info,
+     receipts_analysis,
      vendors_analysis,
      items_analysis,
-     purchase_time_analysis,
-     map_analysis
+     purchase_time_analysis
     ],
     width=2,
+    style={'margin-top': '30px'}
 )
 
-
-    ##############################
-    # RECEIPTS INFO
-    ##############################
 
 ###########################################################################
 ###########################################################################
 ############################# MAIN BOX CONTENT ############################
 ###########################################################################
 ########################################################################### 
-receipts_info_content = dbc.Container([
+receipts_process_table_content = dbc.Container([
+    ##############################
+    # RECEIPTS INFO
+    ##############################
+
     dbc.Row([
-        html.Div('Receipts Information', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+        html.Div('Receipts Process Table', className="text-darkmagenta text-left fs-3 mb-3")
+    ], style={'margin-top': '30px'}),
     
     html.Div(className='row', children=[
         dash_table.DataTable(
-            id='receipt_info_table',
+            id='receipt_process_table',
             data=receipts_info_df.to_dict('records'),
             page_size=11,
             style_table={'overflowX': 'auto'},
@@ -285,6 +274,98 @@ receipts_info_content = dbc.Container([
     receipt_info_modal
 ])
 
+receipts_vendors_count = dbc.Container([
+
+    dbc.Row([
+        html.Div('Receipts Vendors Count Analysis', className="text-darkmagenta text-left fs-3 mb-3")
+    ], style={'margin-top': '30px'}),
+
+    dbc.Row([
+        
+        dbc.Col([
+            dbc.RadioItems(options=[
+                            {'label': 'Histogram', 'value': 'hist'},
+                            {'label': 'Pie Chart', 'value': 'pie'}
+                            ],
+                       value='hist',
+                       inline=True,
+                       id='receipts-vendors-count-chart-radio-buttons')
+        ])
+        
+    ]),
+
+    dbc.Row([
+        dbc.Col([
+            dcc.Graph(figure={}, id='receipts-vendors-count-chart')
+        ]),
+        
+
+    ]),
+
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendor_name_count_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendor_name_count_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ]),
+    ], style={'margin-bottom': '100px'})
+
+])
+
+receipts_categories_count = dbc.Container([
+   
+    dbc.Row([
+        html.Div('Receipts Categories Count Analysis', className="text-darkmagenta text-left fs-3 mb-3")
+    ], style={'margin-top': '30px'}),
+
+    dbc.Row([
+        
+        dbc.Col([
+            dbc.RadioItems(options=[
+                            {'label': 'Histogram', 'value': 'hist'},
+                            {'label': 'Pie Chart', 'value': 'pie'}
+                            ],
+                       value='hist',
+                       inline=True,
+                       id='receipts-categories-count-chart-radio-buttons')
+        ])
+        
+    ]),
+
+    dbc.Row([
+        dbc.Col([
+            dcc.Graph(figure={}, id='receipts-categories-count-chart')
+        ]),
+        
+
+    ]),
+
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendor_category_count_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendor_category_count_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ]),
+    ], style={'margin-bottom': '100px'})
+
+])
+
 vendors_name_content = dbc.Container([
 
     ##############################
@@ -292,7 +373,7 @@ vendors_name_content = dbc.Container([
     ##############################
     dbc.Row([
         html.Div('Vendors Names Analysis', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -316,18 +397,25 @@ vendors_name_content = dbc.Container([
 
     dbc.Row([
         dbc.Col([
-            dash_table.DataTable(
-                data=vendors_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
             dcc.Graph(figure={}, id='vendors-chart')
-        ], width=6),
+        ])
     ]),
     
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendors_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendors_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ]),
+    ], style={'margin-bottom': '100px'}),
 ])
 
 vendors_category_content = dbc.Container([
@@ -338,7 +426,7 @@ vendors_category_content = dbc.Container([
     
     dbc.Row([
         html.Div('Vendors Categories Analysis', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -362,18 +450,25 @@ vendors_category_content = dbc.Container([
 
     dbc.Row([
         dbc.Col([
-            dash_table.DataTable(
-                data=vendors_classification_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
             dcc.Graph(figure={}, id='vendors-classification-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendors_classification_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendors_classification_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ]),
+    ], style={'margin-bottom': '100px'}),
 ])
 
 items_name_content = dbc.Container([
@@ -383,7 +478,7 @@ items_name_content = dbc.Container([
     
     dbc.Row([
         html.Div('Items Names Analysis', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -406,19 +501,27 @@ items_name_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=items_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='items-classification-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=items_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in items_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ]),
+    ], style={'margin-bottom': '100px'}),
 ])
 
 items_category_content = dbc.Container([
@@ -428,7 +531,7 @@ items_category_content = dbc.Container([
     
     dbc.Row([
         html.Div('Items Categories Analysis', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -451,19 +554,27 @@ items_category_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=items_classification_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='items-categories-classification-chart')
-        ], width=6),
+        ]),
     ]),
-  
+    
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=items_classification_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in items_classification_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
 ])
 
 vendors_comparison_hourly_content = dbc.Container([
@@ -472,7 +583,7 @@ vendors_comparison_hourly_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Time Analysis for all the Vendors', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -497,19 +608,27 @@ vendors_comparison_hourly_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=vendors_time_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='vendors-purchase-time-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendors_time_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendors_time_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ]),
+    ], style={'margin-bottom': '100px'}),
 ])
 
 categories_comparison_hourly_content = dbc.Container([
@@ -518,7 +637,7 @@ categories_comparison_hourly_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Time Analysis for all categories', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -543,19 +662,27 @@ categories_comparison_hourly_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=categories_time_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='categories-purchase-time-chart')
-        ], width=6),
+        ]),
     ]),
-  
+    
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=categories_time_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in categories_time_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ]),
+    ], style={'margin-bottom': '100px'}),
 ])
 
 individual_vendor_hourly_content = dbc.Container([
@@ -564,7 +691,7 @@ individual_vendor_hourly_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Time Analysis for each vendor separately', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -589,19 +716,27 @@ individual_vendor_hourly_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=vendors_time_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='sep-vendor-purchase-time-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendors_time_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendors_time_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
 ])
 
 individual_category_hourly_content = dbc.Container([
@@ -610,7 +745,7 @@ individual_category_hourly_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Time Analysis for each category separately', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -635,21 +770,28 @@ individual_category_hourly_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=categories_time_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='sep-category-purchase-time-chart')
-        ], width=6),
+        ]),
     ]),
     
-])
+    html.Hr(),
 
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=categories_time_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in categories_time_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
+])
 
 vendors_comparison_weekday_content = dbc.Container([
     ##########################################
@@ -657,7 +799,7 @@ vendors_comparison_weekday_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Weekday Analysis for all the Vendors', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -685,19 +827,27 @@ vendors_comparison_weekday_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=vendors_weekday_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='vendors-purchase-weekday-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendors_weekday_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendors_weekday_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
 ])
 
 categories_comparison_weekday_content = dbc.Container([
@@ -706,7 +856,7 @@ categories_comparison_weekday_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Weekday Analysis for all categories', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -735,19 +885,25 @@ categories_comparison_weekday_content = dbc.Container([
 
     dbc.Row([
         dbc.Col([
-            dash_table.DataTable(
-                data=categories_weekday_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
             dcc.Graph(figure={}, id='categories-purchase-weekday-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
 
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=categories_weekday_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in categories_weekday_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
 ])
 
 individual_vendor_weekday_content = dbc.Container([
@@ -756,7 +912,7 @@ individual_vendor_weekday_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Weekday Analysis for each vendor separately', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -781,20 +937,27 @@ individual_vendor_weekday_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=vendors_weekday_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='sep-vendor-purchase-weekday-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
 
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendors_weekday_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in vendors_weekday_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
 
 ])
 
@@ -804,7 +967,7 @@ individual_category_weekday_content = dbc.Container([
     ##########################################
     dbc.Row([
         html.Div('Purchase Weekday Analysis for each category separately', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
+    ], style={'margin-top': '30px'}),
     
     dbc.Row([
         dbc.Col([
@@ -829,20 +992,27 @@ individual_category_weekday_content = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=categories_weekday_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
 
         dbc.Col([
             dcc.Graph(figure={}, id='sep-category-purchase-weekday-chart')
-        ], width=6),
+        ]),
     ]),
     
+    html.Hr(),
 
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=categories_weekday_df.to_dict('records'),
+                columns=[{"name": i, "id": i, 'sortable': True} for i in categories_weekday_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi'
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
    
 ])
 
@@ -872,10 +1042,18 @@ def display_page(pathname):
     if pathname == '/':
         return html.Div([
             html.H3('Home Sweet Home')
-        ])
-    elif pathname == '/receipts-info/':
+        ], style={'margin-top': '200px', 'margin-left': '200px'})
+    elif pathname == '/receipts-analysis/process-table':
         return html.Div([
-            receipts_info_content
+            receipts_process_table_content
+        ])
+    elif pathname == '/receipts-analysis/vendors-count':
+        return html.Div([
+            receipts_vendors_count
+        ])
+    elif pathname == '/receipts-analysis/categories-count':
+        return html.Div([
+            receipts_categories_count
         ])
     elif pathname == '/vendors-analysis/vendors-names':
         return html.Div([
@@ -928,54 +1106,59 @@ def display_page(pathname):
     else:
         return html.Div([
             html.H3('Under Development :)')
-        ])
+        ], style={'margin-top': '200px', 'margin-left': '200px'})
 
 # Callbacks for toggling the collapse
 @callback(
-    [Output(f"collapse-Vendors Analysis", "is_open"),
+    [Output(f"collapse-Receipts Analysis", "is_open"),
+     Output(f"collapse-Vendors Analysis", "is_open"),
      Output(f"collapse-Items Analysis", "is_open"),
      Output(f"collapse-Purchase Time Analysis", "is_open"),
      Output(f"collapse-Hourly Analysis", "is_open"),
      Output(f"collapse-Weekday vs Weekend Analysis", "is_open")],
     
-    [Input(f"group-Vendors Analysis-toggle", "n_clicks"),
+    [Input(f"group-Receipts Analysis-toggle", "n_clicks"),
+     Input(f"group-Vendors Analysis-toggle", "n_clicks"),
      Input(f"group-Items Analysis-toggle", "n_clicks"),
      Input(f"group-Purchase Time Analysis-toggle", "n_clicks"),
      Input(f"group-Hourly Analysis-toggle", "n_clicks"),
      Input(f"group-Weekday vs Weekend Analysis-toggle", "n_clicks")],
     
-    [State(f"collapse-Vendors Analysis", "is_open"),
+    [State(f"collapse-Receipts Analysis", "is_open"),
+     State(f"collapse-Vendors Analysis", "is_open"),
      State(f"collapse-Items Analysis", "is_open"),
      State(f"collapse-Purchase Time Analysis", "is_open"),
      State(f"collapse-Hourly Analysis", "is_open"),
      State(f"collapse-Weekday vs Weekend Analysis", "is_open")],
 )
-def toggle_collapse(n1, n2, n3, n4, n5, is_open1, is_open2, is_open3, is_open4, is_open5):
+def toggle_collapse(n1, n2, n3, n4, n5, n6, is_open1, is_open2, is_open3, is_open4, is_open5, is_open6):
     ctx = dash.callback_context
 
     if not ctx.triggered:
-        return False, False, False, False, False
+        return False, False, False, False, False, False
     else:
         button_id = ctx.triggered[0]["prop_id"].split(".")[0]
 
-    if button_id == "group-Vendors Analysis-toggle":
-        return not is_open1, False, False, False, False
+    if button_id == "group-Receipts Analysis-toggle":
+        return not is_open1, False, False, False, False, False
+    elif button_id == "group-Vendors Analysis-toggle":
+        return False, not is_open2, False, False, False, False
     elif button_id == "group-Items Analysis-toggle":
-        return False, not is_open2, False, False, False
+        return False, False, not is_open3, False, False, False
     elif button_id == "group-Purchase Time Analysis-toggle":
-        return False, False, not is_open3, False, False
+        return False, False, False, not is_open4, False, False
     elif button_id == "group-Hourly Analysis-toggle":
-        return False, False, is_open3, not is_open4, False
+        return False, False, False, is_open4, not is_open5, False
     elif button_id == "group-Weekday vs Weekend Analysis-toggle":
-        return False, False, is_open3, False, not is_open5
+        return False, False, False, is_open4, False, not is_open6
 
-    return False, False, False, False, False
+    return False, False, False, False, False, False
 
 
 # Callback for modal of receipts information 1
 @callback(
     Output('modal', 'is_open'),
-    [Input('receipt_info_table', 'active_cell'), Input('close-modal', 'n_clicks')],
+    [Input('receipt_process_table', 'active_cell'), Input('close-modal', 'n_clicks')],
     [State('modal', 'is_open')]
 )
 def toggle_modal(active_cell, n_clicks, is_open):
@@ -986,8 +1169,8 @@ def toggle_modal(active_cell, n_clicks, is_open):
 # Callback for modal of receipts information 2
 @callback(
     Output('modal-body', 'children'),
-    [Input('receipt_info_table', 'active_cell')],
-    [State('receipt_info_table', 'data')]
+    [Input('receipt_process_table', 'active_cell')],
+    [State('receipt_process_table', 'data')]
 )
 def update_modal_body(active_cell, data):
     if active_cell:
@@ -996,6 +1179,30 @@ def update_modal_body(active_cell, data):
         cell_data = data[row][col]
         return html.Pre(cell_data)  # Using Pre for formatted text like JSON
     return "Click a cell"
+
+# Callback for receipts vendors count section
+@callback(
+    Output('receipts-vendors-count-chart', 'figure'),
+    [Input('receipts-vendors-count-chart-radio-buttons', 'value')]
+)
+def update_graph(graph_type):
+    if graph_type == 'hist':
+        fig = px.bar(vendor_name_count, x=vendor_name_count.index, y=vendor_name_count.values, labels={'y':'Count', 'index':'Vendor Name'})
+    elif graph_type == 'pie':
+        fig = px.pie(vendor_name_count, names=vendor_name_count.index, values=vendor_name_count.values, labels={'values':'Count', 'index':'Vendor Name'})
+    return fig
+
+# Callback for receipts categories count section
+@callback(
+    Output('receipts-categories-count-chart', 'figure'),
+    [Input('receipts-categories-count-chart-radio-buttons', 'value')]
+)
+def update_graph(graph_type):
+    if graph_type == 'hist':
+        fig = px.bar(vendor_category_count, x=vendor_category_count.index, y=vendor_category_count.values, labels={'y':'Count', 'index':'Vendor Category'})
+    elif graph_type == 'pie':
+        fig = px.pie(vendor_category_count, names=vendor_category_count.index, values=vendor_category_count.values, labels={'values':'Count', 'index':'Vendor Category'})
+    return fig
 
 # Callback for the vendors information section
 @callback(
