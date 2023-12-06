@@ -1,10 +1,9 @@
+# Import packages
 import dash
-import dash_bootstrap_components as dbc
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, State
-from dash import dcc
-import plotly.express as px
-
+import dash_bootstrap_components as dbc
 import pandas as pd
+import plotly.express as px
 
 from datetime import datetime
 
@@ -17,9 +16,9 @@ def is_weekday_or_weekend(input_date):
     else:
         return "Weekend"
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+# Incorporate data
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv')
 
-# Incorporating Datasets
 receipts_info_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/test_receipt_information.csv')
 
 vendors_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_vendors_dataset.csv')
@@ -46,10 +45,29 @@ items_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics4
 items_df = items_df[['Item Name', 'Unit Price ($)', 'Discount ($)', 'Tax ($)']]
 
 items_classification_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_items_dataset.csv')
-items_classification_df = items_classification_df[['Item Category', 'Unit Price ($)', 'Discount ($)', 'Tax ($)']]
+items_classification_df = items_classification_df[['Item Name', 'Item Category', 'Unit Price ($)', 'Discount ($)', 'Tax ($)']]
 
 # Initialize the app - incorporate css
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+modal_body_style = {
+    'maxWidth': '2000px',
+    'height': 'auto'
+}
+
+# Modal Component
+receipt_info_modal = dbc.Modal(
+            [
+                dbc.ModalHeader(dbc.ModalTitle("Cell Details")),
+                dbc.ModalBody(html.Div(id="modal-body", style=modal_body_style)),
+                dbc.ModalFooter(
+                    dbc.Button("Close", id="close-modal", className="ml-auto")
+                ),
+            ],
+            id="modal",
+            is_open=False
+        )
 
 # Hour Items for the dropdown
 hours = [
@@ -79,193 +97,21 @@ hours = [
     dbc.DropdownMenuItem("Hour 23 to 24"),
 ]
 
-
-# Function to create a collapsible section
-def create_collapsible_section(title, subsections):
-    return dbc.Card(
-        [
-            dbc.CardHeader(
-                html.H2(
-                    dbc.Button(
-                        title,
-                        color="link",
-                        id=f"group-{title}-toggle",
-                    )
-                )
-            ),
-            dbc.Collapse(
-                dbc.CardBody(subsections),
-                id=f"collapse-{title}",
-            ),
-        ]
-    )
-
-# Receipt Info Section -> Modal Component
-receipt_info_modal_body_style = {
-    'maxWidth': '2000px',
-    'height': 'auto'
-}
-
-receipt_info_modal = dbc.Modal(
-            [
-                dbc.ModalHeader(dbc.ModalTitle("Cell Details")),
-                dbc.ModalBody(html.Div(id="modal-body", style=receipt_info_modal_body_style)),
-                dbc.ModalFooter(
-                    dbc.Button("Close", id="close-modal", className="ml-auto")
-                ),
-            ],
-            id="modal",
-            is_open=False
-        )
-
-# Sidebar Header
-sidebar_header = dcc.Link(
-    html.H2("Sidebar", className="display-4"),
-    href="/",
-    style={"color": "inherit", "textDecoration": "none"}
-)
-
-# Receipts Info Section
-receipts_info = dbc.Card(
-        [
-            dbc.CardHeader(
-                html.H2(
-                    dbc.Button(
-                        'Receipts Info',
-                        color="link",
-                        href="/receipts-info/",
-                        id="receipts-info"
-                    )
-                )
-            )
-        ]
-    )
+# App layout
+app.layout = dbc.Container([
     
-# Vendors Analysis Section
-vendors_analysis = create_collapsible_section(
-    "Vendors Analysis",
-    dbc.Nav(
-            [
-                dbc.NavLink("Based on Vendors Name", href="/vendors-analysis/vendors-names", id="vendors-names"),
-                dbc.NavLink("Based on Vendors Categories", href="/vendors-analysis/vendors-categories", id="vendors-categories")            ],
-            vertical=True,
-            pills=True,
-        )
-)
-
-# Items Analysis Section
-items_analysis = create_collapsible_section(
-    "Items Analysis",
-    dbc.Nav(
-            [
-                dbc.NavLink("Based on Items Name", href="/items-analysis/items-names", id="items-names"),
-                dbc.NavLink("Based on Items Categories", href="/items-analysis/items-categories", id="items-categories")
-            ],
-            vertical=True,
-            pills=True,
-        )
-)
-
-# Custom Time Analysis Section
-custom_time_analysis = dbc.Card(
-        [
-            dbc.CardHeader(
-                html.H2(
-                    dbc.Button(
-                        'Custom Time',
-                        color="link",
-                        href="/purchase-time-analysis/custom-time",
-                        id="time-analysis-custom-time"
-                    )
-                )
-            )
-        ]
-    )
-
-# Hourly Purchase Time Analysis
-hourly_analysis = create_collapsible_section(
-    "Hourly Analysis",
-    dbc.Nav(
-            [
-                dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/hourly/vendors-comparison", id="time-analysis-hourly-vendors-comparison"),
-                dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/hourly/categories-comparison", id="time-analysis-hourly-categories-comparison"),
-                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/hourly/individual-vendor", id="time-analysis-hourly-individual-vendor"),
-                dbc.NavLink("Individual Category", href="/purchase-time-analysis/hourly/individual-category", id="time-analysis-hourly-individual-category")
-            ],
-            vertical=True,
-            pills=True,
-        )
-)
-
-# Weekday vs Weekend Purchase Time Analysis
-weekday_analysis = create_collapsible_section(
-    "Weekday vs Weekend Analysis",
-    dbc.Nav(
-            [
-                dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/weekday/vendors-comparison", id="time-analysis-weekday-vendors-comparison"),
-                dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/weekday/categories-comparison", id="time-analysis-weekday-categories-comparison"),
-                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/weekday/individual-vendor", id="time-analysis-weekday-individual-vendor"),
-                dbc.NavLink("Individual Category", href="/purchase-time-analysis/weekday/individual-category", id="time-analysis-weekday-individual-category")
-            ],
-            vertical=True,
-            pills=True,
-        )
-)
-
-# Purchase Time Analysis
-purchase_time_analysis = create_collapsible_section(
-    "Purchase Time Analysis",
-    dbc.Nav(
-            [
-                hourly_analysis,
-                weekday_analysis,
-                custom_time_analysis
-            ],
-            vertical=True,
-            pills=True,
-        )
-)
-
-# Map Section
-map_analysis = dbc.Card(
-        [
-            dbc.CardHeader(
-                html.H2(
-                    dbc.Button(
-                        'Map',
-                        color="link",
-                        href="/map/",
-                        id="map"
-                    )
-                )
-            )
-        ]
-    )
-
-# Define the sidebar layout
-sidebar = dbc.Col(
-    [sidebar_header,
-     html.Hr(),
-     receipts_info,
-     vendors_analysis,
-     items_analysis,
-     purchase_time_analysis,
-     map_analysis
-    ],
-    width=2,
-)
-
-
+    ##############################
+    # HEADER
+    ##############################
+    dbc.Row([
+        html.Div('Receipts Analysis Dashboard', className="text-primary text-center fs-3")
+    ]),
+    
+    html.Hr(),
+    
     ##############################
     # RECEIPTS INFO
     ##############################
-
-###########################################################################
-###########################################################################
-############################# MAIN BOX CONTENT ############################
-###########################################################################
-########################################################################### 
-receipts_info_content = dbc.Container([
     dbc.Row([
         html.Div('Receipts Information', className="text-darkmagenta text-left fs-3 mb-3")
     ]),
@@ -282,16 +128,15 @@ receipts_info_content = dbc.Container([
                 'lineHeight': '15px'
             })
     ]),
-    receipt_info_modal
-])
-
-vendors_name_content = dbc.Container([
-
+    receipt_info_modal,
+    
+    html.Hr(),
+    
     ##############################
     # VENDOR INFO
     ##############################
     dbc.Row([
-        html.Div('Vendors Names Analysis', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Vendors Information Analysis', className="text-darkmagenta text-left fs-3 mb-3")
     ]),
     
     dbc.Row([
@@ -328,16 +173,15 @@ vendors_name_content = dbc.Container([
         ], width=6),
     ]),
     
-])
-
-vendors_category_content = dbc.Container([
+    html.Hr(),
+    
     
     ##############################
     # VENDOR CLASSIFICATION
     ##############################
     
     dbc.Row([
-        html.Div('Vendors Categories Analysis', className="text-darkmagenta text-left fs-3 mb-3")
+        html.Div('Vendors Classification Analysis', className="text-darkmagenta text-left fs-3 mb-3")
     ]),
     
     dbc.Row([
@@ -374,99 +218,9 @@ vendors_category_content = dbc.Container([
         ], width=6),
     ]),
     
-])
-
-items_name_content = dbc.Container([
-    ##############################
-    # ITEMS ANALYSIS
-    ##############################
+    html.Hr(),
     
-    dbc.Row([
-        html.Div('Items Names Analysis', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
     
-    dbc.Row([
-        dbc.Col([
-            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)', 'Tax ($)']],
-                       value='Unit Price ($)',
-                       inline=True,
-                       id='items-classification-radio-buttons')
-        ], width=6),
-        
-        dbc.Col([
-            dbc.RadioItems(options=[
-                            {'label': 'Histogram', 'value': 'hist'},
-                            {'label': 'Pie Chart', 'value': 'pie'}
-                            ],
-                       value='hist',
-                       inline=True,
-                       id='items-classification-chart-radio-buttons')
-        ], width=6)
-        
-    ]),
-
-    dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=items_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
-            dcc.Graph(figure={}, id='items-classification-chart')
-        ], width=6),
-    ]),
-    
-])
-
-items_category_content = dbc.Container([
-    ##############################
-    # ITEMS CLASSIFICATION
-    ##############################
-    
-    dbc.Row([
-        html.Div('Items Categories Analysis', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
-    
-    dbc.Row([
-        dbc.Col([
-            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)', 'Tax ($)']],
-                       value='Unit Price ($)',
-                       inline=True,
-                       id='items-categories-classification-radio-buttons')
-        ], width=6),
-        
-        dbc.Col([
-            dbc.RadioItems(options=[
-                            {'label': 'Histogram', 'value': 'hist'},
-                            {'label': 'Pie Chart', 'value': 'pie'}
-                            ],
-                       value='hist',
-                       inline=True,
-                       id='items-categories-classification-chart-radio-buttons')
-        ], width=6)
-        
-    ]),
-
-    dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=items_classification_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
-            dcc.Graph(figure={}, id='items-categories-classification-chart')
-        ], width=6),
-    ]),
-  
-])
-
-vendors_comparison_hourly_content = dbc.Container([
     ##########################################
     # PURCHASE TIME for all vendors
     ##########################################
@@ -510,148 +264,9 @@ vendors_comparison_hourly_content = dbc.Container([
         ], width=6),
     ]),
     
-])
-
-categories_comparison_hourly_content = dbc.Container([
-    ##########################################
-    # PURCHASE TIME for all categories
-    ##########################################
-    dbc.Row([
-        html.Div('Purchase Time Analysis for all categories', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
-    
-    dbc.Row([
-        dbc.Col([
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Number of Items', 'value': 'Number of Items'},
-                    {'label': 'Total Price ($)', 'value': 'Total Price ($)'}
-                ],
-                value='Number of Items',
-                inline=True,
-                id='categories-purchase-time-radio-buttons'
-            )], width=6),
-        
-        dbc.Col(
-            dcc.Dropdown(
-                id='categories-hour-selector',
-                options=[{'label': f'{hour}:00', 'value': hour} for hour in range(24)],
-                value=0,
-                clearable=False 
-            ), width=3)
-        
-    ]),
-
-    dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=categories_time_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
-            dcc.Graph(figure={}, id='categories-purchase-time-chart')
-        ], width=6),
-    ]),
-  
-])
-
-individual_vendor_hourly_content = dbc.Container([
-    ##########################################
-    # PURCHASE TIME for each vendor separately
-    ##########################################
-    dbc.Row([
-        html.Div('Purchase Time Analysis for each vendor separately', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
-    
-    dbc.Row([
-        dbc.Col([
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Number of Items', 'value': 'Number of Items'},
-                    {'label': 'Total Price ($)', 'value': 'Total Price ($)'}
-                ],
-                value='Number of Items',
-                inline=True,
-                id='sep-vendor-purchase-time-radio-buttons'
-            )], width=6),
-        
-        dbc.Col(html.Div([
-            dcc.Dropdown(
-                id='sep-vendor-hour-selector',
-                options=[{'label': vendor, 'value': vendor} for vendor in vendors_time_df['Vendor Name'].unique()],
-                value=vendors_time_df['Vendor Name'].unique()[0]  # default to first vendor
-            )
-        ]))
-        
-    ]),
-
-    dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=vendors_time_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
-            dcc.Graph(figure={}, id='sep-vendor-purchase-time-chart')
-        ], width=6),
-    ]),
-    
-])
-
-individual_category_hourly_content = dbc.Container([
-    ##########################################
-    # PURCHASE TIME for each category separately
-    ##########################################
-    dbc.Row([
-        html.Div('Purchase Time Analysis for each category separately', className="text-darkmagenta text-left fs-3 mb-3")
-    ]),
-    
-    dbc.Row([
-        dbc.Col([
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Number of Items', 'value': 'Number of Items'},
-                    {'label': 'Total Price ($)', 'value': 'Total Price ($)'}
-                ],
-                value='Number of Items',
-                inline=True,
-                id='sep-category-purchase-time-radio-buttons'
-            )], width=6),
-        
-        dbc.Col(html.Div([
-            dcc.Dropdown(
-                id='sep-category-hour-selector',
-                options=[{'label': category, 'value': category} for category in categories_time_df['Category'].unique()],
-                value=categories_time_df['Category'].unique()[0]  # default to first vendor
-            )
-        ]))
-        
-    ]),
-
-    dbc.Row([
-        dbc.Col([
-            dash_table.DataTable(
-                data=categories_time_df.to_dict('records'),
-                page_size=12,
-                style_table={'overflowX': 'auto'}
-                )
-        ], width=6),
-
-        dbc.Col([
-            dcc.Graph(figure={}, id='sep-category-purchase-time-chart')
-        ], width=6),
-    ]),
-    
-])
+    html.Hr(),
 
 
-vendors_comparison_weekday_content = dbc.Container([
     ##########################################
     # PURCHASE WEEKDAY for all vendors
     ##########################################
@@ -698,9 +313,54 @@ vendors_comparison_weekday_content = dbc.Container([
         ], width=6),
     ]),
     
-])
+    html.Hr(),
 
-categories_comparison_weekday_content = dbc.Container([
+
+    ##########################################
+    # PURCHASE TIME for all categories
+    ##########################################
+    dbc.Row([
+        html.Div('Purchase Time Analysis for all categories', className="text-darkmagenta text-left fs-3 mb-3")
+    ]),
+    
+    dbc.Row([
+        dbc.Col([
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Number of Items', 'value': 'Number of Items'},
+                    {'label': 'Total Price ($)', 'value': 'Total Price ($)'}
+                ],
+                value='Number of Items',
+                inline=True,
+                id='categories-purchase-time-radio-buttons'
+            )], width=6),
+        
+        dbc.Col(
+            dcc.Dropdown(
+                id='categories-hour-selector',
+                options=[{'label': f'{hour}:00', 'value': hour} for hour in range(24)],
+                value=0,
+                clearable=False 
+            ), width=3)
+        
+    ]),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=categories_time_df.to_dict('records'),
+                page_size=12,
+                style_table={'overflowX': 'auto'}
+                )
+        ], width=6),
+
+        dbc.Col([
+            dcc.Graph(figure={}, id='categories-purchase-time-chart')
+        ], width=6),
+    ]),
+    
+    html.Hr(),
+
     ##########################################
     # PURCHASE WEEKDAY for all categories
     ##########################################
@@ -747,10 +407,54 @@ categories_comparison_weekday_content = dbc.Container([
         ], width=6),
     ]),
     
+    html.Hr(),
 
-])
+    ##########################################
+    # PURCHASE TIME for each vendor separately
+    ##########################################
+    dbc.Row([
+        html.Div('Purchase Time Analysis for each vendor separately', className="text-darkmagenta text-left fs-3 mb-3")
+    ]),
+    
+    dbc.Row([
+        dbc.Col([
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Number of Items', 'value': 'Number of Items'},
+                    {'label': 'Total Price ($)', 'value': 'Total Price ($)'}
+                ],
+                value='Number of Items',
+                inline=True,
+                id='sep-vendor-purchase-time-radio-buttons'
+            )], width=6),
+        
+        dbc.Col(html.Div([
+            dcc.Dropdown(
+                id='sep-vendor-hour-selector',
+                options=[{'label': vendor, 'value': vendor} for vendor in vendors_time_df['Vendor Name'].unique()],
+                value=vendors_time_df['Vendor Name'].unique()[0]  # default to first vendor
+            )
+        ]))
+        
+    ]),
 
-individual_vendor_weekday_content = dbc.Container([
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=vendors_time_df.to_dict('records'),
+                page_size=12,
+                style_table={'overflowX': 'auto'}
+                )
+        ], width=6),
+
+        dbc.Col([
+            dcc.Graph(figure={}, id='sep-vendor-purchase-time-chart')
+        ], width=6),
+    ]),
+    
+    html.Hr(),
+
+
     ##########################################
     # PURCHASE WEEKDAY for each vendor separately
     ##########################################
@@ -794,11 +498,54 @@ individual_vendor_weekday_content = dbc.Container([
         ], width=6),
     ]),
     
+    html.Hr(),
 
 
-])
+    ##########################################
+    # PURCHASE TIME for each category separately
+    ##########################################
+    dbc.Row([
+        html.Div('Purchase Time Analysis for each category separately', className="text-darkmagenta text-left fs-3 mb-3")
+    ]),
+    
+    dbc.Row([
+        dbc.Col([
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Number of Items', 'value': 'Number of Items'},
+                    {'label': 'Total Price ($)', 'value': 'Total Price ($)'}
+                ],
+                value='Number of Items',
+                inline=True,
+                id='sep-category-purchase-time-radio-buttons'
+            )], width=6),
+        
+        dbc.Col(html.Div([
+            dcc.Dropdown(
+                id='sep-category-hour-selector',
+                options=[{'label': category, 'value': category} for category in categories_time_df['Category'].unique()],
+                value=categories_time_df['Category'].unique()[0]  # default to first vendor
+            )
+        ]))
+        
+    ]),
 
-individual_category_weekday_content = dbc.Container([
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=categories_time_df.to_dict('records'),
+                page_size=12,
+                style_table={'overflowX': 'auto'}
+                )
+        ], width=6),
+
+        dbc.Col([
+            dcc.Graph(figure={}, id='sep-category-purchase-time-chart')
+        ], width=6),
+    ]),
+    
+    html.Hr(),
+
     ##########################################
     # PURCHASE WEEKDAY for each category separately
     ##########################################
@@ -842,160 +589,104 @@ individual_category_weekday_content = dbc.Container([
         ], width=6),
     ]),
     
-
-   
-])
-
-# Define the main content layout
-content = dbc.Col(html.Div(id='page-content'), width=10)
-
-# Combine sidebar and content
-app.layout = dbc.Container(
-    [
-    dcc.Location(id='url', refresh=False),
-    dbc.Row([sidebar, content])  
-    ],
-    fluid=True
-)
+    html.Hr(),
 
 
-###########################################################################
-###########################################################################
-################################ CALLBACKS ################################
-###########################################################################
-###########################################################################
-# Callbacks for displaying different pages
-@callback(
-    Output('page-content', 'children'), [Input('url', 'pathname')]
-)
-def display_page(pathname):
-    if pathname == '/':
-        return html.Div([
-            html.H3('Home Sweet Home')
-        ])
-    elif pathname == '/receipts-info/':
-        return html.Div([
-            receipts_info_content
-        ])
-    elif pathname == '/vendors-analysis/vendors-names':
-        return html.Div([
-            vendors_name_content
-        ])
-    elif pathname == '/vendors-analysis/vendors-categories':
-        return html.Div([
-            vendors_category_content
-        ])     
-    elif pathname == '/items-analysis/items-names':
-        return html.Div([
-            items_name_content
-        ])
-    elif pathname == '/items-analysis/items-categories':
-        return html.Div([
-            items_category_content
-        ])
-    elif pathname == '/purchase-time-analysis/hourly/vendors-comparison':
-        return html.Div([
-            vendors_comparison_hourly_content
-        ])
-    elif pathname == '/purchase-time-analysis/hourly/categories-comparison':
-        return html.Div([
-            categories_comparison_hourly_content
-        ])
-    elif pathname == '/purchase-time-analysis/hourly/individual-vendor':
-        return html.Div([
-            individual_vendor_hourly_content
-        ])
-    elif pathname == '/purchase-time-analysis/hourly/individual-category':
-        return html.Div([
-            individual_category_hourly_content
-        ])
-    elif pathname == '/purchase-time-analysis/weekday/vendors-comparison':
-        return html.Div([
-            vendors_comparison_weekday_content
-        ])
-    elif pathname == '/purchase-time-analysis/weekday/categories-comparison':
-        return html.Div([
-            categories_comparison_weekday_content
-        ])
-    elif pathname == '/purchase-time-analysis/weekday/individual-vendor':
-        return html.Div([
-            individual_vendor_weekday_content
-        ])
-    elif pathname == '/purchase-time-analysis/weekday/individual-category':
-        return html.Div([
-            individual_category_weekday_content
-        ])
-    else:
-        return html.Div([
-            html.H3('Under Development :)')
-        ])
 
-# Callbacks for toggling the collapse
-@callback(
-    [Output(f"collapse-Vendors Analysis", "is_open"),
-     Output(f"collapse-Items Analysis", "is_open"),
-     Output(f"collapse-Purchase Time Analysis", "is_open"),
-     Output(f"collapse-Hourly Analysis", "is_open"),
-     Output(f"collapse-Weekday vs Weekend Analysis", "is_open")],
+    ##############################
+    # ITEMS ANALYSIS
+    ##############################
     
-    [Input(f"group-Vendors Analysis-toggle", "n_clicks"),
-     Input(f"group-Items Analysis-toggle", "n_clicks"),
-     Input(f"group-Purchase Time Analysis-toggle", "n_clicks"),
-     Input(f"group-Hourly Analysis-toggle", "n_clicks"),
-     Input(f"group-Weekday vs Weekend Analysis-toggle", "n_clicks")],
+    dbc.Row([
+        html.Div('Items Classification Analysis', className="text-darkmagenta text-left fs-3 mb-3")
+    ]),
     
-    [State(f"collapse-Vendors Analysis", "is_open"),
-     State(f"collapse-Items Analysis", "is_open"),
-     State(f"collapse-Purchase Time Analysis", "is_open"),
-     State(f"collapse-Hourly Analysis", "is_open"),
-     State(f"collapse-Weekday vs Weekend Analysis", "is_open")],
-)
-def toggle_collapse(n1, n2, n3, n4, n5, is_open1, is_open2, is_open3, is_open4, is_open5):
-    ctx = dash.callback_context
+    dbc.Row([
+        dbc.Col([
+            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)', 'Tax ($)']],
+                       value='Unit Price ($)',
+                       inline=True,
+                       id='items-classification-radio-buttons')
+        ], width=6),
+        
+        dbc.Col([
+            dbc.RadioItems(options=[
+                            {'label': 'Histogram', 'value': 'hist'},
+                            {'label': 'Pie Chart', 'value': 'pie'}
+                            ],
+                       value='hist',
+                       inline=True,
+                       id='items-classification-chart-radio-buttons')
+        ], width=6)
+        
+    ]),
 
-    if not ctx.triggered:
-        return False, False, False, False, False
-    else:
-        button_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=items_df.to_dict('records'),
+                page_size=12,
+                style_table={'overflowX': 'auto'}
+                )
+        ], width=6),
 
-    if button_id == "group-Vendors Analysis-toggle":
-        return not is_open1, False, False, False, False
-    elif button_id == "group-Items Analysis-toggle":
-        return False, not is_open2, False, False, False
-    elif button_id == "group-Purchase Time Analysis-toggle":
-        return False, False, not is_open3, False, False
-    elif button_id == "group-Hourly Analysis-toggle":
-        return False, False, is_open3, not is_open4, False
-    elif button_id == "group-Weekday vs Weekend Analysis-toggle":
-        return False, False, is_open3, False, not is_open5
+        dbc.Col([
+            dcc.Graph(figure={}, id='items-classification-chart')
+        ], width=6),
+    ]),
+    
+    html.Hr(),
 
-    return False, False, False, False, False
+    ##############################
+    # ITEMS CLASSIFICATION
+    ##############################
+    
+    dbc.Row([
+        html.Div('Items Classification Analysis', className="text-darkmagenta text-left fs-3 mb-3")
+    ]),
+    
+    dbc.Row([
+        dbc.Col([
+            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)', 'Tax ($)']],
+                       value='Unit Price ($)',
+                       inline=True,
+                       id='items-categories-classification-radio-buttons')
+        ], width=6),
+        
+        dbc.Col([
+            dbc.RadioItems(options=[
+                            {'label': 'Histogram', 'value': 'hist'},
+                            {'label': 'Pie Chart', 'value': 'pie'}
+                            ],
+                       value='hist',
+                       inline=True,
+                       id='items-categories-classification-chart-radio-buttons')
+        ], width=6)
+        
+    ]),
+
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                data=items_classification_df.to_dict('records'),
+                page_size=12,
+                style_table={'overflowX': 'auto'}
+                )
+        ], width=6),
+
+        dbc.Col([
+            dcc.Graph(figure={}, id='items-categories-classification-chart')
+        ], width=6),
+    ]),
+    
+    html.Hr(),
 
 
-# Callback for modal of receipts information 1
-@callback(
-    Output('modal', 'is_open'),
-    [Input('receipt_info_table', 'active_cell'), Input('close-modal', 'n_clicks')],
-    [State('modal', 'is_open')]
-)
-def toggle_modal(active_cell, n_clicks, is_open):
-    if active_cell or n_clicks:
-        return not is_open
-    return is_open
+], fluid=True, style={'margin-right': '100px'})
 
-# Callback for modal of receipts information 2
-@callback(
-    Output('modal-body', 'children'),
-    [Input('receipt_info_table', 'active_cell')],
-    [State('receipt_info_table', 'data')]
-)
-def update_modal_body(active_cell, data):
-    if active_cell:
-        row = active_cell['row']
-        col = active_cell['column_id']
-        cell_data = data[row][col]
-        return html.Pre(cell_data)  # Using Pre for formatted text like JSON
-    return "Click a cell"
+#######################
+# CALLBACKS
+#######################
 
 # Callback for the vendors information section
 @callback(
@@ -1276,5 +967,32 @@ def update_graph(chart_type, col_chosen):
     return fig
 
 
+
+
+# Callback for modal of receipts information
+@callback(
+    Output('modal', 'is_open'),
+    [Input('receipt_info_table', 'active_cell'), Input('close-modal', 'n_clicks')],
+    [State('modal', 'is_open')]
+)
+def toggle_modal(active_cell, n_clicks, is_open):
+    if active_cell or n_clicks:
+        return not is_open
+    return is_open
+
+@callback(
+    Output('modal-body', 'children'),
+    [Input('receipt_info_table', 'active_cell')],
+    [State('receipt_info_table', 'data')]
+)
+def update_modal_body(active_cell, data):
+    if active_cell:
+        row = active_cell['row']
+        col = active_cell['column_id']
+        cell_data = data[row][col]
+        return html.Pre(cell_data)  # Using Pre for formatted text like JSON
+    return "Click a cell"
+
+# Run the app
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run(debug=True)
