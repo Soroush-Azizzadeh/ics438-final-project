@@ -1,1001 +1,1001 @@
-Item Name,Item Category,Unit Price ($),Discount ($),Tax ($)
-Smartphone,Electronics,379.22,47.85,25.15
-Laptop,Electronics,203.06,47.75,12.48
-Laptop,Electronics,179.67,48.06,9.46
-Burger,Food Services,141.64,32.12,12.25
-T-shirt,Retail,493.64,78.87,49.99
-Burger,Food Services,155.76,34.1,17.02
-Jeans,Retail,236.6,7.15,21.43
-Coffee,Food Services,483.34,69.17,56.55
-T-shirt,Retail,32.08,8.84,3.29
-Nails,Home Improvement,360.13,43.09,42.0
-Hammer,Home Improvement,306.34,76.1,19.18
-Jeans,Retail,352.12,6.65,48.95
-Coffee,Food Services,120.07,34.85,11.11
-Laptop,Electronics,46.52,13.86,4.49
-Laptop,Electronics,55.42,9.17,5.58
-Jeans,Retail,407.42,66.04,49.97
-T-shirt,Retail,223.05,39.9,16.21
-Coffee,Food Services,145.87,8.29,9.45
-T-shirt,Retail,238.79,6.43,29.22
-Burger,Food Services,461.77,116.71,48.25
-Smartphone,Electronics,419.09,65.95,36.08
-Coffee,Food Services,424.89,114.09,33.87
-Smartphone,Electronics,290.27,39.24,29.13
-Jeans,Retail,42.1,7.74,3.39
-Jeans,Retail,422.69,30.82,48.26
-Nails,Home Improvement,352.96,39.4,21.02
-Smartphone,Electronics,408.14,12.32,25.58
-Coffee,Food Services,23.57,4.06,2.75
-Nails,Home Improvement,14.32,2.73,1.28
-Nails,Home Improvement,196.21,21.79,25.82
-Hammer,Home Improvement,303.15,17.7,41.98
-Nails,Home Improvement,240.14,52.39,10.53
-Hammer,Home Improvement,272.57,50.75,29.63
-Nails,Home Improvement,111.19,21.58,7.62
-Burger,Food Services,31.46,4.41,2.97
-Smartphone,Electronics,100.48,10.81,11.04
-Burger,Food Services,349.15,21.31,41.55
-Burger,Food Services,422.87,43.43,28.48
-Laptop,Electronics,333.14,1.32,39.2
-T-shirt,Retail,324.82,37.87,33.22
-Burger,Food Services,280.74,1.05,34.73
-Jeans,Retail,369.77,60.38,19.64
-Laptop,Electronics,176.76,15.27,13.88
-Burger,Food Services,358.09,41.68,28.93
-Nails,Home Improvement,1.76,0.1,0.14
-Coffee,Food Services,112.33,15.1,11.77
-Smartphone,Electronics,16.74,4.38,1.32
-Hammer,Home Improvement,83.67,1.6,9.86
-Laptop,Electronics,264.26,38.63,23.95
-Hammer,Home Improvement,442.05,65.59,30.57
-Laptop,Electronics,25.88,6.39,2.87
-Smartphone,Electronics,94.81,28.43,7.52
-Nails,Home Improvement,418.89,16.4,20.72
-Smartphone,Electronics,158.77,10.17,18.09
-Hammer,Home Improvement,490.14,99.37,43.46
-Coffee,Food Services,60.33,11.75,6.67
-T-shirt,Retail,344.58,18.84,31.78
-Smartphone,Electronics,314.19,2.06,44.13
-Nails,Home Improvement,430.82,17.24,42.22
-Jeans,Retail,58.44,2.71,7.53
-Hammer,Home Improvement,21.29,4.35,1.79
-Jeans,Retail,469.28,128.09,18.49
-Laptop,Electronics,356.47,96.54,29.64
-Jeans,Retail,435.83,23.31,36.12
-T-shirt,Retail,5.44,0.25,0.43
-Jeans,Retail,359.53,36.48,36.2
-Hammer,Home Improvement,135.54,6.08,14.03
-Jeans,Retail,198.0,32.58,13.12
-Laptop,Electronics,365.53,102.39,21.26
-Nails,Home Improvement,152.03,38.11,9.1
-Nails,Home Improvement,50.6,13.79,3.59
-Jeans,Retail,63.04,2.19,6.07
-Hammer,Home Improvement,151.65,33.43,16.48
-Burger,Food Services,313.74,35.35,41.05
-Nails,Home Improvement,33.85,0.86,4.12
-Hammer,Home Improvement,193.02,5.68,19.79
-T-shirt,Retail,224.82,32.96,20.81
-Coffee,Food Services,212.1,23.44,28.08
-T-shirt,Retail,293.03,14.64,19.26
-Nails,Home Improvement,32.87,8.52,2.93
-Laptop,Electronics,376.47,22.78,35.27
-T-shirt,Retail,104.41,1.32,14.93
-Coffee,Food Services,312.08,9.8,28.97
-Jeans,Retail,273.65,12.42,38.89
-Laptop,Electronics,75.05,9.14,7.78
-Laptop,Electronics,339.98,90.55,33.26
-Laptop,Electronics,317.9,83.42,24.45
-Coffee,Food Services,5.84,1.24,0.57
-Jeans,Retail,409.24,4.35,26.25
-T-shirt,Retail,301.69,14.11,25.28
-T-shirt,Retail,359.35,87.0,15.42
-Nails,Home Improvement,258.75,71.07,10.63
-Burger,Food Services,21.28,0.1,2.85
-Jeans,Retail,431.09,103.55,44.83
-Laptop,Electronics,484.33,73.38,57.58
-Hammer,Home Improvement,287.36,58.5,29.87
-Nails,Home Improvement,373.74,101.56,19.22
-Smartphone,Electronics,413.02,59.75,45.61
-Smartphone,Electronics,304.11,21.31,38.6
-Hammer,Home Improvement,328.84,0.02,22.42
-T-shirt,Retail,167.01,24.73,10.84
-T-shirt,Retail,386.47,44.54,30.22
-Burger,Food Services,320.85,12.26,24.29
-Jeans,Retail,28.71,0.31,2.61
-Laptop,Electronics,445.09,80.38,21.21
-Burger,Food Services,405.33,42.9,19.4
-Laptop,Electronics,193.95,2.74,18.56
-Burger,Food Services,11.09,1.99,0.58
-Jeans,Retail,53.54,8.82,3.79
-Smartphone,Electronics,391.93,91.41,18.36
-Hammer,Home Improvement,305.45,42.81,29.74
-Jeans,Retail,325.59,94.7,28.02
-T-shirt,Retail,394.49,15.04,53.57
-T-shirt,Retail,458.53,120.03,39.98
-Nails,Home Improvement,259.98,61.26,13.69
-Smartphone,Electronics,222.85,50.58,16.46
-Nails,Home Improvement,478.29,129.41,18.84
-T-shirt,Retail,450.63,127.72,37.67
-Coffee,Food Services,115.6,26.92,12.28
-Smartphone,Electronics,254.05,72.06,11.75
-Smartphone,Electronics,461.52,129.56,30.4
-Nails,Home Improvement,208.17,9.75,28.86
-Laptop,Electronics,216.11,27.04,18.84
-Jeans,Retail,361.55,8.52,20.13
-Jeans,Retail,346.2,35.88,21.04
-Coffee,Food Services,409.68,8.67,55.88
-Coffee,Food Services,2.61,0.52,0.26
-Nails,Home Improvement,374.24,32.93,40.6
-Coffee,Food Services,429.73,24.11,24.84
-Jeans,Retail,354.03,27.43,17.24
-Coffee,Food Services,181.76,25.81,12.36
-Jeans,Retail,92.84,27.66,3.93
-T-shirt,Retail,79.05,21.29,8.35
-Coffee,Food Services,158.63,11.56,18.46
-T-shirt,Retail,186.86,37.18,20.37
-Hammer,Home Improvement,197.51,41.61,9.85
-T-shirt,Retail,275.84,61.31,13.78
-Smartphone,Electronics,149.72,15.93,10.01
-Jeans,Retail,318.89,50.63,23.51
-Hammer,Home Improvement,209.2,45.7,13.42
-Coffee,Food Services,186.43,53.26,7.87
-Burger,Food Services,398.46,33.11,38.66
-Burger,Food Services,398.03,53.28,30.99
-Smartphone,Electronics,216.43,16.1,19.1
-Burger,Food Services,178.33,33.79,8.48
-Coffee,Food Services,148.07,36.88,10.55
-Laptop,Electronics,4.88,0.44,0.56
-T-shirt,Retail,273.06,12.8,31.4
-Laptop,Electronics,47.18,7.04,5.86
-Smartphone,Electronics,140.76,41.55,6.16
-Hammer,Home Improvement,1.13,0.14,0.14
-Smartphone,Electronics,222.85,49.91,14.77
-Coffee,Food Services,298.11,3.17,38.11
-T-shirt,Retail,267.29,9.48,35.05
-Burger,Food Services,34.98,9.03,2.03
-Burger,Food Services,287.42,54.08,24.07
-Smartphone,Electronics,477.87,77.93,49.65
-T-shirt,Retail,146.83,16.38,14.73
-Burger,Food Services,62.53,2.26,5.43
-Laptop,Electronics,70.63,14.16,4.82
-Laptop,Electronics,371.43,24.29,34.33
-Jeans,Retail,246.87,70.98,16.6
-Burger,Food Services,372.86,5.86,41.15
-Hammer,Home Improvement,178.35,20.92,23.5
-Nails,Home Improvement,343.76,8.39,48.61
-Smartphone,Electronics,4.21,0.05,0.47
-T-shirt,Retail,436.7,91.67,42.34
-Coffee,Food Services,71.2,12.24,4.08
-Smartphone,Electronics,230.99,22.88,13.91
-Smartphone,Electronics,324.35,66.89,16.68
-Burger,Food Services,262.56,10.18,35.6
-Laptop,Electronics,175.23,51.7,11.45
-Laptop,Electronics,195.38,12.9,12.7
-Coffee,Food Services,293.68,4.39,25.7
-Coffee,Food Services,316.95,82.82,20.22
-Burger,Food Services,117.3,10.47,6.27
-T-shirt,Retail,385.94,102.23,25.86
-Hammer,Home Improvement,316.31,48.98,38.94
-Smartphone,Electronics,290.9,42.78,29.88
-Coffee,Food Services,169.26,2.14,9.23
-Jeans,Retail,2.93,0.58,0.15
-Smartphone,Electronics,340.57,99.17,21.64
-Coffee,Food Services,227.4,23.16,12.3
-Nails,Home Improvement,397.6,38.52,34.32
-Jeans,Retail,128.49,20.12,7.48
-Nails,Home Improvement,105.59,16.62,6.12
-Coffee,Food Services,126.39,27.64,7.91
-Smartphone,Electronics,128.06,13.21,13.93
-Hammer,Home Improvement,153.6,25.43,6.53
-Laptop,Electronics,362.58,5.16,46.79
-Laptop,Electronics,230.8,8.18,12.94
-Nails,Home Improvement,413.31,19.07,54.57
-Coffee,Food Services,220.88,5.11,20.0
-Smartphone,Electronics,20.64,1.12,1.93
-Burger,Food Services,420.39,35.19,32.82
-Smartphone,Electronics,54.54,14.72,4.42
-Coffee,Food Services,355.82,82.99,27.67
-Laptop,Electronics,268.55,21.03,18.11
-Nails,Home Improvement,307.82,65.74,16.28
-Smartphone,Electronics,125.14,10.68,14.15
-Hammer,Home Improvement,371.22,57.39,42.65
-Nails,Home Improvement,192.96,15.77,26.07
-Jeans,Retail,115.55,24.84,9.49
-T-shirt,Retail,111.56,27.84,6.2
-T-shirt,Retail,337.65,23.66,35.43
-T-shirt,Retail,291.45,12.0,14.41
-Jeans,Retail,184.13,35.07,19.56
-Smartphone,Electronics,78.47,4.16,11.08
-Burger,Food Services,382.76,89.73,37.36
-Coffee,Food Services,118.42,4.69,8.34
-Smartphone,Electronics,177.38,31.45,16.48
-Nails,Home Improvement,308.39,2.41,33.54
-Laptop,Electronics,228.35,0.87,16.38
-Burger,Food Services,330.76,49.09,40.94
-Laptop,Electronics,273.47,57.78,12.48
-Burger,Food Services,302.55,63.85,31.55
-T-shirt,Retail,192.66,3.42,10.19
-Coffee,Food Services,172.24,22.8,18.32
-Coffee,Food Services,130.79,26.35,8.41
-Jeans,Retail,287.22,5.01,31.9
-Jeans,Retail,11.97,2.25,0.51
-Hammer,Home Improvement,7.21,2.05,0.43
-Hammer,Home Improvement,173.12,34.48,8.82
-Coffee,Food Services,225.03,9.59,17.49
-Jeans,Retail,364.3,85.82,25.3
-Hammer,Home Improvement,205.23,16.24,19.49
-Laptop,Electronics,379.78,64.34,19.64
-Smartphone,Electronics,86.49,12.99,8.25
-Burger,Food Services,40.74,2.9,5.03
-Burger,Food Services,124.15,0.82,16.11
-Burger,Food Services,371.66,93.47,29.53
-Nails,Home Improvement,214.16,55.55,9.57
-Laptop,Electronics,355.34,65.55,15.65
-Jeans,Retail,403.14,88.62,16.58
-Hammer,Home Improvement,248.68,26.74,26.0
-Laptop,Electronics,118.84,12.69,13.11
-Smartphone,Electronics,169.49,40.85,18.58
-Hammer,Home Improvement,156.07,42.16,11.97
-Hammer,Home Improvement,386.68,66.18,24.44
-Hammer,Home Improvement,228.5,49.45,16.18
-Laptop,Electronics,26.53,2.17,3.64
-T-shirt,Retail,340.68,59.48,35.88
-T-shirt,Retail,497.48,113.74,48.45
-Jeans,Retail,193.65,48.47,10.9
-Nails,Home Improvement,283.45,28.01,37.51
-Coffee,Food Services,293.49,63.4,27.18
-Jeans,Retail,82.11,21.38,3.97
-Hammer,Home Improvement,292.88,4.5,18.92
-Jeans,Retail,182.23,34.21,12.18
-Smartphone,Electronics,300.75,89.09,10.6
-Burger,Food Services,284.73,37.75,20.78
-Hammer,Home Improvement,474.36,68.37,58.73
-T-shirt,Retail,373.89,21.05,37.01
-Smartphone,Electronics,140.07,34.88,10.83
-Nails,Home Improvement,329.77,15.57,19.17
-Smartphone,Electronics,377.62,30.11,27.28
-Smartphone,Electronics,389.49,95.79,22.92
-T-shirt,Retail,269.4,44.82,33.46
-Coffee,Food Services,353.08,45.73,19.72
-Hammer,Home Improvement,375.28,17.49,41.54
-Smartphone,Electronics,181.11,51.59,13.75
-Smartphone,Electronics,318.7,76.34,30.54
-Hammer,Home Improvement,181.75,53.52,8.44
-Coffee,Food Services,315.82,59.48,25.56
-Coffee,Food Services,286.21,20.79,18.19
-Smartphone,Electronics,39.88,5.36,4.29
-Laptop,Electronics,432.02,115.99,41.41
-Nails,Home Improvement,479.04,23.64,64.83
-Smartphone,Electronics,317.74,89.64,17.17
-Jeans,Retail,305.23,8.3,15.74
-Hammer,Home Improvement,381.5,23.21,32.17
-Smartphone,Electronics,387.95,72.82,28.02
-Hammer,Home Improvement,291.76,31.04,27.87
-T-shirt,Retail,164.73,1.2,15.92
-Burger,Food Services,21.75,3.69,1.53
-Hammer,Home Improvement,35.62,7.66,3.28
-Laptop,Electronics,22.52,6.27,2.19
-Hammer,Home Improvement,158.09,42.93,17.09
-T-shirt,Retail,203.8,8.69,12.63
-T-shirt,Retail,256.23,12.52,33.94
-Laptop,Electronics,352.95,75.84,33.91
-Hammer,Home Improvement,411.92,85.41,39.09
-Smartphone,Electronics,474.89,49.11,46.23
-Nails,Home Improvement,41.28,2.16,2.99
-T-shirt,Retail,164.64,35.0,16.62
-Laptop,Electronics,499.27,23.25,66.65
-Burger,Food Services,20.26,3.56,1.91
-Hammer,Home Improvement,448.09,42.49,58.68
-Coffee,Food Services,324.55,44.45,20.69
-Laptop,Electronics,261.61,55.69,29.09
-Burger,Food Services,238.77,39.82,20.76
-Jeans,Retail,2.23,0.52,0.1
-Jeans,Retail,285.57,28.77,22.55
-Jeans,Retail,493.64,127.58,22.65
-Jeans,Retail,462.83,25.35,27.35
-Jeans,Retail,443.08,25.7,38.14
-Hammer,Home Improvement,349.72,83.59,37.57
-Burger,Food Services,179.58,45.0,7.77
-Hammer,Home Improvement,220.91,40.04,20.26
-T-shirt,Retail,336.49,56.81,36.46
-Smartphone,Electronics,91.15,12.41,6.02
-Smartphone,Electronics,32.98,0.95,1.69
-Hammer,Home Improvement,89.37,16.52,8.4
-Hammer,Home Improvement,162.08,38.45,15.4
-Laptop,Electronics,238.79,61.46,18.36
-Smartphone,Electronics,395.57,101.87,22.39
-Nails,Home Improvement,418.46,10.05,35.06
-Nails,Home Improvement,236.22,2.34,32.95
-T-shirt,Retail,479.96,0.1,40.2
-Burger,Food Services,81.12,18.97,4.1
-Coffee,Food Services,471.63,132.17,28.12
-Hammer,Home Improvement,241.98,64.46,20.92
-Hammer,Home Improvement,113.99,21.74,7.64
-Coffee,Food Services,176.69,8.67,15.47
-Jeans,Retail,438.38,18.15,44.75
-Hammer,Home Improvement,81.91,14.34,8.02
-Burger,Food Services,499.94,2.93,65.81
-Hammer,Home Improvement,20.05,4.67,0.94
-Burger,Food Services,389.38,78.68,27.34
-Hammer,Home Improvement,209.95,35.78,20.66
-Coffee,Food Services,461.35,50.38,29.45
-Smartphone,Electronics,37.45,4.58,3.81
-Nails,Home Improvement,216.34,28.3,18.26
-Coffee,Food Services,458.25,33.0,41.72
-Nails,Home Improvement,417.96,125.13,40.56
-Jeans,Retail,271.63,49.22,28.46
-Coffee,Food Services,138.86,25.45,15.51
-Smartphone,Electronics,482.1,15.43,64.29
-Hammer,Home Improvement,72.96,8.59,8.16
-Smartphone,Electronics,217.05,6.83,20.2
-Laptop,Electronics,81.53,8.33,6.67
-T-shirt,Retail,381.15,12.87,31.98
-Burger,Food Services,314.67,72.32,27.39
-Hammer,Home Improvement,98.65,28.33,4.76
-Jeans,Retail,148.73,28.31,9.53
-Smartphone,Electronics,18.42,2.27,1.41
-Coffee,Food Services,174.09,6.9,18.61
-Burger,Food Services,16.58,2.87,1.32
-Nails,Home Improvement,389.12,63.61,34.31
-Burger,Food Services,77.33,3.82,3.89
-Burger,Food Services,409.67,43.87,50.55
-T-shirt,Retail,358.51,36.05,19.94
-Smartphone,Electronics,386.94,30.39,23.47
-Jeans,Retail,267.03,11.58,22.38
-T-shirt,Retail,118.03,32.39,7.52
-Smartphone,Electronics,474.41,72.8,58.82
-Smartphone,Electronics,406.66,83.38,21.14
-Hammer,Home Improvement,292.16,55.57,35.04
-Nails,Home Improvement,348.73,67.73,19.81
-Nails,Home Improvement,134.07,29.44,7.0
-Nails,Home Improvement,396.88,1.25,55.09
-Laptop,Electronics,159.86,32.42,11.08
-T-shirt,Retail,333.6,81.27,18.39
-Burger,Food Services,281.26,69.8,12.22
-Burger,Food Services,13.86,2.67,0.75
-Smartphone,Electronics,304.52,19.01,34.49
-Smartphone,Electronics,132.8,23.4,15.53
-Burger,Food Services,442.7,75.03,52.07
-Nails,Home Improvement,322.38,39.19,20.76
-Laptop,Electronics,20.51,3.81,1.28
-Laptop,Electronics,275.85,32.61,18.62
-Coffee,Food Services,270.96,12.97,34.88
-Burger,Food Services,229.0,66.12,15.93
-Smartphone,Electronics,278.51,22.19,18.7
-Nails,Home Improvement,149.05,16.07,7.9
-Hammer,Home Improvement,411.68,16.9,41.8
-Hammer,Home Improvement,17.5,2.12,1.85
-Laptop,Electronics,357.34,11.48,33.65
-Jeans,Retail,437.48,45.02,23.45
-Hammer,Home Improvement,121.6,18.16,15.35
-T-shirt,Retail,113.08,16.81,13.93
-Jeans,Retail,46.74,4.27,3.92
-Jeans,Retail,481.82,124.42,23.07
-T-shirt,Retail,468.01,104.23,35.69
-Jeans,Retail,142.17,26.12,15.45
-Nails,Home Improvement,201.2,30.2,16.6
-Jeans,Retail,316.45,34.06,21.95
-Smartphone,Electronics,383.89,82.27,23.62
-Nails,Home Improvement,240.38,21.01,20.75
-Jeans,Retail,466.51,104.03,51.82
-Jeans,Retail,250.15,8.25,21.38
-Smartphone,Electronics,232.94,32.27,28.81
-Coffee,Food Services,338.14,50.95,28.34
-Jeans,Retail,259.44,0.13,25.2
-Smartphone,Electronics,445.6,30.4,60.93
-Hammer,Home Improvement,288.12,3.5,16.89
-Coffee,Food Services,362.99,19.45,23.39
-Jeans,Retail,15.1,4.32,0.55
-Hammer,Home Improvement,65.7,16.19,5.48
-Coffee,Food Services,41.7,5.83,4.83
-Smartphone,Electronics,34.32,1.82,2.39
-Smartphone,Electronics,191.58,46.4,13.59
-Smartphone,Electronics,488.06,6.03,70.11
-Hammer,Home Improvement,291.82,61.62,30.55
-Laptop,Electronics,320.73,57.34,15.59
-Nails,Home Improvement,357.71,29.28,39.16
-Burger,Food Services,190.08,32.68,18.26
-Coffee,Food Services,211.16,31.7,19.02
-Laptop,Electronics,63.15,16.92,4.48
-Laptop,Electronics,274.34,10.61,19.9
-Nails,Home Improvement,282.93,28.48,33.64
-Coffee,Food Services,227.45,23.95,25.95
-Smartphone,Electronics,12.93,2.81,0.51
-Smartphone,Electronics,479.33,111.48,26.63
-Coffee,Food Services,127.36,18.15,7.95
-T-shirt,Retail,180.63,26.35,22.09
-Burger,Food Services,484.47,75.92,24.0
-T-shirt,Retail,466.45,88.29,23.55
-Hammer,Home Improvement,78.4,0.86,10.62
-Burger,Food Services,383.11,53.86,38.78
-Smartphone,Electronics,248.55,12.49,12.92
-Jeans,Retail,443.95,90.84,36.05
-Jeans,Retail,92.42,25.59,8.1
-Smartphone,Electronics,76.92,15.89,6.06
-Coffee,Food Services,299.43,2.96,29.28
-Jeans,Retail,278.35,16.4,14.24
-Burger,Food Services,122.18,32.04,10.01
-Nails,Home Improvement,431.11,97.94,30.84
-T-shirt,Retail,442.82,44.92,47.17
-Burger,Food Services,186.95,47.29,17.0
-Smartphone,Electronics,220.01,43.78,23.72
-Laptop,Electronics,34.59,2.28,1.98
-Burger,Food Services,476.97,56.39,40.54
-Coffee,Food Services,446.17,94.26,18.34
-Coffee,Food Services,44.7,5.53,4.19
-Smartphone,Electronics,270.88,51.47,32.05
-Burger,Food Services,265.89,72.3,15.65
-Nails,Home Improvement,40.06,11.66,2.82
-Hammer,Home Improvement,102.77,19.02,7.2
-Nails,Home Improvement,372.77,85.81,21.21
-Hammer,Home Improvement,294.36,84.63,18.19
-Laptop,Electronics,129.94,23.14,8.31
-Coffee,Food Services,191.98,42.96,21.27
-Coffee,Food Services,412.25,32.64,22.36
-Burger,Food Services,158.45,27.77,12.87
-Laptop,Electronics,217.91,25.2,26.44
-Nails,Home Improvement,217.69,43.39,25.49
-Burger,Food Services,442.69,15.79,39.69
-Hammer,Home Improvement,315.03,24.97,17.85
-T-shirt,Retail,187.5,45.17,9.81
-Hammer,Home Improvement,170.03,28.17,9.38
-Laptop,Electronics,409.93,78.36,25.13
-Burger,Food Services,172.68,51.55,13.49
-Smartphone,Electronics,477.7,108.61,27.74
-Nails,Home Improvement,260.83,67.39,21.01
-Laptop,Electronics,18.29,4.61,0.99
-Nails,Home Improvement,279.34,59.28,32.91
-Coffee,Food Services,200.12,36.55,20.37
-Jeans,Retail,79.82,17.26,8.72
-Coffee,Food Services,108.82,27.04,12.13
-T-shirt,Retail,280.99,65.43,10.79
-Jeans,Retail,154.87,32.82,17.7
-Hammer,Home Improvement,43.2,0.18,5.61
-Burger,Food Services,356.22,104.63,25.48
-Jeans,Retail,432.67,11.54,42.23
-Smartphone,Electronics,62.23,11.08,4.93
-Jeans,Retail,87.89,6.36,7.64
-T-shirt,Retail,16.64,4.17,1.42
-T-shirt,Retail,39.01,11.42,2.24
-T-shirt,Retail,25.17,5.35,2.67
-Burger,Food Services,130.53,2.2,11.4
-T-shirt,Retail,291.63,22.18,21.9
-Laptop,Electronics,444.8,94.51,32.35
-Burger,Food Services,260.84,18.08,31.75
-Smartphone,Electronics,16.27,0.4,0.95
-Burger,Food Services,452.17,130.27,16.58
-Jeans,Retail,263.22,9.84,18.92
-T-shirt,Retail,135.01,17.48,14.07
-Hammer,Home Improvement,82.95,22.07,6.24
-Coffee,Food Services,125.36,8.32,9.37
-Burger,Food Services,93.95,27.7,6.92
-Burger,Food Services,117.08,28.82,8.1
-Burger,Food Services,122.43,20.57,14.07
-Burger,Food Services,372.75,58.6,40.02
-Hammer,Home Improvement,361.25,85.61,37.14
-Hammer,Home Improvement,206.61,23.62,16.25
-Smartphone,Electronics,267.08,39.52,14.26
-Nails,Home Improvement,266.87,71.98,27.16
-Hammer,Home Improvement,480.82,141.91,42.22
-Laptop,Electronics,337.38,99.66,35.02
-Smartphone,Electronics,129.87,2.99,16.01
-Coffee,Food Services,370.64,95.4,34.72
-Hammer,Home Improvement,256.13,5.15,23.75
-Laptop,Electronics,355.36,95.63,30.17
-T-shirt,Retail,7.73,0.34,0.86
-Jeans,Retail,415.02,37.02,43.15
-T-shirt,Retail,67.68,9.73,7.15
-Coffee,Food Services,304.67,31.02,21.93
-Burger,Food Services,238.25,21.15,28.41
-Jeans,Retail,175.15,33.52,12.47
-Smartphone,Electronics,348.07,52.37,34.73
-Coffee,Food Services,95.22,6.18,9.03
-Burger,Food Services,404.06,62.72,47.79
-Laptop,Electronics,458.62,35.63,33.91
-Hammer,Home Improvement,394.94,23.02,28.15
-Nails,Home Improvement,10.12,1.81,1.13
-Hammer,Home Improvement,412.91,26.83,53.89
-Burger,Food Services,453.7,90.01,40.35
-T-shirt,Retail,5.5,1.63,0.2
-Burger,Food Services,415.8,38.72,49.85
-Smartphone,Electronics,411.78,91.21,43.54
-Nails,Home Improvement,291.46,68.38,26.76
-Burger,Food Services,8.12,1.3,0.58
-Coffee,Food Services,435.43,50.16,31.56
-Burger,Food Services,248.66,11.28,25.91
-Smartphone,Electronics,293.81,82.91,28.71
-Hammer,Home Improvement,28.02,7.54,1.09
-Burger,Food Services,251.73,31.67,18.3
-Coffee,Food Services,357.5,36.37,20.49
-T-shirt,Retail,243.54,35.16,29.44
-T-shirt,Retail,448.01,10.47,57.06
-Burger,Food Services,449.12,69.04,40.25
-Smartphone,Electronics,304.4,38.47,17.53
-Smartphone,Electronics,383.38,78.93,39.97
-Nails,Home Improvement,292.68,9.78,19.41
-Laptop,Electronics,147.81,32.32,13.68
-Smartphone,Electronics,131.85,31.06,11.44
-Nails,Home Improvement,5.03,0.92,0.61
-Burger,Food Services,444.29,54.39,50.06
-Laptop,Electronics,443.08,41.64,52.98
-Nails,Home Improvement,351.75,67.95,35.46
-Coffee,Food Services,25.3,3.13,3.15
-Hammer,Home Improvement,24.54,5.76,1.19
-T-shirt,Retail,203.94,54.58,21.74
-Hammer,Home Improvement,371.61,49.69,33.56
-Burger,Food Services,322.48,56.94,17.75
-Nails,Home Improvement,288.7,24.93,19.85
-Smartphone,Electronics,342.64,88.91,34.56
-Nails,Home Improvement,438.23,84.07,23.18
-Burger,Food Services,416.49,63.39,50.79
-Nails,Home Improvement,476.68,0.92,62.83
-Burger,Food Services,165.8,37.36,7.53
-Coffee,Food Services,127.68,12.71,11.33
-Nails,Home Improvement,41.35,5.44,4.58
-Laptop,Electronics,276.09,42.96,32.79
-Burger,Food Services,322.5,80.18,24.51
-Burger,Food Services,439.77,18.89,22.49
-Nails,Home Improvement,332.46,52.3,29.85
-Jeans,Retail,469.22,122.38,33.88
-Jeans,Retail,372.22,101.03,26.22
-Jeans,Retail,116.92,17.61,12.17
-Jeans,Retail,171.79,26.4,10.9
-Nails,Home Improvement,238.17,26.29,26.84
-Coffee,Food Services,273.33,42.53,14.12
-Hammer,Home Improvement,285.38,3.4,24.41
-Jeans,Retail,135.36,19.62,16.37
-Smartphone,Electronics,1.65,0.32,0.1
-Laptop,Electronics,371.68,98.92,32.28
-Burger,Food Services,461.09,105.3,34.88
-Burger,Food Services,416.72,86.93,39.08
-Laptop,Electronics,107.3,0.88,10.16
-Burger,Food Services,306.17,28.96,22.95
-Smartphone,Electronics,284.37,73.82,23.76
-Smartphone,Electronics,196.33,21.71,13.89
-Coffee,Food Services,128.2,9.3,12.93
-Jeans,Retail,471.21,33.67,36.65
-Burger,Food Services,161.7,6.98,19.49
-Burger,Food Services,268.72,57.28,13.0
-Laptop,Electronics,240.43,49.9,20.96
-Coffee,Food Services,355.25,9.46,34.47
-Coffee,Food Services,147.58,12.11,9.51
-Smartphone,Electronics,158.35,0.99,10.89
-Coffee,Food Services,302.35,14.84,30.4
-Nails,Home Improvement,126.18,10.89,11.37
-Jeans,Retail,424.4,94.56,39.58
-Smartphone,Electronics,28.17,7.73,2.85
-Jeans,Retail,491.61,112.52,42.27
-Laptop,Electronics,155.13,41.84,15.33
-Laptop,Electronics,188.11,53.39,7.94
-Nails,Home Improvement,497.76,118.03,22.45
-Hammer,Home Improvement,427.4,74.69,29.31
-Nails,Home Improvement,450.66,31.76,22.67
-Nails,Home Improvement,411.97,90.24,19.03
-Smartphone,Electronics,355.18,82.28,29.36
-Coffee,Food Services,139.58,6.65,9.09
-Coffee,Food Services,69.32,18.22,3.87
-T-shirt,Retail,73.49,13.59,4.22
-Burger,Food Services,449.21,89.46,53.03
-Burger,Food Services,100.24,17.71,7.03
-Laptop,Electronics,339.37,76.9,32.58
-Nails,Home Improvement,449.32,94.28,48.01
-T-shirt,Retail,396.1,87.52,15.55
-Burger,Food Services,412.13,91.53,37.68
-Smartphone,Electronics,64.45,9.38,2.98
-Jeans,Retail,474.84,95.42,36.3
-Laptop,Electronics,116.49,22.69,11.57
-Coffee,Food Services,51.09,7.51,3.72
-T-shirt,Retail,109.72,18.18,5.18
-Smartphone,Electronics,57.78,10.23,5.48
-Burger,Food Services,358.14,98.62,24.94
-Smartphone,Electronics,131.54,28.95,7.13
-Burger,Food Services,369.79,29.41,50.18
-Smartphone,Electronics,256.42,26.49,31.33
-Smartphone,Electronics,275.24,63.76,25.64
-Burger,Food Services,328.38,30.09,28.15
-Smartphone,Electronics,105.86,6.46,14.81
-Nails,Home Improvement,268.12,9.78,30.32
-Burger,Food Services,17.11,1.2,0.95
-Smartphone,Electronics,203.84,54.27,15.67
-Coffee,Food Services,110.03,3.0,15.25
-Nails,Home Improvement,257.09,46.57,22.11
-Smartphone,Electronics,300.78,78.03,31.47
-Laptop,Electronics,320.38,57.94,13.88
-Jeans,Retail,490.16,115.93,44.98
-Hammer,Home Improvement,487.39,64.41,43.06
-Coffee,Food Services,413.01,17.76,37.7
-Nails,Home Improvement,302.53,75.87,17.91
-Jeans,Retail,369.27,103.81,37.09
-T-shirt,Retail,438.77,11.67,26.67
-Laptop,Electronics,185.91,34.66,8.9
-Burger,Food Services,205.27,54.16,20.5
-Laptop,Electronics,142.17,22.06,13.61
-Burger,Food Services,58.76,5.67,6.28
-Nails,Home Improvement,180.39,43.9,9.44
-T-shirt,Retail,261.2,33.21,27.94
-Smartphone,Electronics,197.99,8.48,10.94
-Burger,Food Services,263.83,65.7,19.6
-Burger,Food Services,293.12,77.05,20.08
-Coffee,Food Services,59.27,2.81,5.32
-Smartphone,Electronics,468.52,117.93,28.01
-Laptop,Electronics,286.88,58.74,26.18
-Nails,Home Improvement,51.4,3.79,2.58
-Nails,Home Improvement,233.36,18.21,23.36
-Smartphone,Electronics,82.07,15.4,7.86
-Burger,Food Services,477.37,93.11,43.35
-Hammer,Home Improvement,114.01,24.18,10.55
-Burger,Food Services,432.22,125.97,41.29
-Burger,Food Services,34.89,2.92,2.46
-Laptop,Electronics,289.02,22.37,24.53
-Hammer,Home Improvement,354.42,15.03,50.2
-Hammer,Home Improvement,174.17,13.27,14.61
-Hammer,Home Improvement,491.93,96.36,28.18
-Nails,Home Improvement,296.68,12.82,38.96
-Coffee,Food Services,227.04,66.35,8.21
-T-shirt,Retail,210.99,32.87,26.35
-Jeans,Retail,358.15,70.46,42.82
-Coffee,Food Services,149.82,20.01,14.74
-Coffee,Food Services,400.62,31.47,47.07
-Nails,Home Improvement,184.59,24.92,14.15
-Laptop,Electronics,26.93,6.28,1.62
-Smartphone,Electronics,234.64,59.34,21.8
-Coffee,Food Services,81.0,0.18,4.91
-Smartphone,Electronics,354.27,21.03,45.99
-T-shirt,Retail,258.18,10.28,24.73
-Burger,Food Services,347.3,21.65,24.81
-Nails,Home Improvement,329.12,43.06,23.53
-Coffee,Food Services,165.88,38.78,7.98
-Nails,Home Improvement,125.73,28.71,13.7
-Laptop,Electronics,87.71,22.05,6.09
-Smartphone,Electronics,205.66,36.04,25.21
-Laptop,Electronics,66.38,0.31,8.61
-Smartphone,Electronics,327.64,23.34,34.6
-Nails,Home Improvement,211.51,42.85,13.43
-Burger,Food Services,151.38,23.93,13.48
-Jeans,Retail,1.07,0.05,0.06
-Jeans,Retail,226.72,13.49,18.65
-Laptop,Electronics,131.5,6.75,11.85
-Hammer,Home Improvement,52.52,1.69,6.23
-T-shirt,Retail,272.84,41.01,18.58
-Nails,Home Improvement,52.08,9.63,5.27
-Coffee,Food Services,460.6,15.37,29.59
-Burger,Food Services,83.69,6.47,10.27
-Burger,Food Services,220.49,55.02,8.72
-Smartphone,Electronics,9.15,0.34,0.71
-Smartphone,Electronics,105.12,22.81,6.0
-Jeans,Retail,94.1,18.06,3.87
-Smartphone,Electronics,485.27,87.71,31.14
-Jeans,Retail,236.98,60.64,21.82
-T-shirt,Retail,172.95,40.23,9.11
-Coffee,Food Services,450.14,43.69,21.27
-Laptop,Electronics,311.33,87.94,17.57
-Coffee,Food Services,11.49,0.35,1.37
-Burger,Food Services,99.67,11.62,10.57
-Jeans,Retail,276.31,2.73,25.0
-Laptop,Electronics,396.24,104.26,25.34
-Coffee,Food Services,283.98,5.8,41.51
-Nails,Home Improvement,359.83,74.86,41.06
-Smartphone,Electronics,307.11,19.15,26.72
-Laptop,Electronics,359.0,36.91,45.56
-Coffee,Food Services,308.71,77.03,31.67
-Smartphone,Electronics,224.99,34.68,14.91
-Hammer,Home Improvement,43.95,5.0,3.55
-Coffee,Food Services,142.31,41.49,10.62
-Smartphone,Electronics,317.97,64.23,16.59
-Smartphone,Electronics,459.05,54.38,57.44
-T-shirt,Retail,235.37,26.1,19.23
-Burger,Food Services,173.98,22.15,22.15
-T-shirt,Retail,33.85,2.3,2.62
-Smartphone,Electronics,12.99,1.32,0.8
-Laptop,Electronics,438.75,102.11,22.8
-Hammer,Home Improvement,115.19,34.2,4.13
-Smartphone,Electronics,337.91,18.2,28.67
-T-shirt,Retail,479.0,5.44,46.35
-Nails,Home Improvement,330.82,47.0,35.0
-T-shirt,Retail,151.6,1.47,19.81
-Jeans,Retail,380.29,7.74,47.14
-T-shirt,Retail,110.66,30.98,9.03
-Coffee,Food Services,189.43,3.87,10.03
-Nails,Home Improvement,185.05,16.35,9.41
-Hammer,Home Improvement,312.74,14.62,32.61
-Burger,Food Services,235.4,5.74,14.68
-Burger,Food Services,398.0,9.17,21.98
-Nails,Home Improvement,101.68,3.05,9.74
-Nails,Home Improvement,58.45,12.58,4.34
-Burger,Food Services,270.39,11.21,22.61
-Smartphone,Electronics,256.21,6.21,25.16
-Hammer,Home Improvement,365.48,60.64,18.12
-Smartphone,Electronics,448.29,71.09,31.09
-Smartphone,Electronics,454.49,33.02,50.3
-Burger,Food Services,302.87,77.22,33.1
-T-shirt,Retail,471.25,71.45,20.83
-Hammer,Home Improvement,72.42,16.09,6.72
-Burger,Food Services,93.92,23.34,8.71
-Burger,Food Services,138.48,10.83,8.15
-Hammer,Home Improvement,86.92,17.12,9.17
-Jeans,Retail,100.85,19.15,8.18
-Laptop,Electronics,73.16,5.52,4.66
-Nails,Home Improvement,309.17,64.03,20.9
-Smartphone,Electronics,384.95,110.57,34.97
-Smartphone,Electronics,279.11,2.68,23.0
-Smartphone,Electronics,17.84,4.05,1.43
-Burger,Food Services,459.97,6.44,67.17
-Nails,Home Improvement,497.88,96.87,20.36
-T-shirt,Retail,114.14,33.85,11.5
-Burger,Food Services,127.44,35.43,12.17
-Nails,Home Improvement,86.31,5.16,8.66
-Nails,Home Improvement,204.6,49.93,18.23
-T-shirt,Retail,3.59,0.86,0.18
-Burger,Food Services,445.03,31.27,43.39
-Coffee,Food Services,457.5,4.33,47.27
-Coffee,Food Services,227.49,37.31,18.06
-Jeans,Retail,481.86,50.11,26.64
-Hammer,Home Improvement,209.98,11.72,27.15
-Coffee,Food Services,361.46,79.57,32.04
-Smartphone,Electronics,382.33,1.7,52.09
-Coffee,Food Services,307.71,45.63,32.96
-Burger,Food Services,77.77,10.01,10.16
-Coffee,Food Services,127.1,26.73,6.61
-Hammer,Home Improvement,151.1,44.81,7.28
-Burger,Food Services,125.9,15.03,11.33
-Smartphone,Electronics,160.9,35.16,12.45
-Nails,Home Improvement,126.15,11.93,8.59
-T-shirt,Retail,188.33,29.03,15.93
-Coffee,Food Services,211.52,46.39,20.83
-Hammer,Home Improvement,482.73,60.03,24.76
-T-shirt,Retail,356.52,2.72,35.13
-Smartphone,Electronics,474.19,49.74,41.25
-Laptop,Electronics,278.39,61.22,30.4
-Burger,Food Services,403.29,91.32,34.54
-Coffee,Food Services,154.62,3.09,9.05
-Laptop,Electronics,314.81,92.84,22.13
-Laptop,Electronics,430.2,126.76,30.0
-T-shirt,Retail,246.13,52.39,23.7
-Coffee,Food Services,387.85,41.98,34.96
-Smartphone,Electronics,406.76,79.34,35.86
-T-shirt,Retail,447.21,67.61,24.5
-Jeans,Retail,98.09,0.79,9.45
-Hammer,Home Improvement,70.5,9.87,3.85
-T-shirt,Retail,41.39,4.43,2.33
-Laptop,Electronics,456.51,5.86,27.19
-Nails,Home Improvement,312.5,10.32,34.97
-Jeans,Retail,91.07,0.19,11.4
-Smartphone,Electronics,202.9,13.02,17.43
-T-shirt,Retail,471.88,61.15,40.78
-Smartphone,Electronics,73.57,17.87,7.03
-Coffee,Food Services,134.55,32.67,9.83
-Jeans,Retail,146.39,35.59,9.35
-Burger,Food Services,231.12,8.84,18.67
-Coffee,Food Services,249.11,7.24,26.27
-Laptop,Electronics,364.86,19.07,40.14
-Burger,Food Services,136.88,14.63,14.83
-Nails,Home Improvement,57.11,5.52,4.27
-Jeans,Retail,428.13,110.98,21.86
-T-shirt,Retail,320.07,16.3,32.13
-Laptop,Electronics,479.33,11.41,47.9
-T-shirt,Retail,448.35,14.23,38.15
-Nails,Home Improvement,196.14,28.52,10.74
-Burger,Food Services,29.79,1.01,3.26
-Smartphone,Electronics,304.15,8.57,17.2
-Nails,Home Improvement,109.24,24.5,6.8
-Smartphone,Electronics,451.15,71.88,45.61
-Jeans,Retail,313.71,60.87,22.85
-Burger,Food Services,458.13,113.39,20.19
-Jeans,Retail,338.19,46.25,40.9
-Nails,Home Improvement,166.67,21.22,18.74
-T-shirt,Retail,229.87,3.88,19.19
-Laptop,Electronics,113.86,7.9,6.63
-Laptop,Electronics,217.67,23.56,14.07
-Jeans,Retail,67.86,4.82,6.6
-Laptop,Electronics,430.32,76.13,40.29
-Laptop,Electronics,450.8,133.34,43.74
-T-shirt,Retail,10.09,2.07,1.14
-T-shirt,Retail,98.66,16.23,10.99
-T-shirt,Retail,220.42,7.25,20.36
-Smartphone,Electronics,435.2,41.45,51.03
-Coffee,Food Services,499.25,148.55,22.61
-Hammer,Home Improvement,487.68,70.49,26.69
-Nails,Home Improvement,281.43,1.58,17.86
-Nails,Home Improvement,28.43,7.74,2.42
-Nails,Home Improvement,337.94,76.89,32.16
-Jeans,Retail,477.76,141.39,48.82
-Jeans,Retail,448.09,28.2,51.21
-Coffee,Food Services,284.91,75.72,25.9
-Smartphone,Electronics,77.58,4.68,7.87
-Burger,Food Services,465.66,124.56,27.85
-T-shirt,Retail,441.63,102.95,32.26
-Smartphone,Electronics,246.09,59.72,18.94
-T-shirt,Retail,222.39,35.64,16.83
-Jeans,Retail,464.98,138.37,41.01
-Hammer,Home Improvement,107.81,29.41,7.58
-T-shirt,Retail,202.18,44.84,20.89
-Burger,Food Services,459.78,24.67,30.04
-Burger,Food Services,312.64,86.78,13.05
-T-shirt,Retail,251.8,38.24,23.22
-Burger,Food Services,331.02,12.06,45.83
-Smartphone,Electronics,484.34,16.89,67.26
-Hammer,Home Improvement,351.8,104.97,31.83
-Nails,Home Improvement,441.64,78.34,23.51
-Coffee,Food Services,323.4,35.53,17.15
-Laptop,Electronics,63.68,10.96,5.39
-Coffee,Food Services,381.98,65.33,34.93
-Nails,Home Improvement,71.03,17.9,3.16
-Coffee,Food Services,470.28,18.38,64.38
-T-shirt,Retail,138.54,28.11,7.39
-Jeans,Retail,273.57,61.93,18.97
-Hammer,Home Improvement,95.12,12.42,6.19
-Jeans,Retail,463.16,81.87,31.58
-Laptop,Electronics,304.4,27.12,24.5
-Hammer,Home Improvement,173.09,8.78,9.69
-T-shirt,Retail,471.97,0.88,61.79
-Burger,Food Services,428.35,94.4,50.09
-Jeans,Retail,340.38,46.38,40.28
-Nails,Home Improvement,395.84,97.28,23.04
-T-shirt,Retail,15.54,4.0,1.51
-Laptop,Electronics,405.72,16.05,51.38
-Jeans,Retail,149.62,6.98,18.55
-Hammer,Home Improvement,304.9,83.0,20.28
-Hammer,Home Improvement,150.06,8.03,15.31
-Burger,Food Services,40.05,10.39,3.0
-Laptop,Electronics,435.06,120.55,35.9
-Burger,Food Services,453.76,111.81,28.71
-Jeans,Retail,491.5,24.85,27.18
-Coffee,Food Services,57.07,8.19,6.86
-Coffee,Food Services,14.83,3.81,0.91
-Jeans,Retail,295.37,39.25,26.1
-Hammer,Home Improvement,156.45,20.92,19.14
-Coffee,Food Services,438.16,96.86,33.23
-Smartphone,Electronics,495.45,118.91,49.39
-Coffee,Food Services,477.3,80.58,31.49
-Burger,Food Services,89.35,19.21,4.91
-Nails,Home Improvement,176.9,20.06,12.58
-T-shirt,Retail,355.66,66.46,19.31
-Smartphone,Electronics,14.82,4.23,1.4
-Burger,Food Services,463.38,57.23,23.43
-Coffee,Food Services,268.31,17.38,31.18
-Nails,Home Improvement,386.6,94.0,19.3
-Hammer,Home Improvement,437.14,57.43,28.86
-Hammer,Home Improvement,247.31,1.25,13.5
-Coffee,Food Services,86.5,19.58,4.68
-T-shirt,Retail,287.87,85.67,11.88
-Jeans,Retail,423.1,102.52,16.06
-Jeans,Retail,328.13,88.04,31.02
-T-shirt,Retail,7.08,0.88,0.35
-T-shirt,Retail,413.49,42.92,22.25
-Burger,Food Services,176.7,38.34,18.5
-Smartphone,Electronics,5.23,0.37,0.45
-Laptop,Electronics,147.66,0.19,17.55
-Laptop,Electronics,269.43,52.37,11.15
-Hammer,Home Improvement,399.0,15.25,33.91
-Burger,Food Services,367.27,71.72,17.96
-Hammer,Home Improvement,197.86,48.46,10.03
-Smartphone,Electronics,14.12,1.35,1.17
-Coffee,Food Services,461.65,112.4,38.27
-Hammer,Home Improvement,208.18,32.03,19.91
-Coffee,Food Services,169.81,37.08,14.17
-Coffee,Food Services,18.8,0.67,2.28
-Jeans,Retail,366.72,87.39,19.01
-Smartphone,Electronics,138.58,39.3,12.88
-Nails,Home Improvement,378.63,110.72,36.37
-Laptop,Electronics,81.99,9.35,5.24
-Smartphone,Electronics,65.24,12.37,7.32
-Jeans,Retail,459.57,88.7,38.01
-Coffee,Food Services,256.99,37.49,23.53
-Nails,Home Improvement,270.61,12.44,17.17
-Hammer,Home Improvement,160.25,6.31,22.53
-Burger,Food Services,273.7,21.05,31.97
-Jeans,Retail,69.72,10.77,7.16
-T-shirt,Retail,389.98,100.79,36.85
-Coffee,Food Services,295.08,17.1,32.42
-T-shirt,Retail,246.55,61.48,10.33
-T-shirt,Retail,348.86,37.59,21.63
-Jeans,Retail,117.07,34.39,5.78
-Smartphone,Electronics,61.72,18.22,5.07
-Jeans,Retail,451.93,3.64,46.33
-Hammer,Home Improvement,267.79,55.02,16.04
-Coffee,Food Services,256.08,56.58,27.91
-Nails,Home Improvement,250.56,31.74,23.04
-Burger,Food Services,74.55,2.73,8.85
-T-shirt,Retail,87.81,23.7,4.79
-Coffee,Food Services,39.77,9.55,2.59
-T-shirt,Retail,465.54,129.66,50.25
-Burger,Food Services,232.33,43.73,18.99
-Nails,Home Improvement,467.04,64.58,51.03
-Jeans,Retail,410.94,38.41,23.88
-Hammer,Home Improvement,205.93,49.42,15.08
-Burger,Food Services,35.0,1.19,3.02
-T-shirt,Retail,313.26,39.97,30.8
-T-shirt,Retail,490.23,133.76,38.0
-Smartphone,Electronics,493.11,61.01,37.5
-Coffee,Food Services,82.36,16.1,9.61
-Burger,Food Services,148.68,21.65,9.48
-Burger,Food Services,465.77,83.68,26.25
-Jeans,Retail,91.51,18.07,3.83
-Burger,Food Services,52.32,4.94,6.59
-Nails,Home Improvement,367.63,98.38,39.58
-Nails,Home Improvement,368.37,52.77,35.2
-Laptop,Electronics,143.94,38.06,6.25
-Hammer,Home Improvement,317.31,38.46,28.23
-Jeans,Retail,110.66,19.53,7.66
-Nails,Home Improvement,401.88,54.27,21.81
-Nails,Home Improvement,220.19,46.82,25.8
-Jeans,Retail,127.86,0.69,15.67
-Coffee,Food Services,408.0,89.44,47.06
-Smartphone,Electronics,101.47,11.99,10.1
-T-shirt,Retail,200.85,36.32,17.19
-Nails,Home Improvement,157.81,20.55,8.14
-Burger,Food Services,26.32,7.22,1.51
-Coffee,Food Services,377.16,40.9,50.31
-Nails,Home Improvement,382.19,76.56,24.98
-T-shirt,Retail,11.35,1.57,1.11
-Smartphone,Electronics,107.69,23.43,8.03
-Burger,Food Services,432.77,21.64,61.32
-Hammer,Home Improvement,46.82,10.78,4.21
-Coffee,Food Services,248.7,23.29,29.1
-Jeans,Retail,492.72,113.74,37.79
-Hammer,Home Improvement,122.65,27.27,13.95
-Nails,Home Improvement,71.07,0.89,7.44
-Smartphone,Electronics,227.13,30.66,10.1
-Jeans,Retail,351.93,22.25,36.61
-T-shirt,Retail,336.73,60.09,34.79
-Laptop,Electronics,285.75,21.21,23.61
-T-shirt,Retail,369.23,90.96,29.87
-T-shirt,Retail,481.5,74.21,38.78
-Nails,Home Improvement,458.16,112.19,28.46
-Nails,Home Improvement,358.39,93.11,32.98
-Nails,Home Improvement,420.71,125.69,24.46
-Nails,Home Improvement,279.06,47.79,27.01
-Hammer,Home Improvement,10.02,2.25,0.47
-Hammer,Home Improvement,250.32,17.76,31.56
-T-shirt,Retail,392.37,31.09,52.2
-Smartphone,Electronics,302.1,82.26,17.74
-Hammer,Home Improvement,379.53,65.61,34.64
-T-shirt,Retail,54.26,11.29,2.81
-Laptop,Electronics,131.87,13.79,13.28
-Coffee,Food Services,355.1,58.72,28.28
-T-shirt,Retail,238.4,5.94,27.59
-Burger,Food Services,276.84,64.41,18.27
-Jeans,Retail,180.63,20.8,13.45
-T-shirt,Retail,441.79,5.87,43.78
-Jeans,Retail,462.46,105.14,40.26
-Nails,Home Improvement,492.69,51.59,22.93
-Laptop,Electronics,415.7,21.67,55.12
-T-shirt,Retail,347.61,51.22,28.02
-Coffee,Food Services,174.44,12.21,22.29
-Hammer,Home Improvement,190.64,45.3,16.66
-Hammer,Home Improvement,162.89,33.14,12.45
-T-shirt,Retail,106.89,5.65,6.1
-Smartphone,Electronics,281.42,22.32,16.51
-Hammer,Home Improvement,129.56,20.39,13.91
-T-shirt,Retail,401.21,40.14,39.15
-T-shirt,Retail,167.86,2.38,16.88
-Laptop,Electronics,262.14,1.4,34.36
-Jeans,Retail,22.28,6.49,1.11
-Nails,Home Improvement,281.15,2.54,34.36
-Jeans,Retail,75.7,16.25,6.37
-Laptop,Electronics,217.32,29.12,12.65
-Jeans,Retail,476.87,42.28,58.58
-Jeans,Retail,313.5,21.54,14.76
-Nails,Home Improvement,68.74,20.08,4.04
-Burger,Food Services,10.67,2.54,1.17
-Burger,Food Services,40.19,1.82,2.63
-Smartphone,Electronics,10.35,0.89,1.21
-Hammer,Home Improvement,119.39,32.93,7.5
-Jeans,Retail,171.83,50.84,14.23
-Jeans,Retail,183.26,22.51,13.84
-T-shirt,Retail,400.11,25.54,38.37
-Burger,Food Services,469.56,71.22,56.72
-Jeans,Retail,291.36,48.91,27.17
-Burger,Food Services,179.48,25.2,14.6
-Smartphone,Electronics,209.88,6.13,13.24
-Burger,Food Services,168.74,39.01,11.34
-Jeans,Retail,134.77,26.78,14.25
-Smartphone,Electronics,483.44,28.97,49.18
-Smartphone,Electronics,329.78,58.04,20.22
-Hammer,Home Improvement,183.42,1.7,16.52
-Nails,Home Improvement,420.7,125.7,23.29
-Coffee,Food Services,216.01,56.44,17.77
-Smartphone,Electronics,307.63,44.76,37.95
-Smartphone,Electronics,491.39,137.01,19.88
-Burger,Food Services,84.51,21.05,3.95
+Item Name,Item Category,Unit Price ($),Discount ($),Tax ($),Time
+Smartphone,Electronics,379.22,47.85,25.15,2021-08-21 10:59:09
+Laptop,Electronics,203.06,47.75,12.48,2021-10-15 08:02:42
+Laptop,Electronics,179.67,48.06,9.46,2020-03-03 21:22:01
+Burger,Food Services,141.64,32.12,12.25,2021-02-06 05:06:57
+T-shirt,Retail,493.64,78.87,49.99,2022-03-05 05:42:11
+Burger,Food Services,155.76,34.1,17.02,2022-01-24 20:41:51
+Jeans,Retail,236.6,7.15,21.43,2021-09-21 01:02:19
+Coffee,Food Services,483.34,69.17,56.55,2021-04-16 04:19:04
+T-shirt,Retail,32.08,8.84,3.29,2022-01-10 08:49:20
+Nails,Home Improvement,360.13,43.09,42.0,2021-07-10 05:02:53
+Hammer,Home Improvement,306.34,76.1,19.18,2022-06-25 06:03:31
+Jeans,Retail,352.12,6.65,48.95,2020-12-05 08:08:06
+Coffee,Food Services,120.07,34.85,11.11,2022-02-23 00:05:23
+Laptop,Electronics,46.52,13.86,4.49,2020-08-04 08:30:00
+Laptop,Electronics,55.42,9.17,5.58,2021-03-13 19:40:35
+Jeans,Retail,407.42,66.04,49.97,2020-08-05 02:06:01
+T-shirt,Retail,223.05,39.9,16.21,2020-05-27 07:32:49
+Coffee,Food Services,145.87,8.29,9.45,2022-08-18 14:28:01
+T-shirt,Retail,238.79,6.43,29.22,2021-01-24 03:33:11
+Burger,Food Services,461.77,116.71,48.25,2022-04-07 07:24:40
+Smartphone,Electronics,419.09,65.95,36.08,2022-07-24 00:32:08
+Coffee,Food Services,424.89,114.09,33.87,2020-08-16 07:07:05
+Smartphone,Electronics,290.27,39.24,29.13,2021-04-26 19:08:22
+Jeans,Retail,42.1,7.74,3.39,2020-06-02 10:09:51
+Jeans,Retail,422.69,30.82,48.26,2020-04-24 13:19:01
+Nails,Home Improvement,352.96,39.4,21.02,2022-11-28 12:46:09
+Smartphone,Electronics,408.14,12.32,25.58,2021-05-27 22:38:40
+Coffee,Food Services,23.57,4.06,2.75,2022-01-03 10:45:22
+Nails,Home Improvement,14.32,2.73,1.28,2022-05-19 15:22:00
+Nails,Home Improvement,196.21,21.79,25.82,2020-06-05 10:24:47
+Hammer,Home Improvement,303.15,17.7,41.98,2021-07-03 14:17:48
+Nails,Home Improvement,240.14,52.39,10.53,2021-11-05 11:05:57
+Hammer,Home Improvement,272.57,50.75,29.63,2021-05-06 04:40:02
+Nails,Home Improvement,111.19,21.58,7.62,2022-08-06 23:31:01
+Burger,Food Services,31.46,4.41,2.97,2022-09-21 20:42:53
+Smartphone,Electronics,100.48,10.81,11.04,2020-11-13 15:28:58
+Burger,Food Services,349.15,21.31,41.55,2022-05-08 07:34:32
+Burger,Food Services,422.87,43.43,28.48,2022-01-11 00:12:48
+Laptop,Electronics,333.14,1.32,39.2,2021-11-18 16:48:16
+T-shirt,Retail,324.82,37.87,33.22,2022-03-20 21:28:20
+Burger,Food Services,280.74,1.05,34.73,2021-02-08 15:51:26
+Jeans,Retail,369.77,60.38,19.64,2020-04-06 17:57:04
+Laptop,Electronics,176.76,15.27,13.88,2022-05-02 08:59:33
+Burger,Food Services,358.09,41.68,28.93,2020-01-22 19:30:45
+Nails,Home Improvement,1.76,0.1,0.14,2020-05-24 21:25:37
+Coffee,Food Services,112.33,15.1,11.77,2021-09-11 13:13:09
+Smartphone,Electronics,16.74,4.38,1.32,2022-11-03 22:33:24
+Hammer,Home Improvement,83.67,1.6,9.86,2022-08-29 07:35:59
+Laptop,Electronics,264.26,38.63,23.95,2020-01-02 18:36:26
+Hammer,Home Improvement,442.05,65.59,30.57,2022-08-08 13:10:36
+Laptop,Electronics,25.88,6.39,2.87,2022-02-05 17:54:59
+Smartphone,Electronics,94.81,28.43,7.52,2021-06-01 12:10:41
+Nails,Home Improvement,418.89,16.4,20.72,2021-01-13 21:39:23
+Smartphone,Electronics,158.77,10.17,18.09,2021-05-20 04:29:50
+Hammer,Home Improvement,490.14,99.37,43.46,2022-12-29 01:41:43
+Coffee,Food Services,60.33,11.75,6.67,2020-04-07 20:13:26
+T-shirt,Retail,344.58,18.84,31.78,2020-10-23 19:29:50
+Smartphone,Electronics,314.19,2.06,44.13,2022-05-31 14:20:02
+Nails,Home Improvement,430.82,17.24,42.22,2020-12-10 09:43:13
+Jeans,Retail,58.44,2.71,7.53,2021-01-05 16:14:47
+Hammer,Home Improvement,21.29,4.35,1.79,2020-08-09 08:34:33
+Jeans,Retail,469.28,128.09,18.49,2022-04-23 12:07:58
+Laptop,Electronics,356.47,96.54,29.64,2021-11-26 21:30:58
+Jeans,Retail,435.83,23.31,36.12,2020-05-21 16:46:38
+T-shirt,Retail,5.44,0.25,0.43,2020-05-04 23:14:14
+Jeans,Retail,359.53,36.48,36.2,2021-05-12 04:30:01
+Hammer,Home Improvement,135.54,6.08,14.03,2022-02-28 01:23:58
+Jeans,Retail,198.0,32.58,13.12,2022-01-30 01:56:00
+Laptop,Electronics,365.53,102.39,21.26,2020-06-18 09:58:16
+Nails,Home Improvement,152.03,38.11,9.1,2021-04-13 06:45:03
+Nails,Home Improvement,50.6,13.79,3.59,2022-05-06 08:43:57
+Jeans,Retail,63.04,2.19,6.07,2021-03-28 04:38:48
+Hammer,Home Improvement,151.65,33.43,16.48,2020-07-12 21:16:50
+Burger,Food Services,313.74,35.35,41.05,2022-04-30 10:04:35
+Nails,Home Improvement,33.85,0.86,4.12,2021-05-31 21:50:17
+Hammer,Home Improvement,193.02,5.68,19.79,2022-04-19 07:13:58
+T-shirt,Retail,224.82,32.96,20.81,2020-11-11 15:54:50
+Coffee,Food Services,212.1,23.44,28.08,2022-07-26 00:23:24
+T-shirt,Retail,293.03,14.64,19.26,2022-04-30 02:13:01
+Nails,Home Improvement,32.87,8.52,2.93,2022-07-01 19:57:07
+Laptop,Electronics,376.47,22.78,35.27,2021-03-22 20:38:24
+T-shirt,Retail,104.41,1.32,14.93,2021-11-22 06:23:36
+Coffee,Food Services,312.08,9.8,28.97,2020-05-22 08:17:31
+Jeans,Retail,273.65,12.42,38.89,2022-07-15 07:11:07
+Laptop,Electronics,75.05,9.14,7.78,2021-08-20 22:09:17
+Laptop,Electronics,339.98,90.55,33.26,2021-05-07 12:21:47
+Laptop,Electronics,317.9,83.42,24.45,2022-06-13 05:49:31
+Coffee,Food Services,5.84,1.24,0.57,2021-01-11 02:24:32
+Jeans,Retail,409.24,4.35,26.25,2021-03-27 00:16:06
+T-shirt,Retail,301.69,14.11,25.28,2020-10-12 15:07:22
+T-shirt,Retail,359.35,87.0,15.42,2020-10-21 05:01:13
+Nails,Home Improvement,258.75,71.07,10.63,2020-10-17 01:46:53
+Burger,Food Services,21.28,0.1,2.85,2020-02-21 05:18:02
+Jeans,Retail,431.09,103.55,44.83,2022-08-09 21:50:23
+Laptop,Electronics,484.33,73.38,57.58,2022-10-17 02:02:11
+Hammer,Home Improvement,287.36,58.5,29.87,2021-02-07 23:35:53
+Nails,Home Improvement,373.74,101.56,19.22,2022-01-10 06:21:47
+Smartphone,Electronics,413.02,59.75,45.61,2020-04-17 07:41:05
+Smartphone,Electronics,304.11,21.31,38.6,2020-05-19 12:53:41
+Hammer,Home Improvement,328.84,0.02,22.42,2022-11-20 08:39:47
+T-shirt,Retail,167.01,24.73,10.84,2020-07-21 07:07:09
+T-shirt,Retail,386.47,44.54,30.22,2020-08-20 07:38:25
+Burger,Food Services,320.85,12.26,24.29,2020-03-01 00:39:43
+Jeans,Retail,28.71,0.31,2.61,2020-05-04 15:52:26
+Laptop,Electronics,445.09,80.38,21.21,2022-12-22 08:38:37
+Burger,Food Services,405.33,42.9,19.4,2022-04-19 19:01:33
+Laptop,Electronics,193.95,2.74,18.56,2022-11-27 18:40:00
+Burger,Food Services,11.09,1.99,0.58,2021-08-30 20:34:26
+Jeans,Retail,53.54,8.82,3.79,2022-03-25 21:32:02
+Smartphone,Electronics,391.93,91.41,18.36,2021-03-04 04:23:05
+Hammer,Home Improvement,305.45,42.81,29.74,2022-03-21 13:44:41
+Jeans,Retail,325.59,94.7,28.02,2020-12-31 20:08:27
+T-shirt,Retail,394.49,15.04,53.57,2020-11-30 07:17:08
+T-shirt,Retail,458.53,120.03,39.98,2022-11-21 12:38:24
+Nails,Home Improvement,259.98,61.26,13.69,2022-07-05 05:22:54
+Smartphone,Electronics,222.85,50.58,16.46,2021-10-13 13:13:54
+Nails,Home Improvement,478.29,129.41,18.84,2022-06-19 12:35:47
+T-shirt,Retail,450.63,127.72,37.67,2021-03-03 12:36:10
+Coffee,Food Services,115.6,26.92,12.28,2021-11-30 22:12:36
+Smartphone,Electronics,254.05,72.06,11.75,2022-02-04 07:31:26
+Smartphone,Electronics,461.52,129.56,30.4,2022-10-22 15:43:54
+Nails,Home Improvement,208.17,9.75,28.86,2022-09-23 01:33:00
+Laptop,Electronics,216.11,27.04,18.84,2022-12-23 18:17:58
+Jeans,Retail,361.55,8.52,20.13,2021-07-09 03:37:40
+Jeans,Retail,346.2,35.88,21.04,2020-05-07 23:05:15
+Coffee,Food Services,409.68,8.67,55.88,2021-05-18 19:42:23
+Coffee,Food Services,2.61,0.52,0.26,2022-08-09 22:12:36
+Nails,Home Improvement,374.24,32.93,40.6,2020-06-28 04:33:00
+Coffee,Food Services,429.73,24.11,24.84,2022-01-25 15:57:15
+Jeans,Retail,354.03,27.43,17.24,2022-06-30 23:43:52
+Coffee,Food Services,181.76,25.81,12.36,2022-09-05 21:35:44
+Jeans,Retail,92.84,27.66,3.93,2021-06-04 19:47:21
+T-shirt,Retail,79.05,21.29,8.35,2020-10-22 17:50:16
+Coffee,Food Services,158.63,11.56,18.46,2021-01-12 13:01:29
+T-shirt,Retail,186.86,37.18,20.37,2020-01-26 04:18:58
+Hammer,Home Improvement,197.51,41.61,9.85,2021-02-25 01:01:39
+T-shirt,Retail,275.84,61.31,13.78,2020-06-30 23:04:58
+Smartphone,Electronics,149.72,15.93,10.01,2020-12-08 11:21:52
+Jeans,Retail,318.89,50.63,23.51,2021-07-31 23:24:33
+Hammer,Home Improvement,209.2,45.7,13.42,2020-09-21 20:01:16
+Coffee,Food Services,186.43,53.26,7.87,2021-05-31 13:50:46
+Burger,Food Services,398.46,33.11,38.66,2021-10-23 23:19:12
+Burger,Food Services,398.03,53.28,30.99,2020-04-06 14:42:10
+Smartphone,Electronics,216.43,16.1,19.1,2020-06-05 06:55:12
+Burger,Food Services,178.33,33.79,8.48,2020-08-15 08:38:23
+Coffee,Food Services,148.07,36.88,10.55,2022-12-19 19:02:48
+Laptop,Electronics,4.88,0.44,0.56,2020-12-05 20:28:10
+T-shirt,Retail,273.06,12.8,31.4,2020-03-11 06:26:53
+Laptop,Electronics,47.18,7.04,5.86,2022-06-10 11:16:35
+Smartphone,Electronics,140.76,41.55,6.16,2022-09-12 04:55:43
+Hammer,Home Improvement,1.13,0.14,0.14,2022-04-09 20:20:37
+Smartphone,Electronics,222.85,49.91,14.77,2022-07-24 10:32:34
+Coffee,Food Services,298.11,3.17,38.11,2022-11-23 06:12:07
+T-shirt,Retail,267.29,9.48,35.05,2020-04-24 22:48:15
+Burger,Food Services,34.98,9.03,2.03,2020-02-11 11:19:43
+Burger,Food Services,287.42,54.08,24.07,2020-07-12 07:35:53
+Smartphone,Electronics,477.87,77.93,49.65,2022-09-13 10:30:45
+T-shirt,Retail,146.83,16.38,14.73,2020-10-19 20:33:29
+Burger,Food Services,62.53,2.26,5.43,2022-07-30 21:56:04
+Laptop,Electronics,70.63,14.16,4.82,2022-06-13 17:04:56
+Laptop,Electronics,371.43,24.29,34.33,2020-07-04 22:34:14
+Jeans,Retail,246.87,70.98,16.6,2021-08-30 17:20:38
+Burger,Food Services,372.86,5.86,41.15,2020-05-22 04:33:17
+Hammer,Home Improvement,178.35,20.92,23.5,2021-07-28 23:49:01
+Nails,Home Improvement,343.76,8.39,48.61,2020-06-29 06:30:49
+Smartphone,Electronics,4.21,0.05,0.47,2020-02-26 12:47:36
+T-shirt,Retail,436.7,91.67,42.34,2022-07-29 14:49:54
+Coffee,Food Services,71.2,12.24,4.08,2020-02-03 14:40:03
+Smartphone,Electronics,230.99,22.88,13.91,2020-10-29 06:52:35
+Smartphone,Electronics,324.35,66.89,16.68,2020-10-14 08:15:13
+Burger,Food Services,262.56,10.18,35.6,2020-07-11 11:08:47
+Laptop,Electronics,175.23,51.7,11.45,2022-01-14 11:07:32
+Laptop,Electronics,195.38,12.9,12.7,2020-11-23 02:51:40
+Coffee,Food Services,293.68,4.39,25.7,2020-04-04 21:24:35
+Coffee,Food Services,316.95,82.82,20.22,2022-11-21 07:53:57
+Burger,Food Services,117.3,10.47,6.27,2020-02-05 09:23:45
+T-shirt,Retail,385.94,102.23,25.86,2022-04-25 10:34:00
+Hammer,Home Improvement,316.31,48.98,38.94,2021-10-23 04:13:12
+Smartphone,Electronics,290.9,42.78,29.88,2022-08-22 01:38:38
+Coffee,Food Services,169.26,2.14,9.23,2020-06-06 16:12:08
+Jeans,Retail,2.93,0.58,0.15,2021-02-07 18:30:57
+Smartphone,Electronics,340.57,99.17,21.64,2020-04-18 17:56:58
+Coffee,Food Services,227.4,23.16,12.3,2020-12-09 01:06:43
+Nails,Home Improvement,397.6,38.52,34.32,2020-04-21 19:17:56
+Jeans,Retail,128.49,20.12,7.48,2022-10-01 23:08:20
+Nails,Home Improvement,105.59,16.62,6.12,2021-04-12 16:23:15
+Coffee,Food Services,126.39,27.64,7.91,2021-06-28 03:54:20
+Smartphone,Electronics,128.06,13.21,13.93,2021-11-08 09:49:03
+Hammer,Home Improvement,153.6,25.43,6.53,2020-10-07 02:44:19
+Laptop,Electronics,362.58,5.16,46.79,2020-04-04 19:49:37
+Laptop,Electronics,230.8,8.18,12.94,2022-02-21 08:55:47
+Nails,Home Improvement,413.31,19.07,54.57,2021-12-26 15:54:52
+Coffee,Food Services,220.88,5.11,20.0,2020-03-02 04:08:40
+Smartphone,Electronics,20.64,1.12,1.93,2022-07-15 14:34:11
+Burger,Food Services,420.39,35.19,32.82,2020-06-05 18:36:59
+Smartphone,Electronics,54.54,14.72,4.42,2022-12-22 08:39:20
+Coffee,Food Services,355.82,82.99,27.67,2021-08-30 19:50:02
+Laptop,Electronics,268.55,21.03,18.11,2020-11-05 16:31:21
+Nails,Home Improvement,307.82,65.74,16.28,2021-02-08 02:28:14
+Smartphone,Electronics,125.14,10.68,14.15,2021-07-10 23:54:37
+Hammer,Home Improvement,371.22,57.39,42.65,2021-12-31 10:55:44
+Nails,Home Improvement,192.96,15.77,26.07,2022-06-04 02:30:39
+Jeans,Retail,115.55,24.84,9.49,2020-09-20 04:36:25
+T-shirt,Retail,111.56,27.84,6.2,2022-12-19 20:01:55
+T-shirt,Retail,337.65,23.66,35.43,2022-11-10 21:51:28
+T-shirt,Retail,291.45,12.0,14.41,2020-11-11 23:50:56
+Jeans,Retail,184.13,35.07,19.56,2020-03-31 04:17:45
+Smartphone,Electronics,78.47,4.16,11.08,2022-11-16 10:37:47
+Burger,Food Services,382.76,89.73,37.36,2020-09-02 18:26:42
+Coffee,Food Services,118.42,4.69,8.34,2020-09-08 14:05:07
+Smartphone,Electronics,177.38,31.45,16.48,2021-06-15 18:20:11
+Nails,Home Improvement,308.39,2.41,33.54,2022-04-02 12:13:47
+Laptop,Electronics,228.35,0.87,16.38,2021-01-24 10:18:05
+Burger,Food Services,330.76,49.09,40.94,2020-07-01 02:00:41
+Laptop,Electronics,273.47,57.78,12.48,2022-07-16 01:59:44
+Burger,Food Services,302.55,63.85,31.55,2021-11-18 02:39:44
+T-shirt,Retail,192.66,3.42,10.19,2022-10-30 23:35:01
+Coffee,Food Services,172.24,22.8,18.32,2020-09-28 13:44:34
+Coffee,Food Services,130.79,26.35,8.41,2020-01-21 12:16:18
+Jeans,Retail,287.22,5.01,31.9,2022-01-02 15:28:11
+Jeans,Retail,11.97,2.25,0.51,2022-11-24 07:59:04
+Hammer,Home Improvement,7.21,2.05,0.43,2021-09-28 18:22:50
+Hammer,Home Improvement,173.12,34.48,8.82,2022-06-03 02:03:38
+Coffee,Food Services,225.03,9.59,17.49,2022-03-01 01:59:13
+Jeans,Retail,364.3,85.82,25.3,2021-04-28 19:32:54
+Hammer,Home Improvement,205.23,16.24,19.49,2022-10-05 01:59:38
+Laptop,Electronics,379.78,64.34,19.64,2021-07-08 19:34:47
+Smartphone,Electronics,86.49,12.99,8.25,2021-08-26 17:37:58
+Burger,Food Services,40.74,2.9,5.03,2022-10-18 13:42:32
+Burger,Food Services,124.15,0.82,16.11,2021-01-24 19:26:52
+Burger,Food Services,371.66,93.47,29.53,2020-08-26 07:38:33
+Nails,Home Improvement,214.16,55.55,9.57,2022-05-20 20:41:27
+Laptop,Electronics,355.34,65.55,15.65,2022-12-09 03:44:21
+Jeans,Retail,403.14,88.62,16.58,2020-01-20 07:39:34
+Hammer,Home Improvement,248.68,26.74,26.0,2021-12-12 09:46:12
+Laptop,Electronics,118.84,12.69,13.11,2020-05-02 20:05:04
+Smartphone,Electronics,169.49,40.85,18.58,2021-06-05 19:52:36
+Hammer,Home Improvement,156.07,42.16,11.97,2020-03-11 23:41:19
+Hammer,Home Improvement,386.68,66.18,24.44,2022-04-25 13:42:06
+Hammer,Home Improvement,228.5,49.45,16.18,2021-03-12 08:05:00
+Laptop,Electronics,26.53,2.17,3.64,2020-07-28 11:06:37
+T-shirt,Retail,340.68,59.48,35.88,2021-01-08 00:42:37
+T-shirt,Retail,497.48,113.74,48.45,2022-01-18 11:48:56
+Jeans,Retail,193.65,48.47,10.9,2021-07-01 03:55:14
+Nails,Home Improvement,283.45,28.01,37.51,2022-08-05 19:30:21
+Coffee,Food Services,293.49,63.4,27.18,2021-03-23 04:51:59
+Jeans,Retail,82.11,21.38,3.97,2022-11-12 02:18:02
+Hammer,Home Improvement,292.88,4.5,18.92,2021-07-11 23:59:28
+Jeans,Retail,182.23,34.21,12.18,2022-07-05 23:08:49
+Smartphone,Electronics,300.75,89.09,10.6,2022-09-11 11:49:56
+Burger,Food Services,284.73,37.75,20.78,2022-08-22 19:25:23
+Hammer,Home Improvement,474.36,68.37,58.73,2020-07-24 14:09:08
+T-shirt,Retail,373.89,21.05,37.01,2021-04-27 00:43:56
+Smartphone,Electronics,140.07,34.88,10.83,2021-08-25 18:19:51
+Nails,Home Improvement,329.77,15.57,19.17,2021-10-05 18:37:20
+Smartphone,Electronics,377.62,30.11,27.28,2022-10-08 00:48:28
+Smartphone,Electronics,389.49,95.79,22.92,2020-05-05 09:34:32
+T-shirt,Retail,269.4,44.82,33.46,2020-01-03 08:49:37
+Coffee,Food Services,353.08,45.73,19.72,2022-07-12 15:26:04
+Hammer,Home Improvement,375.28,17.49,41.54,2020-10-25 17:49:09
+Smartphone,Electronics,181.11,51.59,13.75,2022-12-21 05:03:01
+Smartphone,Electronics,318.7,76.34,30.54,2021-06-03 11:23:55
+Hammer,Home Improvement,181.75,53.52,8.44,2020-09-05 16:12:24
+Coffee,Food Services,315.82,59.48,25.56,2021-01-06 22:04:26
+Coffee,Food Services,286.21,20.79,18.19,2020-12-12 13:41:22
+Smartphone,Electronics,39.88,5.36,4.29,2022-09-17 03:58:19
+Laptop,Electronics,432.02,115.99,41.41,2021-11-27 03:41:45
+Nails,Home Improvement,479.04,23.64,64.83,2021-08-11 05:01:23
+Smartphone,Electronics,317.74,89.64,17.17,2022-11-12 16:09:36
+Jeans,Retail,305.23,8.3,15.74,2022-06-01 14:13:12
+Hammer,Home Improvement,381.5,23.21,32.17,2021-10-05 18:11:25
+Smartphone,Electronics,387.95,72.82,28.02,2020-02-19 00:06:02
+Hammer,Home Improvement,291.76,31.04,27.87,2021-09-16 21:36:12
+T-shirt,Retail,164.73,1.2,15.92,2022-12-26 06:06:17
+Burger,Food Services,21.75,3.69,1.53,2022-05-31 12:54:08
+Hammer,Home Improvement,35.62,7.66,3.28,2021-10-11 16:36:57
+Laptop,Electronics,22.52,6.27,2.19,2022-10-25 16:27:07
+Hammer,Home Improvement,158.09,42.93,17.09,2020-03-13 16:04:23
+T-shirt,Retail,203.8,8.69,12.63,2020-09-14 08:48:38
+T-shirt,Retail,256.23,12.52,33.94,2021-11-22 19:55:59
+Laptop,Electronics,352.95,75.84,33.91,2020-04-09 05:51:15
+Hammer,Home Improvement,411.92,85.41,39.09,2021-02-06 16:40:48
+Smartphone,Electronics,474.89,49.11,46.23,2022-12-25 18:25:06
+Nails,Home Improvement,41.28,2.16,2.99,2020-09-01 22:58:53
+T-shirt,Retail,164.64,35.0,16.62,2021-11-24 09:40:57
+Laptop,Electronics,499.27,23.25,66.65,2022-03-30 13:21:06
+Burger,Food Services,20.26,3.56,1.91,2022-01-26 22:34:41
+Hammer,Home Improvement,448.09,42.49,58.68,2022-05-22 02:41:33
+Coffee,Food Services,324.55,44.45,20.69,2022-07-27 05:54:32
+Laptop,Electronics,261.61,55.69,29.09,2020-01-01 02:34:42
+Burger,Food Services,238.77,39.82,20.76,2020-03-01 10:40:36
+Jeans,Retail,2.23,0.52,0.1,2022-02-07 07:22:42
+Jeans,Retail,285.57,28.77,22.55,2021-05-21 08:04:10
+Jeans,Retail,493.64,127.58,22.65,2021-04-29 18:22:28
+Jeans,Retail,462.83,25.35,27.35,2021-12-26 07:00:15
+Jeans,Retail,443.08,25.7,38.14,2020-03-18 10:48:12
+Hammer,Home Improvement,349.72,83.59,37.57,2021-10-06 21:26:40
+Burger,Food Services,179.58,45.0,7.77,2020-10-19 01:11:46
+Hammer,Home Improvement,220.91,40.04,20.26,2022-05-02 03:52:33
+T-shirt,Retail,336.49,56.81,36.46,2022-09-10 11:15:34
+Smartphone,Electronics,91.15,12.41,6.02,2020-05-09 15:52:37
+Smartphone,Electronics,32.98,0.95,1.69,2020-07-21 18:12:12
+Hammer,Home Improvement,89.37,16.52,8.4,2020-01-23 21:08:51
+Hammer,Home Improvement,162.08,38.45,15.4,2021-09-16 04:49:00
+Laptop,Electronics,238.79,61.46,18.36,2022-11-20 00:52:22
+Smartphone,Electronics,395.57,101.87,22.39,2021-10-10 12:58:18
+Nails,Home Improvement,418.46,10.05,35.06,2021-05-06 03:56:17
+Nails,Home Improvement,236.22,2.34,32.95,2020-01-06 06:29:35
+T-shirt,Retail,479.96,0.1,40.2,2020-11-27 16:46:35
+Burger,Food Services,81.12,18.97,4.1,2020-01-23 04:49:07
+Coffee,Food Services,471.63,132.17,28.12,2020-01-04 15:53:46
+Hammer,Home Improvement,241.98,64.46,20.92,2022-11-15 18:13:46
+Hammer,Home Improvement,113.99,21.74,7.64,2022-03-31 18:09:56
+Coffee,Food Services,176.69,8.67,15.47,2022-08-08 19:19:26
+Jeans,Retail,438.38,18.15,44.75,2020-05-31 21:39:52
+Hammer,Home Improvement,81.91,14.34,8.02,2020-10-22 20:51:39
+Burger,Food Services,499.94,2.93,65.81,2020-07-03 17:03:30
+Hammer,Home Improvement,20.05,4.67,0.94,2022-08-03 01:17:28
+Burger,Food Services,389.38,78.68,27.34,2022-10-05 14:22:10
+Hammer,Home Improvement,209.95,35.78,20.66,2020-11-04 09:13:36
+Coffee,Food Services,461.35,50.38,29.45,2021-04-14 18:53:14
+Smartphone,Electronics,37.45,4.58,3.81,2021-03-10 22:30:47
+Nails,Home Improvement,216.34,28.3,18.26,2022-12-05 14:37:54
+Coffee,Food Services,458.25,33.0,41.72,2020-10-10 01:41:48
+Nails,Home Improvement,417.96,125.13,40.56,2020-06-04 15:00:24
+Jeans,Retail,271.63,49.22,28.46,2022-01-08 19:51:26
+Coffee,Food Services,138.86,25.45,15.51,2021-09-08 05:54:19
+Smartphone,Electronics,482.1,15.43,64.29,2022-09-02 00:04:54
+Hammer,Home Improvement,72.96,8.59,8.16,2020-05-06 08:46:37
+Smartphone,Electronics,217.05,6.83,20.2,2020-02-03 22:27:33
+Laptop,Electronics,81.53,8.33,6.67,2021-03-02 18:04:27
+T-shirt,Retail,381.15,12.87,31.98,2021-12-04 16:15:02
+Burger,Food Services,314.67,72.32,27.39,2020-06-28 20:34:07
+Hammer,Home Improvement,98.65,28.33,4.76,2021-02-02 10:35:40
+Jeans,Retail,148.73,28.31,9.53,2020-07-26 06:16:43
+Smartphone,Electronics,18.42,2.27,1.41,2022-10-12 06:44:36
+Coffee,Food Services,174.09,6.9,18.61,2022-03-20 03:16:27
+Burger,Food Services,16.58,2.87,1.32,2022-10-07 22:57:27
+Nails,Home Improvement,389.12,63.61,34.31,2022-09-28 21:07:51
+Burger,Food Services,77.33,3.82,3.89,2021-06-23 03:04:27
+Burger,Food Services,409.67,43.87,50.55,2020-06-27 19:35:14
+T-shirt,Retail,358.51,36.05,19.94,2020-08-27 21:56:44
+Smartphone,Electronics,386.94,30.39,23.47,2021-03-08 11:52:12
+Jeans,Retail,267.03,11.58,22.38,2020-01-29 20:30:04
+T-shirt,Retail,118.03,32.39,7.52,2020-03-06 16:58:08
+Smartphone,Electronics,474.41,72.8,58.82,2020-03-04 04:02:12
+Smartphone,Electronics,406.66,83.38,21.14,2020-11-15 14:23:03
+Hammer,Home Improvement,292.16,55.57,35.04,2022-11-23 21:23:59
+Nails,Home Improvement,348.73,67.73,19.81,2021-02-07 09:10:34
+Nails,Home Improvement,134.07,29.44,7.0,2022-05-17 09:00:38
+Nails,Home Improvement,396.88,1.25,55.09,2021-05-03 21:21:34
+Laptop,Electronics,159.86,32.42,11.08,2021-07-23 22:47:31
+T-shirt,Retail,333.6,81.27,18.39,2022-05-31 12:43:57
+Burger,Food Services,281.26,69.8,12.22,2020-03-06 06:02:32
+Burger,Food Services,13.86,2.67,0.75,2022-12-25 11:17:03
+Smartphone,Electronics,304.52,19.01,34.49,2022-08-01 20:50:21
+Smartphone,Electronics,132.8,23.4,15.53,2022-10-15 01:39:40
+Burger,Food Services,442.7,75.03,52.07,2022-02-07 03:45:43
+Nails,Home Improvement,322.38,39.19,20.76,2022-09-27 15:24:30
+Laptop,Electronics,20.51,3.81,1.28,2021-12-13 12:14:48
+Laptop,Electronics,275.85,32.61,18.62,2022-09-21 10:11:37
+Coffee,Food Services,270.96,12.97,34.88,2021-11-07 10:24:10
+Burger,Food Services,229.0,66.12,15.93,2021-08-01 13:54:53
+Smartphone,Electronics,278.51,22.19,18.7,2022-04-15 15:26:19
+Nails,Home Improvement,149.05,16.07,7.9,2020-10-03 23:04:13
+Hammer,Home Improvement,411.68,16.9,41.8,2020-11-18 20:59:23
+Hammer,Home Improvement,17.5,2.12,1.85,2021-08-06 10:35:49
+Laptop,Electronics,357.34,11.48,33.65,2022-07-01 01:37:31
+Jeans,Retail,437.48,45.02,23.45,2021-03-28 02:35:22
+Hammer,Home Improvement,121.6,18.16,15.35,2020-01-14 19:42:26
+T-shirt,Retail,113.08,16.81,13.93,2020-08-03 02:02:57
+Jeans,Retail,46.74,4.27,3.92,2020-08-22 14:33:07
+Jeans,Retail,481.82,124.42,23.07,2021-02-25 13:32:05
+T-shirt,Retail,468.01,104.23,35.69,2021-06-01 22:21:56
+Jeans,Retail,142.17,26.12,15.45,2021-06-08 07:19:28
+Nails,Home Improvement,201.2,30.2,16.6,2021-07-24 10:15:47
+Jeans,Retail,316.45,34.06,21.95,2020-05-25 13:40:09
+Smartphone,Electronics,383.89,82.27,23.62,2021-06-09 11:05:47
+Nails,Home Improvement,240.38,21.01,20.75,2022-08-21 23:20:15
+Jeans,Retail,466.51,104.03,51.82,2020-02-25 09:42:18
+Jeans,Retail,250.15,8.25,21.38,2020-03-05 00:09:26
+Smartphone,Electronics,232.94,32.27,28.81,2021-02-22 20:14:31
+Coffee,Food Services,338.14,50.95,28.34,2020-09-11 13:09:50
+Jeans,Retail,259.44,0.13,25.2,2020-08-20 02:38:00
+Smartphone,Electronics,445.6,30.4,60.93,2022-06-25 08:38:11
+Hammer,Home Improvement,288.12,3.5,16.89,2021-03-25 18:29:33
+Coffee,Food Services,362.99,19.45,23.39,2021-07-14 15:34:25
+Jeans,Retail,15.1,4.32,0.55,2021-09-05 06:54:42
+Hammer,Home Improvement,65.7,16.19,5.48,2022-05-02 00:58:36
+Coffee,Food Services,41.7,5.83,4.83,2020-07-20 09:21:52
+Smartphone,Electronics,34.32,1.82,2.39,2021-03-31 19:00:21
+Smartphone,Electronics,191.58,46.4,13.59,2020-06-27 11:38:55
+Smartphone,Electronics,488.06,6.03,70.11,2022-01-12 15:32:33
+Hammer,Home Improvement,291.82,61.62,30.55,2021-01-07 08:53:25
+Laptop,Electronics,320.73,57.34,15.59,2020-03-15 23:07:39
+Nails,Home Improvement,357.71,29.28,39.16,2021-04-23 06:35:22
+Burger,Food Services,190.08,32.68,18.26,2020-10-05 23:28:58
+Coffee,Food Services,211.16,31.7,19.02,2022-03-23 12:43:33
+Laptop,Electronics,63.15,16.92,4.48,2020-04-20 01:57:35
+Laptop,Electronics,274.34,10.61,19.9,2021-04-15 04:22:48
+Nails,Home Improvement,282.93,28.48,33.64,2021-09-18 07:14:06
+Coffee,Food Services,227.45,23.95,25.95,2021-05-25 08:08:23
+Smartphone,Electronics,12.93,2.81,0.51,2021-04-09 19:56:07
+Smartphone,Electronics,479.33,111.48,26.63,2021-10-06 05:56:32
+Coffee,Food Services,127.36,18.15,7.95,2020-06-17 18:49:06
+T-shirt,Retail,180.63,26.35,22.09,2020-06-03 09:54:47
+Burger,Food Services,484.47,75.92,24.0,2022-05-21 05:15:26
+T-shirt,Retail,466.45,88.29,23.55,2022-01-17 11:24:12
+Hammer,Home Improvement,78.4,0.86,10.62,2022-01-06 08:10:27
+Burger,Food Services,383.11,53.86,38.78,2021-06-07 15:16:24
+Smartphone,Electronics,248.55,12.49,12.92,2021-06-17 20:15:36
+Jeans,Retail,443.95,90.84,36.05,2020-07-12 03:09:52
+Jeans,Retail,92.42,25.59,8.1,2022-01-14 05:38:24
+Smartphone,Electronics,76.92,15.89,6.06,2020-06-29 05:05:38
+Coffee,Food Services,299.43,2.96,29.28,2022-12-22 18:48:10
+Jeans,Retail,278.35,16.4,14.24,2022-02-12 04:53:16
+Burger,Food Services,122.18,32.04,10.01,2021-10-24 14:23:22
+Nails,Home Improvement,431.11,97.94,30.84,2020-02-28 18:11:42
+T-shirt,Retail,442.82,44.92,47.17,2021-04-13 23:45:50
+Burger,Food Services,186.95,47.29,17.0,2021-06-04 12:45:32
+Smartphone,Electronics,220.01,43.78,23.72,2022-12-03 09:20:08
+Laptop,Electronics,34.59,2.28,1.98,2020-08-29 19:34:41
+Burger,Food Services,476.97,56.39,40.54,2020-09-15 17:39:51
+Coffee,Food Services,446.17,94.26,18.34,2022-08-31 14:38:13
+Coffee,Food Services,44.7,5.53,4.19,2022-05-26 21:36:54
+Smartphone,Electronics,270.88,51.47,32.05,2021-08-06 10:18:52
+Burger,Food Services,265.89,72.3,15.65,2022-09-19 11:07:03
+Nails,Home Improvement,40.06,11.66,2.82,2020-05-15 00:40:43
+Hammer,Home Improvement,102.77,19.02,7.2,2020-04-12 06:29:40
+Nails,Home Improvement,372.77,85.81,21.21,2020-05-11 12:42:37
+Hammer,Home Improvement,294.36,84.63,18.19,2020-11-03 15:28:36
+Laptop,Electronics,129.94,23.14,8.31,2020-12-09 09:39:59
+Coffee,Food Services,191.98,42.96,21.27,2020-04-05 00:04:00
+Coffee,Food Services,412.25,32.64,22.36,2021-08-20 18:49:39
+Burger,Food Services,158.45,27.77,12.87,2020-01-13 04:42:24
+Laptop,Electronics,217.91,25.2,26.44,2020-06-01 08:33:26
+Nails,Home Improvement,217.69,43.39,25.49,2021-09-03 18:13:28
+Burger,Food Services,442.69,15.79,39.69,2022-05-14 10:52:37
+Hammer,Home Improvement,315.03,24.97,17.85,2022-03-17 05:51:41
+T-shirt,Retail,187.5,45.17,9.81,2021-03-26 05:18:10
+Hammer,Home Improvement,170.03,28.17,9.38,2021-11-27 18:56:34
+Laptop,Electronics,409.93,78.36,25.13,2022-01-29 01:01:45
+Burger,Food Services,172.68,51.55,13.49,2022-06-27 14:13:52
+Smartphone,Electronics,477.7,108.61,27.74,2022-11-21 06:14:07
+Nails,Home Improvement,260.83,67.39,21.01,2020-12-03 11:47:57
+Laptop,Electronics,18.29,4.61,0.99,2021-10-19 04:00:09
+Nails,Home Improvement,279.34,59.28,32.91,2020-05-09 23:11:30
+Coffee,Food Services,200.12,36.55,20.37,2021-07-26 04:23:31
+Jeans,Retail,79.82,17.26,8.72,2020-12-07 23:20:03
+Coffee,Food Services,108.82,27.04,12.13,2021-02-09 07:40:24
+T-shirt,Retail,280.99,65.43,10.79,2022-06-28 02:52:50
+Jeans,Retail,154.87,32.82,17.7,2020-09-15 18:35:38
+Hammer,Home Improvement,43.2,0.18,5.61,2021-10-31 21:05:06
+Burger,Food Services,356.22,104.63,25.48,2020-10-25 04:13:43
+Jeans,Retail,432.67,11.54,42.23,2021-07-10 22:36:31
+Smartphone,Electronics,62.23,11.08,4.93,2020-06-27 15:58:23
+Jeans,Retail,87.89,6.36,7.64,2020-04-09 04:47:48
+T-shirt,Retail,16.64,4.17,1.42,2022-12-26 12:36:42
+T-shirt,Retail,39.01,11.42,2.24,2020-02-12 21:42:32
+T-shirt,Retail,25.17,5.35,2.67,2022-03-27 19:49:50
+Burger,Food Services,130.53,2.2,11.4,2021-12-02 13:18:28
+T-shirt,Retail,291.63,22.18,21.9,2022-11-17 13:26:34
+Laptop,Electronics,444.8,94.51,32.35,2020-11-09 07:28:14
+Burger,Food Services,260.84,18.08,31.75,2020-07-03 17:17:48
+Smartphone,Electronics,16.27,0.4,0.95,2022-02-11 04:45:51
+Burger,Food Services,452.17,130.27,16.58,2021-09-10 04:47:08
+Jeans,Retail,263.22,9.84,18.92,2021-02-02 10:15:19
+T-shirt,Retail,135.01,17.48,14.07,2020-11-17 22:10:04
+Hammer,Home Improvement,82.95,22.07,6.24,2022-09-22 18:06:37
+Coffee,Food Services,125.36,8.32,9.37,2020-03-06 09:39:17
+Burger,Food Services,93.95,27.7,6.92,2020-12-01 09:07:31
+Burger,Food Services,117.08,28.82,8.1,2022-08-26 10:35:56
+Burger,Food Services,122.43,20.57,14.07,2020-08-15 08:29:27
+Burger,Food Services,372.75,58.6,40.02,2020-06-11 12:52:39
+Hammer,Home Improvement,361.25,85.61,37.14,2020-11-03 12:51:29
+Hammer,Home Improvement,206.61,23.62,16.25,2021-12-13 02:41:26
+Smartphone,Electronics,267.08,39.52,14.26,2021-08-10 06:03:11
+Nails,Home Improvement,266.87,71.98,27.16,2021-07-15 18:59:40
+Hammer,Home Improvement,480.82,141.91,42.22,2022-04-28 18:56:33
+Laptop,Electronics,337.38,99.66,35.02,2020-08-23 02:09:15
+Smartphone,Electronics,129.87,2.99,16.01,2020-06-11 17:13:27
+Coffee,Food Services,370.64,95.4,34.72,2022-07-15 05:27:21
+Hammer,Home Improvement,256.13,5.15,23.75,2022-01-27 22:16:58
+Laptop,Electronics,355.36,95.63,30.17,2020-08-18 12:49:41
+T-shirt,Retail,7.73,0.34,0.86,2022-05-25 23:52:09
+Jeans,Retail,415.02,37.02,43.15,2021-09-22 13:18:19
+T-shirt,Retail,67.68,9.73,7.15,2022-09-18 15:55:04
+Coffee,Food Services,304.67,31.02,21.93,2022-11-22 05:36:30
+Burger,Food Services,238.25,21.15,28.41,2021-10-19 11:29:20
+Jeans,Retail,175.15,33.52,12.47,2022-03-20 16:48:44
+Smartphone,Electronics,348.07,52.37,34.73,2022-02-08 14:04:17
+Coffee,Food Services,95.22,6.18,9.03,2022-11-21 06:49:27
+Burger,Food Services,404.06,62.72,47.79,2021-05-15 22:11:30
+Laptop,Electronics,458.62,35.63,33.91,2022-02-13 07:13:23
+Hammer,Home Improvement,394.94,23.02,28.15,2022-02-13 14:53:32
+Nails,Home Improvement,10.12,1.81,1.13,2022-09-13 12:55:53
+Hammer,Home Improvement,412.91,26.83,53.89,2022-11-06 21:57:04
+Burger,Food Services,453.7,90.01,40.35,2020-11-09 18:46:54
+T-shirt,Retail,5.5,1.63,0.2,2022-04-23 05:23:20
+Burger,Food Services,415.8,38.72,49.85,2022-08-05 05:53:45
+Smartphone,Electronics,411.78,91.21,43.54,2020-12-05 20:27:08
+Nails,Home Improvement,291.46,68.38,26.76,2020-01-16 01:48:57
+Burger,Food Services,8.12,1.3,0.58,2021-06-12 12:19:57
+Coffee,Food Services,435.43,50.16,31.56,2021-05-09 09:34:18
+Burger,Food Services,248.66,11.28,25.91,2021-05-14 22:30:05
+Smartphone,Electronics,293.81,82.91,28.71,2020-02-25 02:21:09
+Hammer,Home Improvement,28.02,7.54,1.09,2022-03-26 17:25:20
+Burger,Food Services,251.73,31.67,18.3,2020-08-18 11:31:05
+Coffee,Food Services,357.5,36.37,20.49,2021-02-03 01:15:06
+T-shirt,Retail,243.54,35.16,29.44,2022-07-25 02:03:39
+T-shirt,Retail,448.01,10.47,57.06,2020-08-30 04:34:23
+Burger,Food Services,449.12,69.04,40.25,2021-08-11 18:20:04
+Smartphone,Electronics,304.4,38.47,17.53,2022-06-24 13:53:00
+Smartphone,Electronics,383.38,78.93,39.97,2021-04-02 07:22:09
+Nails,Home Improvement,292.68,9.78,19.41,2021-12-31 18:57:11
+Laptop,Electronics,147.81,32.32,13.68,2020-04-13 02:02:51
+Smartphone,Electronics,131.85,31.06,11.44,2020-05-11 11:43:29
+Nails,Home Improvement,5.03,0.92,0.61,2022-03-13 09:33:07
+Burger,Food Services,444.29,54.39,50.06,2020-03-02 05:31:43
+Laptop,Electronics,443.08,41.64,52.98,2020-04-13 01:52:55
+Nails,Home Improvement,351.75,67.95,35.46,2020-12-15 15:59:16
+Coffee,Food Services,25.3,3.13,3.15,2020-07-21 17:10:28
+Hammer,Home Improvement,24.54,5.76,1.19,2020-03-04 02:52:18
+T-shirt,Retail,203.94,54.58,21.74,2021-04-11 17:31:27
+Hammer,Home Improvement,371.61,49.69,33.56,2020-01-24 17:52:16
+Burger,Food Services,322.48,56.94,17.75,2021-11-27 20:36:49
+Nails,Home Improvement,288.7,24.93,19.85,2021-05-28 13:27:04
+Smartphone,Electronics,342.64,88.91,34.56,2020-09-06 14:57:34
+Nails,Home Improvement,438.23,84.07,23.18,2020-08-19 04:23:33
+Burger,Food Services,416.49,63.39,50.79,2022-10-16 04:34:18
+Nails,Home Improvement,476.68,0.92,62.83,2021-12-16 17:26:57
+Burger,Food Services,165.8,37.36,7.53,2021-07-30 19:52:57
+Coffee,Food Services,127.68,12.71,11.33,2022-02-23 11:45:11
+Nails,Home Improvement,41.35,5.44,4.58,2021-08-16 18:39:45
+Laptop,Electronics,276.09,42.96,32.79,2022-04-03 00:39:40
+Burger,Food Services,322.5,80.18,24.51,2022-02-19 11:53:45
+Burger,Food Services,439.77,18.89,22.49,2020-02-22 05:22:13
+Nails,Home Improvement,332.46,52.3,29.85,2022-06-10 11:31:00
+Jeans,Retail,469.22,122.38,33.88,2020-05-20 19:33:39
+Jeans,Retail,372.22,101.03,26.22,2022-11-20 02:58:25
+Jeans,Retail,116.92,17.61,12.17,2022-03-15 16:22:42
+Jeans,Retail,171.79,26.4,10.9,2022-07-21 06:55:33
+Nails,Home Improvement,238.17,26.29,26.84,2020-04-28 14:50:11
+Coffee,Food Services,273.33,42.53,14.12,2021-10-24 08:06:06
+Hammer,Home Improvement,285.38,3.4,24.41,2020-11-16 04:08:42
+Jeans,Retail,135.36,19.62,16.37,2021-03-25 23:27:42
+Smartphone,Electronics,1.65,0.32,0.1,2022-04-11 17:45:59
+Laptop,Electronics,371.68,98.92,32.28,2022-07-18 21:57:26
+Burger,Food Services,461.09,105.3,34.88,2021-10-11 02:13:42
+Burger,Food Services,416.72,86.93,39.08,2022-01-19 02:13:28
+Laptop,Electronics,107.3,0.88,10.16,2021-08-26 14:53:53
+Burger,Food Services,306.17,28.96,22.95,2022-08-01 14:37:42
+Smartphone,Electronics,284.37,73.82,23.76,2022-06-29 22:08:46
+Smartphone,Electronics,196.33,21.71,13.89,2020-12-28 20:09:41
+Coffee,Food Services,128.2,9.3,12.93,2020-02-01 19:36:58
+Jeans,Retail,471.21,33.67,36.65,2022-10-17 14:09:33
+Burger,Food Services,161.7,6.98,19.49,2020-01-01 08:58:25
+Burger,Food Services,268.72,57.28,13.0,2020-10-09 16:17:35
+Laptop,Electronics,240.43,49.9,20.96,2021-04-14 19:51:24
+Coffee,Food Services,355.25,9.46,34.47,2022-02-26 09:01:40
+Coffee,Food Services,147.58,12.11,9.51,2022-06-04 21:04:52
+Smartphone,Electronics,158.35,0.99,10.89,2021-01-30 06:56:02
+Coffee,Food Services,302.35,14.84,30.4,2021-05-31 19:25:34
+Nails,Home Improvement,126.18,10.89,11.37,2020-04-11 22:31:20
+Jeans,Retail,424.4,94.56,39.58,2022-02-05 15:23:13
+Smartphone,Electronics,28.17,7.73,2.85,2021-02-11 00:20:55
+Jeans,Retail,491.61,112.52,42.27,2021-04-15 09:23:02
+Laptop,Electronics,155.13,41.84,15.33,2021-09-25 22:04:13
+Laptop,Electronics,188.11,53.39,7.94,2021-08-19 18:30:45
+Nails,Home Improvement,497.76,118.03,22.45,2021-08-19 00:36:21
+Hammer,Home Improvement,427.4,74.69,29.31,2020-04-06 17:10:29
+Nails,Home Improvement,450.66,31.76,22.67,2020-09-11 10:44:09
+Nails,Home Improvement,411.97,90.24,19.03,2022-09-22 17:38:51
+Smartphone,Electronics,355.18,82.28,29.36,2020-07-16 18:51:50
+Coffee,Food Services,139.58,6.65,9.09,2021-01-06 04:45:54
+Coffee,Food Services,69.32,18.22,3.87,2021-03-21 23:25:44
+T-shirt,Retail,73.49,13.59,4.22,2021-06-02 21:20:29
+Burger,Food Services,449.21,89.46,53.03,2020-03-27 06:11:53
+Burger,Food Services,100.24,17.71,7.03,2020-02-25 19:42:37
+Laptop,Electronics,339.37,76.9,32.58,2022-01-17 17:17:54
+Nails,Home Improvement,449.32,94.28,48.01,2021-10-11 03:10:31
+T-shirt,Retail,396.1,87.52,15.55,2020-08-06 21:18:52
+Burger,Food Services,412.13,91.53,37.68,2022-02-03 00:47:13
+Smartphone,Electronics,64.45,9.38,2.98,2022-07-24 02:56:43
+Jeans,Retail,474.84,95.42,36.3,2020-05-06 19:00:02
+Laptop,Electronics,116.49,22.69,11.57,2022-11-12 07:31:59
+Coffee,Food Services,51.09,7.51,3.72,2022-12-21 09:17:24
+T-shirt,Retail,109.72,18.18,5.18,2020-08-23 03:37:23
+Smartphone,Electronics,57.78,10.23,5.48,2021-07-02 00:17:14
+Burger,Food Services,358.14,98.62,24.94,2021-09-30 16:25:03
+Smartphone,Electronics,131.54,28.95,7.13,2020-02-24 15:35:51
+Burger,Food Services,369.79,29.41,50.18,2022-08-08 08:28:15
+Smartphone,Electronics,256.42,26.49,31.33,2021-12-25 08:08:22
+Smartphone,Electronics,275.24,63.76,25.64,2021-08-23 16:35:14
+Burger,Food Services,328.38,30.09,28.15,2021-12-13 20:22:24
+Smartphone,Electronics,105.86,6.46,14.81,2020-03-14 01:30:51
+Nails,Home Improvement,268.12,9.78,30.32,2020-06-06 15:28:03
+Burger,Food Services,17.11,1.2,0.95,2022-01-01 12:01:19
+Smartphone,Electronics,203.84,54.27,15.67,2020-08-23 03:23:56
+Coffee,Food Services,110.03,3.0,15.25,2020-02-01 10:09:26
+Nails,Home Improvement,257.09,46.57,22.11,2020-02-20 10:24:00
+Smartphone,Electronics,300.78,78.03,31.47,2022-07-18 10:15:01
+Laptop,Electronics,320.38,57.94,13.88,2022-08-17 02:21:22
+Jeans,Retail,490.16,115.93,44.98,2020-07-25 03:29:14
+Hammer,Home Improvement,487.39,64.41,43.06,2022-09-05 14:50:44
+Coffee,Food Services,413.01,17.76,37.7,2021-05-18 04:17:26
+Nails,Home Improvement,302.53,75.87,17.91,2020-06-12 13:36:03
+Jeans,Retail,369.27,103.81,37.09,2022-12-23 12:51:45
+T-shirt,Retail,438.77,11.67,26.67,2022-05-03 01:33:48
+Laptop,Electronics,185.91,34.66,8.9,2022-10-05 04:11:06
+Burger,Food Services,205.27,54.16,20.5,2021-06-22 12:43:08
+Laptop,Electronics,142.17,22.06,13.61,2020-10-29 21:08:36
+Burger,Food Services,58.76,5.67,6.28,2021-08-18 14:42:45
+Nails,Home Improvement,180.39,43.9,9.44,2022-01-31 16:26:33
+T-shirt,Retail,261.2,33.21,27.94,2020-06-21 10:15:54
+Smartphone,Electronics,197.99,8.48,10.94,2020-04-03 10:57:29
+Burger,Food Services,263.83,65.7,19.6,2022-08-05 18:54:45
+Burger,Food Services,293.12,77.05,20.08,2022-12-24 16:22:02
+Coffee,Food Services,59.27,2.81,5.32,2021-12-26 18:02:47
+Smartphone,Electronics,468.52,117.93,28.01,2022-08-12 07:54:49
+Laptop,Electronics,286.88,58.74,26.18,2022-09-09 06:19:25
+Nails,Home Improvement,51.4,3.79,2.58,2021-06-08 20:32:03
+Nails,Home Improvement,233.36,18.21,23.36,2022-10-07 11:21:38
+Smartphone,Electronics,82.07,15.4,7.86,2020-07-12 03:07:36
+Burger,Food Services,477.37,93.11,43.35,2022-11-26 06:32:54
+Hammer,Home Improvement,114.01,24.18,10.55,2022-08-24 07:14:12
+Burger,Food Services,432.22,125.97,41.29,2021-04-05 10:05:07
+Burger,Food Services,34.89,2.92,2.46,2020-07-16 10:58:17
+Laptop,Electronics,289.02,22.37,24.53,2021-08-25 04:28:43
+Hammer,Home Improvement,354.42,15.03,50.2,2021-04-01 09:47:22
+Hammer,Home Improvement,174.17,13.27,14.61,2022-11-23 21:45:37
+Hammer,Home Improvement,491.93,96.36,28.18,2020-07-07 19:48:07
+Nails,Home Improvement,296.68,12.82,38.96,2022-03-17 05:59:41
+Coffee,Food Services,227.04,66.35,8.21,2020-10-20 19:10:59
+T-shirt,Retail,210.99,32.87,26.35,2020-02-29 07:37:04
+Jeans,Retail,358.15,70.46,42.82,2021-08-31 23:48:11
+Coffee,Food Services,149.82,20.01,14.74,2021-11-21 15:07:44
+Coffee,Food Services,400.62,31.47,47.07,2021-07-31 05:34:03
+Nails,Home Improvement,184.59,24.92,14.15,2020-10-22 21:31:05
+Laptop,Electronics,26.93,6.28,1.62,2021-12-08 13:09:40
+Smartphone,Electronics,234.64,59.34,21.8,2021-07-07 21:17:22
+Coffee,Food Services,81.0,0.18,4.91,2022-09-08 19:10:04
+Smartphone,Electronics,354.27,21.03,45.99,2020-04-27 00:51:47
+T-shirt,Retail,258.18,10.28,24.73,2020-03-10 08:20:00
+Burger,Food Services,347.3,21.65,24.81,2020-03-03 02:35:15
+Nails,Home Improvement,329.12,43.06,23.53,2022-01-25 05:32:55
+Coffee,Food Services,165.88,38.78,7.98,2021-01-31 17:29:32
+Nails,Home Improvement,125.73,28.71,13.7,2020-02-11 09:48:27
+Laptop,Electronics,87.71,22.05,6.09,2022-03-18 21:21:38
+Smartphone,Electronics,205.66,36.04,25.21,2022-11-01 09:20:12
+Laptop,Electronics,66.38,0.31,8.61,2022-06-03 07:25:48
+Smartphone,Electronics,327.64,23.34,34.6,2022-06-07 06:07:50
+Nails,Home Improvement,211.51,42.85,13.43,2020-12-01 12:17:42
+Burger,Food Services,151.38,23.93,13.48,2020-12-22 18:10:04
+Jeans,Retail,1.07,0.05,0.06,2020-05-25 05:02:45
+Jeans,Retail,226.72,13.49,18.65,2022-09-01 16:12:07
+Laptop,Electronics,131.5,6.75,11.85,2022-02-19 11:18:32
+Hammer,Home Improvement,52.52,1.69,6.23,2022-12-21 02:03:29
+T-shirt,Retail,272.84,41.01,18.58,2022-03-24 13:22:52
+Nails,Home Improvement,52.08,9.63,5.27,2021-10-14 14:52:39
+Coffee,Food Services,460.6,15.37,29.59,2022-02-26 18:18:32
+Burger,Food Services,83.69,6.47,10.27,2021-04-19 06:50:27
+Burger,Food Services,220.49,55.02,8.72,2020-06-25 05:31:56
+Smartphone,Electronics,9.15,0.34,0.71,2020-08-14 07:43:57
+Smartphone,Electronics,105.12,22.81,6.0,2021-10-23 17:19:18
+Jeans,Retail,94.1,18.06,3.87,2022-05-29 06:29:35
+Smartphone,Electronics,485.27,87.71,31.14,2021-10-17 15:24:26
+Jeans,Retail,236.98,60.64,21.82,2020-05-10 12:56:31
+T-shirt,Retail,172.95,40.23,9.11,2020-06-11 17:54:29
+Coffee,Food Services,450.14,43.69,21.27,2021-10-07 16:13:37
+Laptop,Electronics,311.33,87.94,17.57,2020-04-07 17:55:59
+Coffee,Food Services,11.49,0.35,1.37,2020-06-03 02:51:13
+Burger,Food Services,99.67,11.62,10.57,2021-10-06 22:20:26
+Jeans,Retail,276.31,2.73,25.0,2020-08-30 13:57:13
+Laptop,Electronics,396.24,104.26,25.34,2020-02-17 16:36:37
+Coffee,Food Services,283.98,5.8,41.51,2021-11-24 22:52:35
+Nails,Home Improvement,359.83,74.86,41.06,2021-10-31 16:03:45
+Smartphone,Electronics,307.11,19.15,26.72,2022-12-02 07:31:18
+Laptop,Electronics,359.0,36.91,45.56,2021-10-09 19:36:51
+Coffee,Food Services,308.71,77.03,31.67,2020-02-16 19:29:08
+Smartphone,Electronics,224.99,34.68,14.91,2022-02-10 11:30:48
+Hammer,Home Improvement,43.95,5.0,3.55,2021-05-19 02:12:15
+Coffee,Food Services,142.31,41.49,10.62,2021-01-27 09:05:09
+Smartphone,Electronics,317.97,64.23,16.59,2020-05-02 00:07:44
+Smartphone,Electronics,459.05,54.38,57.44,2021-07-01 14:15:55
+T-shirt,Retail,235.37,26.1,19.23,2020-04-19 06:04:21
+Burger,Food Services,173.98,22.15,22.15,2020-07-07 13:17:59
+T-shirt,Retail,33.85,2.3,2.62,2021-07-12 01:56:03
+Smartphone,Electronics,12.99,1.32,0.8,2022-12-10 15:14:49
+Laptop,Electronics,438.75,102.11,22.8,2020-02-15 15:16:22
+Hammer,Home Improvement,115.19,34.2,4.13,2021-06-20 15:07:37
+Smartphone,Electronics,337.91,18.2,28.67,2021-06-24 09:49:18
+T-shirt,Retail,479.0,5.44,46.35,2020-10-03 08:52:42
+Nails,Home Improvement,330.82,47.0,35.0,2020-01-16 11:29:37
+T-shirt,Retail,151.6,1.47,19.81,2020-12-24 01:25:18
+Jeans,Retail,380.29,7.74,47.14,2021-07-22 06:06:17
+T-shirt,Retail,110.66,30.98,9.03,2020-04-19 13:05:13
+Coffee,Food Services,189.43,3.87,10.03,2022-07-15 18:27:04
+Nails,Home Improvement,185.05,16.35,9.41,2020-08-10 14:16:51
+Hammer,Home Improvement,312.74,14.62,32.61,2020-11-19 01:59:00
+Burger,Food Services,235.4,5.74,14.68,2020-01-06 00:30:05
+Burger,Food Services,398.0,9.17,21.98,2020-11-14 03:09:15
+Nails,Home Improvement,101.68,3.05,9.74,2022-10-20 17:59:24
+Nails,Home Improvement,58.45,12.58,4.34,2022-11-12 15:33:41
+Burger,Food Services,270.39,11.21,22.61,2020-07-10 08:47:09
+Smartphone,Electronics,256.21,6.21,25.16,2020-01-12 03:51:36
+Hammer,Home Improvement,365.48,60.64,18.12,2021-03-31 13:38:07
+Smartphone,Electronics,448.29,71.09,31.09,2021-07-27 10:10:09
+Smartphone,Electronics,454.49,33.02,50.3,2022-12-07 01:10:24
+Burger,Food Services,302.87,77.22,33.1,2020-02-08 07:01:08
+T-shirt,Retail,471.25,71.45,20.83,2022-07-28 14:22:36
+Hammer,Home Improvement,72.42,16.09,6.72,2020-12-27 17:45:56
+Burger,Food Services,93.92,23.34,8.71,2020-08-08 09:56:49
+Burger,Food Services,138.48,10.83,8.15,2020-10-17 11:33:21
+Hammer,Home Improvement,86.92,17.12,9.17,2021-12-06 08:08:20
+Jeans,Retail,100.85,19.15,8.18,2020-06-23 14:14:29
+Laptop,Electronics,73.16,5.52,4.66,2022-01-10 12:26:13
+Nails,Home Improvement,309.17,64.03,20.9,2021-06-19 02:00:43
+Smartphone,Electronics,384.95,110.57,34.97,2021-02-05 03:05:46
+Smartphone,Electronics,279.11,2.68,23.0,2020-07-21 04:37:50
+Smartphone,Electronics,17.84,4.05,1.43,2020-02-13 09:32:18
+Burger,Food Services,459.97,6.44,67.17,2020-11-19 07:16:50
+Nails,Home Improvement,497.88,96.87,20.36,2021-07-16 17:16:52
+T-shirt,Retail,114.14,33.85,11.5,2021-06-04 10:11:45
+Burger,Food Services,127.44,35.43,12.17,2022-01-05 08:31:39
+Nails,Home Improvement,86.31,5.16,8.66,2021-03-30 14:06:40
+Nails,Home Improvement,204.6,49.93,18.23,2021-04-05 08:36:12
+T-shirt,Retail,3.59,0.86,0.18,2022-05-09 08:57:33
+Burger,Food Services,445.03,31.27,43.39,2022-09-14 20:39:21
+Coffee,Food Services,457.5,4.33,47.27,2021-05-22 22:51:08
+Coffee,Food Services,227.49,37.31,18.06,2020-10-12 21:42:55
+Jeans,Retail,481.86,50.11,26.64,2022-07-10 05:21:55
+Hammer,Home Improvement,209.98,11.72,27.15,2020-05-05 12:46:42
+Coffee,Food Services,361.46,79.57,32.04,2020-06-08 08:28:33
+Smartphone,Electronics,382.33,1.7,52.09,2022-04-08 08:10:34
+Coffee,Food Services,307.71,45.63,32.96,2022-06-21 07:38:04
+Burger,Food Services,77.77,10.01,10.16,2021-04-23 02:13:03
+Coffee,Food Services,127.1,26.73,6.61,2020-08-30 23:07:43
+Hammer,Home Improvement,151.1,44.81,7.28,2021-08-08 00:15:10
+Burger,Food Services,125.9,15.03,11.33,2020-08-16 05:49:48
+Smartphone,Electronics,160.9,35.16,12.45,2020-07-13 13:08:10
+Nails,Home Improvement,126.15,11.93,8.59,2020-12-12 03:14:08
+T-shirt,Retail,188.33,29.03,15.93,2021-05-05 17:17:08
+Coffee,Food Services,211.52,46.39,20.83,2022-02-28 16:00:26
+Hammer,Home Improvement,482.73,60.03,24.76,2021-01-12 05:40:57
+T-shirt,Retail,356.52,2.72,35.13,2021-01-02 15:13:10
+Smartphone,Electronics,474.19,49.74,41.25,2020-10-12 17:56:42
+Laptop,Electronics,278.39,61.22,30.4,2021-03-28 03:29:07
+Burger,Food Services,403.29,91.32,34.54,2021-08-01 14:23:13
+Coffee,Food Services,154.62,3.09,9.05,2021-10-14 02:43:59
+Laptop,Electronics,314.81,92.84,22.13,2022-10-27 05:43:15
+Laptop,Electronics,430.2,126.76,30.0,2020-03-12 20:32:11
+T-shirt,Retail,246.13,52.39,23.7,2020-07-24 10:02:01
+Coffee,Food Services,387.85,41.98,34.96,2022-07-22 22:40:01
+Smartphone,Electronics,406.76,79.34,35.86,2020-02-01 22:08:43
+T-shirt,Retail,447.21,67.61,24.5,2021-09-03 17:58:18
+Jeans,Retail,98.09,0.79,9.45,2020-05-01 01:06:35
+Hammer,Home Improvement,70.5,9.87,3.85,2022-12-26 18:46:38
+T-shirt,Retail,41.39,4.43,2.33,2020-04-23 17:30:34
+Laptop,Electronics,456.51,5.86,27.19,2020-07-24 02:04:21
+Nails,Home Improvement,312.5,10.32,34.97,2021-10-14 19:22:24
+Jeans,Retail,91.07,0.19,11.4,2021-04-10 01:56:37
+Smartphone,Electronics,202.9,13.02,17.43,2022-05-05 14:27:41
+T-shirt,Retail,471.88,61.15,40.78,2021-10-09 09:32:27
+Smartphone,Electronics,73.57,17.87,7.03,2020-08-09 00:42:44
+Coffee,Food Services,134.55,32.67,9.83,2022-07-07 04:55:47
+Jeans,Retail,146.39,35.59,9.35,2021-10-17 20:20:14
+Burger,Food Services,231.12,8.84,18.67,2021-04-07 23:17:35
+Coffee,Food Services,249.11,7.24,26.27,2022-09-16 11:48:54
+Laptop,Electronics,364.86,19.07,40.14,2021-07-04 19:06:30
+Burger,Food Services,136.88,14.63,14.83,2020-05-11 08:27:53
+Nails,Home Improvement,57.11,5.52,4.27,2021-01-20 08:17:28
+Jeans,Retail,428.13,110.98,21.86,2021-11-21 23:45:42
+T-shirt,Retail,320.07,16.3,32.13,2022-09-09 23:42:39
+Laptop,Electronics,479.33,11.41,47.9,2021-07-27 14:51:46
+T-shirt,Retail,448.35,14.23,38.15,2022-09-16 14:44:26
+Nails,Home Improvement,196.14,28.52,10.74,2022-04-02 02:16:41
+Burger,Food Services,29.79,1.01,3.26,2020-03-30 21:04:10
+Smartphone,Electronics,304.15,8.57,17.2,2021-08-07 18:23:34
+Nails,Home Improvement,109.24,24.5,6.8,2021-09-26 18:41:23
+Smartphone,Electronics,451.15,71.88,45.61,2020-01-14 02:12:14
+Jeans,Retail,313.71,60.87,22.85,2021-10-10 03:17:35
+Burger,Food Services,458.13,113.39,20.19,2021-05-13 03:28:53
+Jeans,Retail,338.19,46.25,40.9,2021-11-16 12:45:32
+Nails,Home Improvement,166.67,21.22,18.74,2020-11-12 21:18:31
+T-shirt,Retail,229.87,3.88,19.19,2021-07-31 06:07:28
+Laptop,Electronics,113.86,7.9,6.63,2021-03-31 15:27:03
+Laptop,Electronics,217.67,23.56,14.07,2022-01-01 11:57:36
+Jeans,Retail,67.86,4.82,6.6,2020-05-21 10:49:54
+Laptop,Electronics,430.32,76.13,40.29,2020-10-15 02:22:58
+Laptop,Electronics,450.8,133.34,43.74,2020-06-17 17:28:14
+T-shirt,Retail,10.09,2.07,1.14,2021-03-06 06:11:57
+T-shirt,Retail,98.66,16.23,10.99,2020-06-23 05:34:51
+T-shirt,Retail,220.42,7.25,20.36,2022-05-17 02:31:04
+Smartphone,Electronics,435.2,41.45,51.03,2022-07-29 16:23:09
+Coffee,Food Services,499.25,148.55,22.61,2022-12-05 01:58:01
+Hammer,Home Improvement,487.68,70.49,26.69,2020-08-27 01:01:07
+Nails,Home Improvement,281.43,1.58,17.86,2022-12-27 10:45:19
+Nails,Home Improvement,28.43,7.74,2.42,2021-11-24 02:12:49
+Nails,Home Improvement,337.94,76.89,32.16,2021-09-11 11:28:50
+Jeans,Retail,477.76,141.39,48.82,2020-10-14 23:29:34
+Jeans,Retail,448.09,28.2,51.21,2021-10-17 02:16:34
+Coffee,Food Services,284.91,75.72,25.9,2021-11-01 15:33:27
+Smartphone,Electronics,77.58,4.68,7.87,2020-09-28 10:40:30
+Burger,Food Services,465.66,124.56,27.85,2021-01-20 04:31:54
+T-shirt,Retail,441.63,102.95,32.26,2021-12-05 09:43:50
+Smartphone,Electronics,246.09,59.72,18.94,2021-06-12 18:34:50
+T-shirt,Retail,222.39,35.64,16.83,2022-03-23 23:51:06
+Jeans,Retail,464.98,138.37,41.01,2020-08-09 11:18:04
+Hammer,Home Improvement,107.81,29.41,7.58,2021-07-06 01:03:31
+T-shirt,Retail,202.18,44.84,20.89,2021-12-19 08:50:22
+Burger,Food Services,459.78,24.67,30.04,2022-09-08 00:39:26
+Burger,Food Services,312.64,86.78,13.05,2022-09-17 00:23:51
+T-shirt,Retail,251.8,38.24,23.22,2020-05-14 08:55:52
+Burger,Food Services,331.02,12.06,45.83,2022-01-20 18:16:55
+Smartphone,Electronics,484.34,16.89,67.26,2020-11-12 08:14:45
+Hammer,Home Improvement,351.8,104.97,31.83,2021-04-02 20:16:06
+Nails,Home Improvement,441.64,78.34,23.51,2020-01-03 20:43:04
+Coffee,Food Services,323.4,35.53,17.15,2022-12-21 20:17:59
+Laptop,Electronics,63.68,10.96,5.39,2021-11-28 15:13:41
+Coffee,Food Services,381.98,65.33,34.93,2022-08-19 04:07:55
+Nails,Home Improvement,71.03,17.9,3.16,2021-12-18 17:00:46
+Coffee,Food Services,470.28,18.38,64.38,2020-01-13 01:56:04
+T-shirt,Retail,138.54,28.11,7.39,2020-12-05 19:00:05
+Jeans,Retail,273.57,61.93,18.97,2021-04-08 19:07:41
+Hammer,Home Improvement,95.12,12.42,6.19,2020-06-26 19:16:28
+Jeans,Retail,463.16,81.87,31.58,2022-09-03 23:51:04
+Laptop,Electronics,304.4,27.12,24.5,2021-04-12 20:01:12
+Hammer,Home Improvement,173.09,8.78,9.69,2022-04-26 22:49:54
+T-shirt,Retail,471.97,0.88,61.79,2022-08-04 07:09:02
+Burger,Food Services,428.35,94.4,50.09,2020-08-30 16:20:42
+Jeans,Retail,340.38,46.38,40.28,2021-10-20 23:39:37
+Nails,Home Improvement,395.84,97.28,23.04,2022-01-02 08:22:04
+T-shirt,Retail,15.54,4.0,1.51,2020-05-23 18:37:39
+Laptop,Electronics,405.72,16.05,51.38,2022-11-19 12:20:10
+Jeans,Retail,149.62,6.98,18.55,2022-02-12 02:50:24
+Hammer,Home Improvement,304.9,83.0,20.28,2020-12-26 23:06:36
+Hammer,Home Improvement,150.06,8.03,15.31,2022-04-24 16:07:37
+Burger,Food Services,40.05,10.39,3.0,2021-09-21 14:52:10
+Laptop,Electronics,435.06,120.55,35.9,2021-03-11 02:27:06
+Burger,Food Services,453.76,111.81,28.71,2022-09-08 21:06:48
+Jeans,Retail,491.5,24.85,27.18,2020-02-03 14:01:44
+Coffee,Food Services,57.07,8.19,6.86,2020-07-06 16:55:44
+Coffee,Food Services,14.83,3.81,0.91,2021-02-23 13:15:09
+Jeans,Retail,295.37,39.25,26.1,2022-11-04 11:03:50
+Hammer,Home Improvement,156.45,20.92,19.14,2020-03-03 23:42:23
+Coffee,Food Services,438.16,96.86,33.23,2020-01-01 09:26:25
+Smartphone,Electronics,495.45,118.91,49.39,2021-02-02 13:50:23
+Coffee,Food Services,477.3,80.58,31.49,2021-09-10 22:29:42
+Burger,Food Services,89.35,19.21,4.91,2022-03-28 06:30:02
+Nails,Home Improvement,176.9,20.06,12.58,2022-06-22 12:13:22
+T-shirt,Retail,355.66,66.46,19.31,2021-09-07 12:42:39
+Smartphone,Electronics,14.82,4.23,1.4,2021-11-21 15:18:48
+Burger,Food Services,463.38,57.23,23.43,2020-06-07 12:01:06
+Coffee,Food Services,268.31,17.38,31.18,2021-01-27 09:54:43
+Nails,Home Improvement,386.6,94.0,19.3,2021-07-03 15:26:29
+Hammer,Home Improvement,437.14,57.43,28.86,2021-03-16 05:47:14
+Hammer,Home Improvement,247.31,1.25,13.5,2022-11-10 18:23:02
+Coffee,Food Services,86.5,19.58,4.68,2020-10-31 12:33:40
+T-shirt,Retail,287.87,85.67,11.88,2022-07-13 22:29:26
+Jeans,Retail,423.1,102.52,16.06,2020-05-12 10:41:41
+Jeans,Retail,328.13,88.04,31.02,2020-02-25 01:42:28
+T-shirt,Retail,7.08,0.88,0.35,2020-04-19 10:46:39
+T-shirt,Retail,413.49,42.92,22.25,2021-02-11 18:13:00
+Burger,Food Services,176.7,38.34,18.5,2021-04-19 17:44:25
+Smartphone,Electronics,5.23,0.37,0.45,2022-04-08 23:29:27
+Laptop,Electronics,147.66,0.19,17.55,2021-06-12 00:01:58
+Laptop,Electronics,269.43,52.37,11.15,2020-07-02 14:14:58
+Hammer,Home Improvement,399.0,15.25,33.91,2022-04-03 14:44:44
+Burger,Food Services,367.27,71.72,17.96,2021-01-21 21:08:48
+Hammer,Home Improvement,197.86,48.46,10.03,2020-09-11 01:45:48
+Smartphone,Electronics,14.12,1.35,1.17,2020-04-15 18:41:23
+Coffee,Food Services,461.65,112.4,38.27,2021-10-06 09:59:53
+Hammer,Home Improvement,208.18,32.03,19.91,2021-03-26 00:29:55
+Coffee,Food Services,169.81,37.08,14.17,2021-03-15 05:36:19
+Coffee,Food Services,18.8,0.67,2.28,2022-03-18 12:49:12
+Jeans,Retail,366.72,87.39,19.01,2020-07-27 19:33:37
+Smartphone,Electronics,138.58,39.3,12.88,2022-06-10 15:35:33
+Nails,Home Improvement,378.63,110.72,36.37,2022-03-23 13:05:22
+Laptop,Electronics,81.99,9.35,5.24,2022-09-01 05:27:44
+Smartphone,Electronics,65.24,12.37,7.32,2020-11-22 15:44:41
+Jeans,Retail,459.57,88.7,38.01,2022-04-05 11:07:33
+Coffee,Food Services,256.99,37.49,23.53,2020-06-12 14:06:25
+Nails,Home Improvement,270.61,12.44,17.17,2021-09-30 03:54:06
+Hammer,Home Improvement,160.25,6.31,22.53,2022-09-12 19:22:46
+Burger,Food Services,273.7,21.05,31.97,2022-04-24 09:52:33
+Jeans,Retail,69.72,10.77,7.16,2021-09-18 16:19:19
+T-shirt,Retail,389.98,100.79,36.85,2021-03-08 19:30:18
+Coffee,Food Services,295.08,17.1,32.42,2021-03-30 00:01:30
+T-shirt,Retail,246.55,61.48,10.33,2021-11-18 04:32:53
+T-shirt,Retail,348.86,37.59,21.63,2021-07-31 13:52:11
+Jeans,Retail,117.07,34.39,5.78,2022-06-01 17:15:34
+Smartphone,Electronics,61.72,18.22,5.07,2022-09-03 19:46:11
+Jeans,Retail,451.93,3.64,46.33,2020-08-02 02:01:54
+Hammer,Home Improvement,267.79,55.02,16.04,2020-08-31 23:59:34
+Coffee,Food Services,256.08,56.58,27.91,2020-07-10 12:53:26
+Nails,Home Improvement,250.56,31.74,23.04,2022-12-18 19:14:02
+Burger,Food Services,74.55,2.73,8.85,2020-07-06 05:13:52
+T-shirt,Retail,87.81,23.7,4.79,2021-08-15 12:39:26
+Coffee,Food Services,39.77,9.55,2.59,2021-09-15 06:26:12
+T-shirt,Retail,465.54,129.66,50.25,2022-07-07 04:24:22
+Burger,Food Services,232.33,43.73,18.99,2021-12-27 22:10:25
+Nails,Home Improvement,467.04,64.58,51.03,2020-08-04 18:10:15
+Jeans,Retail,410.94,38.41,23.88,2022-05-19 07:53:25
+Hammer,Home Improvement,205.93,49.42,15.08,2022-11-04 02:28:42
+Burger,Food Services,35.0,1.19,3.02,2021-04-09 10:05:02
+T-shirt,Retail,313.26,39.97,30.8,2021-07-04 00:14:01
+T-shirt,Retail,490.23,133.76,38.0,2022-09-08 22:49:25
+Smartphone,Electronics,493.11,61.01,37.5,2022-01-04 06:14:59
+Coffee,Food Services,82.36,16.1,9.61,2021-10-06 20:19:32
+Burger,Food Services,148.68,21.65,9.48,2020-12-04 16:00:01
+Burger,Food Services,465.77,83.68,26.25,2022-01-10 13:13:57
+Jeans,Retail,91.51,18.07,3.83,2022-01-29 09:57:11
+Burger,Food Services,52.32,4.94,6.59,2022-12-15 04:07:49
+Nails,Home Improvement,367.63,98.38,39.58,2022-02-18 03:46:44
+Nails,Home Improvement,368.37,52.77,35.2,2021-05-09 08:51:13
+Laptop,Electronics,143.94,38.06,6.25,2022-02-04 09:55:25
+Hammer,Home Improvement,317.31,38.46,28.23,2022-10-09 22:21:10
+Jeans,Retail,110.66,19.53,7.66,2020-04-03 13:14:34
+Nails,Home Improvement,401.88,54.27,21.81,2021-11-20 16:50:22
+Nails,Home Improvement,220.19,46.82,25.8,2021-04-11 07:42:49
+Jeans,Retail,127.86,0.69,15.67,2020-08-09 20:23:45
+Coffee,Food Services,408.0,89.44,47.06,2022-02-08 18:26:29
+Smartphone,Electronics,101.47,11.99,10.1,2020-03-22 09:49:57
+T-shirt,Retail,200.85,36.32,17.19,2022-08-22 21:51:34
+Nails,Home Improvement,157.81,20.55,8.14,2020-12-01 02:23:55
+Burger,Food Services,26.32,7.22,1.51,2020-02-09 16:27:13
+Coffee,Food Services,377.16,40.9,50.31,2021-07-06 02:19:23
+Nails,Home Improvement,382.19,76.56,24.98,2022-01-02 11:52:13
+T-shirt,Retail,11.35,1.57,1.11,2021-08-30 08:16:14
+Smartphone,Electronics,107.69,23.43,8.03,2020-01-16 16:55:53
+Burger,Food Services,432.77,21.64,61.32,2022-03-29 09:34:19
+Hammer,Home Improvement,46.82,10.78,4.21,2020-04-13 05:41:24
+Coffee,Food Services,248.7,23.29,29.1,2022-12-03 01:19:29
+Jeans,Retail,492.72,113.74,37.79,2020-05-06 09:48:06
+Hammer,Home Improvement,122.65,27.27,13.95,2022-12-02 02:59:19
+Nails,Home Improvement,71.07,0.89,7.44,2022-11-05 06:24:37
+Smartphone,Electronics,227.13,30.66,10.1,2021-09-05 18:58:19
+Jeans,Retail,351.93,22.25,36.61,2020-01-10 23:29:01
+T-shirt,Retail,336.73,60.09,34.79,2021-07-15 05:25:55
+Laptop,Electronics,285.75,21.21,23.61,2020-03-04 23:13:19
+T-shirt,Retail,369.23,90.96,29.87,2020-06-29 10:27:51
+T-shirt,Retail,481.5,74.21,38.78,2022-08-22 11:57:54
+Nails,Home Improvement,458.16,112.19,28.46,2020-01-06 19:27:03
+Nails,Home Improvement,358.39,93.11,32.98,2021-02-23 22:32:54
+Nails,Home Improvement,420.71,125.69,24.46,2022-09-21 18:50:41
+Nails,Home Improvement,279.06,47.79,27.01,2022-12-22 22:10:39
+Hammer,Home Improvement,10.02,2.25,0.47,2021-03-30 10:10:31
+Hammer,Home Improvement,250.32,17.76,31.56,2020-12-18 03:30:17
+T-shirt,Retail,392.37,31.09,52.2,2020-08-06 12:55:21
+Smartphone,Electronics,302.1,82.26,17.74,2022-06-08 21:24:30
+Hammer,Home Improvement,379.53,65.61,34.64,2021-03-23 06:35:19
+T-shirt,Retail,54.26,11.29,2.81,2020-10-24 00:36:52
+Laptop,Electronics,131.87,13.79,13.28,2020-06-12 19:50:37
+Coffee,Food Services,355.1,58.72,28.28,2021-11-05 05:23:52
+T-shirt,Retail,238.4,5.94,27.59,2021-12-16 23:24:25
+Burger,Food Services,276.84,64.41,18.27,2021-05-27 22:35:26
+Jeans,Retail,180.63,20.8,13.45,2021-08-19 17:24:36
+T-shirt,Retail,441.79,5.87,43.78,2020-09-18 09:00:57
+Jeans,Retail,462.46,105.14,40.26,2021-05-28 17:13:21
+Nails,Home Improvement,492.69,51.59,22.93,2021-10-17 02:29:03
+Laptop,Electronics,415.7,21.67,55.12,2022-10-03 15:22:32
+T-shirt,Retail,347.61,51.22,28.02,2022-12-03 22:48:10
+Coffee,Food Services,174.44,12.21,22.29,2021-11-07 04:03:07
+Hammer,Home Improvement,190.64,45.3,16.66,2020-08-17 22:33:32
+Hammer,Home Improvement,162.89,33.14,12.45,2021-11-25 20:15:01
+T-shirt,Retail,106.89,5.65,6.1,2020-08-17 03:13:31
+Smartphone,Electronics,281.42,22.32,16.51,2022-03-25 06:10:15
+Hammer,Home Improvement,129.56,20.39,13.91,2021-05-06 00:00:25
+T-shirt,Retail,401.21,40.14,39.15,2020-07-19 17:47:02
+T-shirt,Retail,167.86,2.38,16.88,2020-11-20 11:05:31
+Laptop,Electronics,262.14,1.4,34.36,2020-10-17 05:19:11
+Jeans,Retail,22.28,6.49,1.11,2021-11-20 22:09:19
+Nails,Home Improvement,281.15,2.54,34.36,2021-06-26 09:53:49
+Jeans,Retail,75.7,16.25,6.37,2021-08-27 02:18:56
+Laptop,Electronics,217.32,29.12,12.65,2021-10-25 18:32:00
+Jeans,Retail,476.87,42.28,58.58,2022-02-03 05:32:35
+Jeans,Retail,313.5,21.54,14.76,2021-08-28 02:58:12
+Nails,Home Improvement,68.74,20.08,4.04,2020-12-08 00:08:30
+Burger,Food Services,10.67,2.54,1.17,2020-10-31 18:40:02
+Burger,Food Services,40.19,1.82,2.63,2021-11-13 09:14:54
+Smartphone,Electronics,10.35,0.89,1.21,2020-11-13 07:41:22
+Hammer,Home Improvement,119.39,32.93,7.5,2022-06-30 03:25:58
+Jeans,Retail,171.83,50.84,14.23,2020-03-18 08:25:38
+Jeans,Retail,183.26,22.51,13.84,2021-08-26 06:38:52
+T-shirt,Retail,400.11,25.54,38.37,2020-02-21 16:44:24
+Burger,Food Services,469.56,71.22,56.72,2020-12-29 13:14:35
+Jeans,Retail,291.36,48.91,27.17,2022-09-10 14:30:17
+Burger,Food Services,179.48,25.2,14.6,2020-05-11 12:14:38
+Smartphone,Electronics,209.88,6.13,13.24,2020-10-17 02:45:48
+Burger,Food Services,168.74,39.01,11.34,2021-07-18 20:22:10
+Jeans,Retail,134.77,26.78,14.25,2020-03-29 12:45:32
+Smartphone,Electronics,483.44,28.97,49.18,2022-09-18 05:06:32
+Smartphone,Electronics,329.78,58.04,20.22,2022-11-18 10:45:18
+Hammer,Home Improvement,183.42,1.7,16.52,2020-09-26 07:50:46
+Nails,Home Improvement,420.7,125.7,23.29,2020-12-28 01:15:43
+Coffee,Food Services,216.01,56.44,17.77,2022-08-06 19:31:27
+Smartphone,Electronics,307.63,44.76,37.95,2021-04-07 04:37:01
+Smartphone,Electronics,491.39,137.01,19.88,2022-08-09 11:54:24
+Burger,Food Services,84.51,21.05,3.95,2020-05-14 13:47:15
