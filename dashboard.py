@@ -8,54 +8,115 @@ import pandas as pd
 
 from datetime import datetime
 
-# For the analysis of weekday vs weekend purchases
+# For the time analysis
 def is_weekday_or_weekend(input_date):
-    input_date = datetime.strptime(input_date, "%Y-%m-%d %H:%M:%S")
 
     if input_date.weekday() < 5:
         return "Weekday"
     else:
         return "Weekend"
 
+# Which day of week -> for weekday/weekend analysis   
+def day_of_week(input_date):
+    if input_date.weekday() == 0:
+        return "Monday"
+    elif input_date.weekday() == 1:
+        return "Tuesday"
+    elif input_date.weekday() == 2:
+        return "Wednesday"
+    elif input_date.weekday() == 3:
+        return "Thursday"
+    elif input_date.weekday() == 4:
+        return "Friday"
+    elif input_date.weekday() == 5:
+        return "Saturday"
+    elif input_date.weekday() == 6:
+        return "Sunday"
+
+# Time str to datetime.time
+def str_to_time(input_time):
+    return datetime.strptime(input_time, '%H:%M').time()
+
+# Time str to datetime.date
+def str_to_date(input_date):
+    return datetime.strptime(input_date, '%Y-%m-%d').date()
+
+# To filter the dataframe based on the period selected
+def df_filterer(start_time, end_time, start_date, end_date, df):
+    # Parsing TIME period
+    if start_time is None:
+        start_time = str_to_time('00:00')
+    else:
+        start_time = str_to_time(start_time)
+    if end_time is None:
+        end_time = str_to_time('23:59')
+    else:
+        end_time = str_to_time(end_time)
+        
+    # Parsing DATE period
+    if start_date is None:
+        start_date = vendors_time_df['Date'].min()
+    else:
+        start_date = str_to_date(start_date)
+    if end_date is None:
+        end_date = vendors_time_df['Date'].max()
+    else:
+        end_date = str_to_date(end_date)
+    
+    
+    filtered_df = df[(df['Time'] >= start_time) & (df['Time'] <= end_time)]
+    filtered_df = filtered_df[(filtered_df['Date'] >= start_date) & (filtered_df['Date'] <= end_date)]
+    
+    return filtered_df
+
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # Incorporating Datasets
 receipts_info_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/test_receipt_information.csv')
 
 vendors_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_vendors_dataset.csv')
 
-vendors_classification_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_category.csv')
+vendors_classification_df_full = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_category.csv')
 
-vendor_name_count = vendors_classification_df['Vendor Name'].value_counts()
+vendor_name_count = vendors_classification_df_full['Vendor Name'].value_counts()
 vendor_name_count_df = vendor_name_count.reset_index()
 vendor_name_count_df.columns = ['Vendor Name', 'Number of Receipts']
 
-vendor_category_count = vendors_classification_df['Category'].value_counts()
+vendor_category_count = vendors_classification_df_full['Category'].value_counts()
 vendor_category_count_df = vendor_category_count.reset_index()
 vendor_category_count_df.columns = ['Vendor Category', 'Number of Receipts']
 
-vendors_classification_df = vendors_classification_df[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
+vendors_classification_df = vendors_classification_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
-vendors_time_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
-vendors_time_df['Hour'] = pd.to_datetime(vendors_time_df['Time']).dt.hour
-vendors_time_df = vendors_time_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Time', 'Hour']]
+vendors_time_df_full = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
+vendors_time_df_full['Date'] = pd.to_datetime(vendors_time_df_full['Time']).dt.date
+vendors_time_df_full['Hour'] = pd.to_datetime(vendors_time_df_full['Time']).dt.hour
+vendors_time_df_full['Time'] = pd.to_datetime(vendors_time_df_full['Time']).dt.time
+vendors_time_df = vendors_time_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Date', 'Time', 'Hour']]
 
-vendors_weekday_df = vendors_time_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Time']]
-vendors_weekday_df['Weekday or Weekend'] = vendors_weekday_df['Time'].apply(lambda x: is_weekday_or_weekend(x))
+vendors_weekday_df = vendors_time_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
+vendors_weekday_df['Day of Week'] = vendors_weekday_df['Date'].apply(lambda x: day_of_week(x))
+vendors_weekday_df['Weekday or Weekend'] = vendors_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
 categories_time_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
+categories_time_df['Date'] = pd.to_datetime(categories_time_df['Time']).dt.date
 categories_time_df['Hour'] = pd.to_datetime(categories_time_df['Time']).dt.hour
-categories_time_df = categories_time_df[['Category', 'Number of Items', 'Total Price ($)', 'Time', 'Hour']]
+categories_time_df['Time'] = pd.to_datetime(categories_time_df['Time']).dt.time
+categories_time_df = categories_time_df[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time', 'Hour']]
 
 categories_weekday_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
-categories_weekday_df = categories_weekday_df[['Category', 'Number of Items', 'Total Price ($)', 'Time']]
-categories_weekday_df['Weekday or Weekend'] = categories_weekday_df['Time'].apply(lambda x: is_weekday_or_weekend(x))
+categories_weekday_df['Date'] = pd.to_datetime(categories_weekday_df['Time']).dt.date
+categories_weekday_df['Time'] = pd.to_datetime(categories_weekday_df['Time']).dt.time
+categories_weekday_df = categories_weekday_df[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
+categories_weekday_df['Day of Week'] = categories_weekday_df['Date'].apply(lambda x: day_of_week(x))
+categories_weekday_df['Weekday or Weekend'] = categories_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
 items_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_items_dataset.csv')
-items_df = items_df[['Item Name', 'Unit Price ($)', 'Discount ($)', 'Tax ($)']]
+items_df = items_df[['Item Name', 'Unit Price ($)', 'Discount ($)']]
 
 items_classification_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_items_dataset.csv')
-items_classification_df = items_classification_df[['Item Category', 'Unit Price ($)', 'Discount ($)', 'Tax ($)']]
+items_classification_df = items_classification_df[['Item Category', 'Unit Price ($)', 'Discount ($)']]
 
 # Hour Items for the dropdown
 hours = [
@@ -100,7 +161,8 @@ receipt_info_modal = dbc.Modal(
                 ),
             ],
             id="modal",
-            is_open=False
+            is_open=False,
+            size="lg"
         )
 
 
@@ -131,10 +193,12 @@ def create_collapsible_section(title, subsections):
     )
 
 # Sidebar Header
-sidebar_header = dcc.Link(
-    html.H2("Sidebar", className="display-4"),
-    href="/",
-    style={"color": "inherit", "textDecoration": "none"}
+sidebar_header = html.Div(
+    dcc.Link(
+        html.H2("Receipt Data Analytics", className="display-4", style={'fontSize': '1.8rem'}),
+        href="/",
+        style={"color": "inherit", "textDecoration": "none"}
+    )
 )
 
 # Receipts Info Section
@@ -159,9 +223,9 @@ vendors_analysis = create_collapsible_section(
     "Vendors Analysis",
     dbc.Nav(
             [
-                dbc.NavLink("Based on Vendors Name", href="/vendors-analysis/vendors-names", id="vendors-names",
+                dbc.NavLink("Vendor Name", href="/vendors-analysis/vendors-names", id="vendors-names",
                             style={"color": "inherit"}),
-                dbc.NavLink("Based on Vendors Categories", href="/vendors-analysis/vendors-categories", id="vendors-categories",
+                dbc.NavLink("Vendor Category", href="/vendors-analysis/vendors-categories", id="vendors-categories",
                             style={"color": "inherit"})            ],
             vertical=True,
             pills=True,
@@ -173,9 +237,9 @@ items_analysis = create_collapsible_section(
     "Items Analysis",
     dbc.Nav(
             [
-                dbc.NavLink("Based on Items Name", href="/items-analysis/items-names", id="items-names",
+                dbc.NavLink("Item Name", href="/items-analysis/items-names", id="items-names",
                             style={"color": "inherit"}),
-                dbc.NavLink("Based on Items Categories", href="/items-analysis/items-categories", id="items-categories",
+                dbc.NavLink("Item Category", href="/items-analysis/items-categories", id="items-categories",
                             style={"color": "inherit"})
             ],
             vertical=True,
@@ -201,16 +265,16 @@ custom_time_analysis = dbc.Card(
 
 # Hourly Purchase Time Analysis
 hourly_analysis = create_collapsible_section(
-    "Hourly Analysis",
+    "Hourly",
     dbc.Nav(
             [
                 dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/hourly/vendors-comparison", id="time-analysis-hourly-vendors-comparison",
                             style={"color": "inherit"}),
                 dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/hourly/categories-comparison", id="time-analysis-hourly-categories-comparison",
                             style={"color": "inherit"}),
-                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/hourly/individual-vendor", id="time-analysis-hourly-individual-vendor",
+                dbc.NavLink("Vendor-Specific", href="/purchase-time-analysis/hourly/individual-vendor", id="time-analysis-hourly-individual-vendor",
                             style={"color": "inherit"}),
-                dbc.NavLink("Individual Category", href="/purchase-time-analysis/hourly/individual-category", id="time-analysis-hourly-individual-category",
+                dbc.NavLink("Category-Specific", href="/purchase-time-analysis/hourly/individual-category", id="time-analysis-hourly-individual-category",
                             style={"color": "inherit"})
             ],
             vertical=True,
@@ -220,16 +284,16 @@ hourly_analysis = create_collapsible_section(
 
 # Weekday vs Weekend Purchase Time Analysis
 weekday_analysis = create_collapsible_section(
-    "Weekday vs Weekend Analysis",
+    "Weekday/Weekend",
     dbc.Nav(
             [
                 dbc.NavLink("Vendors Comparison", href="/purchase-time-analysis/weekday/vendors-comparison", id="time-analysis-weekday-vendors-comparison",
                             style={"color": "inherit"}),
                 dbc.NavLink("Categories Comparison", href="/purchase-time-analysis/weekday/categories-comparison", id="time-analysis-weekday-categories-comparison",
                             style={"color": "inherit"}),
-                dbc.NavLink("Individual Vendor", href="/purchase-time-analysis/weekday/individual-vendor", id="time-analysis-weekday-individual-vendor",
+                dbc.NavLink("Vendor-Specific", href="/purchase-time-analysis/weekday/individual-vendor", id="time-analysis-weekday-individual-vendor",
                             style={"color": "inherit"}),
-                dbc.NavLink("Individual Category", href="/purchase-time-analysis/weekday/individual-category", id="time-analysis-weekday-individual-category",
+                dbc.NavLink("Category-Specific", href="/purchase-time-analysis/weekday/individual-category", id="time-analysis-weekday-individual-category",
                             style={"color": "inherit"})
             ],
             vertical=True,
@@ -279,22 +343,7 @@ receipts_process_table_content = dbc.Container([
     dbc.Row([
         html.Div('Receipts Process Table', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
-    
-    # html.Div(className='row', children=[
-    #     dash_table.DataTable(
-    #         id='receipt_process_table',
-    #         data=receipts_info_df.to_dict('records'),
-    #         page_size=11,
-    #         style_table={'overflowX': 'auto'},
-    #         style_data={
-    #             'whiteSpace': 'normal',
-    #             'height': 'auto',
-    #             'lineHeight': '15px'
-    #         })
-    # ]),
-    # receipt_info_modal,
 
-    html.Hr(),
 
     dbc.Row([
         dbc.Col([
@@ -302,18 +351,15 @@ receipts_process_table_content = dbc.Container([
                 id='receipt_process_table',
                 data=receipts_info_df.to_dict('records'),
                 page_size=12,
-                style_table={'overflowX': 'auto'},
                 style_cell={
                     'maxWidth': '50px',
                     'maxHeight': '20px',
                     'overflow': 'hidden',
                     'textOverflow': 'ellipsis',
-                    'whiteSpace': 'normal'}
+                    'whiteSpace': 'nowrap'}
                 )
         ]),
-    ], style={
-        'margin-bottom': '100px'}),
-
+    ]),
     receipt_info_modal
 ])
 
@@ -324,6 +370,38 @@ receipts_vendors_count = dbc.Container([
     ], style={'margin-top': '30px'}),
 
     dbc.Row([
+        # For the custom date period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Date"),
+                dbc.Input(type="date", id="vendors-count-start-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Date"),
+                dbc.Input(type="date", id="vendors-count-end-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        # For the custom hour period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Time"),
+                dbc.Input(type="time", id="vendors-count-start-time")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Time"),
+                dbc.Input(type="time", id="vendors-count-end-time")
+            ], className="mb-3"),
+        ], width=3),
+    ]),
+    
+    dbc.Row([
         
         dbc.Col([
             dbc.RadioItems(options=[
@@ -333,7 +411,8 @@ receipts_vendors_count = dbc.Container([
                        value='hist',
                        inline=True,
                        id='receipts-vendors-count-chart-radio-buttons')
-        ])
+        ], width=6),
+    
         
     ]),
 
@@ -350,6 +429,7 @@ receipts_vendors_count = dbc.Container([
     dbc.Row([
         dbc.Col([
             dash_table.DataTable(
+                id='vendors-count-table',
                 data=vendor_name_count_df.to_dict('records'),
                 columns=[{"name": i, "id": i, 'sortable': True} for i in vendor_name_count_df.columns],
                 page_size=12,
@@ -369,6 +449,38 @@ receipts_categories_count = dbc.Container([
         html.Div('Receipts Categories Count Analysis', className="text-darkmagenta text-left fs-3 mb-3")
     ], style={'margin-top': '30px'}),
 
+    dbc.Row([
+        # For the custom date period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Date"),
+                dbc.Input(type="date", id="categories-count-start-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Date"),
+                dbc.Input(type="date", id="categories-count-end-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        # For the custom hour period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Time"),
+                dbc.Input(type="time", id="categories-count-start-time")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Time"),
+                dbc.Input(type="time", id="categories-count-end-time")
+            ], className="mb-3"),
+        ], width=3),
+    ]),
+    
     dbc.Row([
         
         dbc.Col([
@@ -392,10 +504,11 @@ receipts_categories_count = dbc.Container([
     ]),
 
     html.Hr(),
-
+    
     dbc.Row([
         dbc.Col([
             dash_table.DataTable(
+                id='categories-count-table',
                 data=vendor_category_count_df.to_dict('records'),
                 columns=[{"name": i, "id": i, 'sortable': True} for i in vendor_category_count_df.columns],
                 page_size=12,
@@ -416,7 +529,7 @@ vendors_name_content = dbc.Container([
     ##############################
     dbc.Row([
         html.Div('Vendors Names Analysis', className="text-darkmagenta text-left fs-3 mb-3")
-    ], style={'margin-top': '30px'}),
+    ], style={'margin-top': '30px', 'margin-bottom': '20px'}),
     
     dbc.Row([
         dbc.Col([
@@ -436,8 +549,40 @@ vendors_name_content = dbc.Container([
                        id='vendors-info-chart-radio-buttons')
         ], width=6)
         
-    ]),
+    ], style={'margin-bottom': '20px'}),
 
+    dbc.Row([
+        # For the custom date period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Date"),
+                dbc.Input(type="date", id="vendors-names-start-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Date"),
+                dbc.Input(type="date", id="vendors-names-end-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        # For the custom hour period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Time"),
+                dbc.Input(type="time", id="vendors-names-start-time")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Time"),
+                dbc.Input(type="time", id="vendors-names-end-time")
+            ], className="mb-3"),
+        ], width=3),
+    ]),
+    
     dbc.Row([
         dbc.Col([
             dcc.Graph(figure={}, id='vendors-chart')
@@ -449,6 +594,7 @@ vendors_name_content = dbc.Container([
     dbc.Row([
         dbc.Col([
             dash_table.DataTable(
+                id='vendors-names-table',
                 data=vendors_df.to_dict('records'),
                 columns=[{"name": i, "id": i, 'sortable': True} for i in vendors_df.columns],
                 page_size=12,
@@ -525,7 +671,7 @@ items_name_content = dbc.Container([
     
     dbc.Row([
         dbc.Col([
-            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)', 'Tax ($)']],
+            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)']],
                        value='Unit Price ($)',
                        inline=True,
                        id='items-classification-radio-buttons')
@@ -578,7 +724,7 @@ items_category_content = dbc.Container([
     
     dbc.Row([
         dbc.Col([
-            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)', 'Tax ($)']],
+            dbc.RadioItems(options=[{"label": x, "value": x} for x in ['Unit Price ($)', 'Discount ($)']],
                        value='Unit Price ($)',
                        inline=True,
                        id='items-categories-classification-radio-buttons')
@@ -1059,6 +1205,69 @@ individual_category_weekday_content = dbc.Container([
    
 ])
 
+custom_time_content = dbc.Container([
+    
+    dbc.Row([
+        html.Div('Purchase Time Analysis - Custom Period', className="text-darkmagenta text-left fs-3 mb-3")
+    ], style={'margin-top': '30px'}),
+    
+    dbc.Row([
+        # For the custom date period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Date"),
+                dbc.Input(type="date", id="custom-time-start-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Date"),
+                dbc.Input(type="date", id="custom-time-end-date")
+            ], className="mb-3"),
+        ], width=3),
+        
+        # For the custom hour period
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("Start Time"),
+                dbc.Input(type="time", id="custom-time-start-time")
+            ], className="mb-3"),
+        ], width=3),
+        
+        dbc.Col([
+            dbc.InputGroup([
+                dbc.InputGroupText("End Time"),
+                dbc.Input(type="time", id="custom-time-end-time")
+            ], className="mb-3"),
+        ], width=3),
+    ]),
+    
+    dbc.Row([
+
+        dbc.Col([
+            dcc.Graph(figure={}, id='custom-time-chart')
+        ]),
+    ]),
+    
+    html.Hr(),
+    
+    dbc.Row([
+        dbc.Col([
+            dash_table.DataTable(
+                id='custom-time-table',
+                data = vendors_time_df.to_dict('records'),
+                columns = [{"name": i, "id": i, 'sortable': True} for i in vendors_time_df.columns],
+                page_size=12,
+                style_table={'overflowX': 'auto'},
+                filter_action='native',
+                sort_action='native',
+                sort_mode='multi',
+                )
+        ])
+    ], style={'margin-bottom': '100px'}),
+])
+
 # Define the main content layout
 content = dbc.Col(html.Div(id='page-content'), width=10)
 
@@ -1084,8 +1293,8 @@ app.layout = dbc.Container(
 def display_page(pathname):
     if pathname == '/':
         return html.Div([
-            html.H3('Home Sweet Home')
-        ], style={'margin-top': '200px', 'margin-left': '200px'})
+            receipts_process_table_content
+        ])
     elif pathname == '/receipts-analysis/process-table':
         return html.Div([
             receipts_process_table_content
@@ -1146,9 +1355,13 @@ def display_page(pathname):
         return html.Div([
             individual_category_weekday_content
         ])
+    elif pathname == '/purchase-time-analysis/custom-time':
+        return html.Div([
+            custom_time_content
+        ])
     else:
         return html.Div([
-            html.H3('Under Development :)')
+            html.H3('404 :/')
         ], style={'margin-top': '200px', 'margin-left': '200px'})
 
 # Callbacks for toggling the collapse
@@ -1157,22 +1370,22 @@ def display_page(pathname):
      Output(f"collapse-Vendors Analysis", "is_open"),
      Output(f"collapse-Items Analysis", "is_open"),
      Output(f"collapse-Purchase Time Analysis", "is_open"),
-     Output(f"collapse-Hourly Analysis", "is_open"),
-     Output(f"collapse-Weekday vs Weekend Analysis", "is_open")],
+     Output(f"collapse-Hourly", "is_open"),
+     Output(f"collapse-Weekday/Weekend", "is_open")],
     
     [Input(f"group-Receipts Analysis-toggle", "n_clicks"),
      Input(f"group-Vendors Analysis-toggle", "n_clicks"),
      Input(f"group-Items Analysis-toggle", "n_clicks"),
      Input(f"group-Purchase Time Analysis-toggle", "n_clicks"),
-     Input(f"group-Hourly Analysis-toggle", "n_clicks"),
-     Input(f"group-Weekday vs Weekend Analysis-toggle", "n_clicks")],
+     Input(f"group-Hourly-toggle", "n_clicks"),
+     Input(f"group-Weekday/Weekend-toggle", "n_clicks")],
     
     [State(f"collapse-Receipts Analysis", "is_open"),
      State(f"collapse-Vendors Analysis", "is_open"),
      State(f"collapse-Items Analysis", "is_open"),
      State(f"collapse-Purchase Time Analysis", "is_open"),
-     State(f"collapse-Hourly Analysis", "is_open"),
-     State(f"collapse-Weekday vs Weekend Analysis", "is_open")],
+     State(f"collapse-Hourly", "is_open"),
+     State(f"collapse-Weekday/Weekend", "is_open")],
 )
 def toggle_collapse(n1, n2, n3, n4, n5, n6, is_open1, is_open2, is_open3, is_open4, is_open5, is_open6):
     ctx = dash.callback_context
@@ -1190,9 +1403,9 @@ def toggle_collapse(n1, n2, n3, n4, n5, n6, is_open1, is_open2, is_open3, is_ope
         return False, False, not is_open3, False, False, False
     elif button_id == "group-Purchase Time Analysis-toggle":
         return False, False, False, not is_open4, False, False
-    elif button_id == "group-Hourly Analysis-toggle":
+    elif button_id == "group-Hourly-toggle":
         return False, False, False, is_open4, not is_open5, False
-    elif button_id == "group-Weekday vs Weekend Analysis-toggle":
+    elif button_id == "group-Weekday/Weekend-toggle":
         return False, False, False, is_open4, False, not is_open6
 
     return False, False, False, False, False, False
@@ -1225,56 +1438,98 @@ def update_modal_body(active_cell, data):
 
 # Callback for receipts vendors count section
 @callback(
-    Output('receipts-vendors-count-chart', 'figure'),
-    [Input('receipts-vendors-count-chart-radio-buttons', 'value')]
+    [Output('receipts-vendors-count-chart', 'figure'),
+     Output('vendors-count-table', 'data'),
+     Output('vendors-count-table', 'columns'),],
+    [Input('receipts-vendors-count-chart-radio-buttons', 'value'),
+     Input('vendors-count-start-time', 'value'),
+     Input('vendors-count-end-time', 'value'),
+     Input('vendors-count-start-date', 'value'),
+     Input('vendors-count-end-date', 'value'),]
 )
-def update_graph(graph_type):
+def update_graph(graph_type, start_time, end_time, start_date, end_date):
+    
+    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df_full)
+    
+    vendor_name_count = filtered_df['Vendor Name'].value_counts()
+    vendor_name_count_df = vendor_name_count.reset_index()
+    vendor_name_count_df.columns = ['Vendor Name', 'Number of Receipts']
+    
     if graph_type == 'hist':
-        fig = px.bar(vendor_name_count, x=vendor_name_count.index, y=vendor_name_count.values, labels={'y':'Count', 'index':'Vendor Name'})
+        fig = px.bar(vendor_name_count, x=vendor_name_count.index, y=vendor_name_count.values, labels={'y':'Number of Receipts', 'index':'Vendor Name'})
     elif graph_type == 'pie':
-        fig = px.pie(vendor_name_count, names=vendor_name_count.index, values=vendor_name_count.values, labels={'values':'Count', 'index':'Vendor Name'})
-    return fig
+        fig = px.pie(vendor_name_count, names=vendor_name_count.index, values=vendor_name_count.values, labels={'values':'Number of Receipts', 'index':'Vendor Name'})
+    
+    
+    data = vendor_name_count_df.to_dict('records')
+    columns = [{"name": i, "id": i, 'sortable': True} for i in vendor_name_count_df.columns]
+    return fig, data, columns
 
 # Callback for receipts categories count section
 @callback(
-    Output('receipts-categories-count-chart', 'figure'),
-    [Input('receipts-categories-count-chart-radio-buttons', 'value')]
+    [Output('receipts-categories-count-chart', 'figure'),
+     Output('categories-count-table', 'data'),
+     Output('categories-count-table', 'columns')],
+    [Input('receipts-categories-count-chart-radio-buttons', 'value'),
+     Input('categories-count-start-time', 'value'),
+     Input('categories-count-end-time', 'value'),
+     Input('categories-count-start-date', 'value'),
+     Input('categories-count-end-date', 'value'),]
 )
-def update_graph(graph_type):
+def update_graph(graph_type, start_time, end_time, start_date, end_date):
+    
+    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df_full)
+    
+    vendor_category_count = filtered_df['Category'].value_counts()
+    vendor_category_count_df = vendor_category_count.reset_index()
+    vendor_category_count_df.columns = ['Vendor Category', 'Number of Receipts']
+    
     if graph_type == 'hist':
-        fig = px.bar(vendor_category_count, x=vendor_category_count.index, y=vendor_category_count.values, labels={'y':'Count', 'index':'Vendor Category'})
+        fig = px.bar(vendor_category_count, x=vendor_category_count.index, y=vendor_category_count.values, labels={'y':'Number of Receipts', 'index':'Vendor Category'})
     elif graph_type == 'pie':
-        fig = px.pie(vendor_category_count, names=vendor_category_count.index, values=vendor_category_count.values, labels={'values':'Count', 'index':'Vendor Category'})
-    return fig
+        fig = px.pie(vendor_category_count, names=vendor_category_count.index, values=vendor_category_count.values, labels={'values':'Number of Receipts', 'index':'Vendor Category'})
+    
+    data = vendor_category_count_df.to_dict('records')
+    columns = [{"name": i, "id": i, 'sortable': True} for i in vendor_category_count_df.columns]
+    return fig, data, columns
 
 # Callback for the vendors information section
 @callback(
-    Output('vendors-chart', 'figure'),
+    [Output('vendors-chart', 'figure'),
+     Output('vendors-names-table', 'data'),
+     Output('vendors-names-table', 'columns')],
     [Input('vendors-info-chart-radio-buttons', 'value'),
-     Input('vendors-radio-buttons', 'value')]
+     Input('vendors-radio-buttons', 'value'),
+     Input('vendors-names-start-time', 'value'),
+     Input('vendors-names-end-time', 'value'),
+     Input('vendors-names-start-date', 'value'),
+     Input('vendors-names-end-date', 'value'),]
 )
-def update_graph(chart_type, col_chosen):
+def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_date):
     ctx_vendor_info = dash.callback_context
+    
+    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df_full)
+    filtered_df = filtered_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
+    
+    data = filtered_df.to_dict('records')
+    columns = [{"name": i, "id": i, 'sortable': True} for i in filtered_df.columns]
 
     if not ctx_vendor_info.triggered:
         # Default action if no input has triggered the callback yet
-        fig = px.histogram(vendors_df, x='Vendor Name', y=col_chosen, histfunc='avg')
+        fig = px.histogram(filtered_df, x='Vendor Name', y=col_chosen, histfunc='avg')
     else:
         # Get the ID of the input that triggered the callback
         input_id = ctx_vendor_info.triggered[0]['prop_id'].split('.')[0]
 
-        if input_id == 'vendors-info-chart-radio-buttons':
+        if (input_id == 'vendors-info-chart-radio-buttons' or input_id == 'vendors-radio-buttons' or
+            input_id == 'vendors-names-start-time' or input_id == 'vendors-names-end-time' or
+            input_id == 'vendors-names-start-date' or input_id == 'vendors-names-end-date'):
             if chart_type == 'hist':
-                fig = px.histogram(vendors_df, x='Vendor Name', y=col_chosen, histfunc='avg')
+                fig = px.histogram(filtered_df, x='Vendor Name', y=col_chosen, histfunc='avg')
             else:
-                fig = px.pie(vendors_df, names='Vendor Name', values=col_chosen)
-        elif input_id == 'vendors-radio-buttons':
-            if chart_type == 'hist':
-                fig = px.histogram(vendors_df, x='Vendor Name', y=col_chosen, histfunc='avg')
-            else:
-                fig = px.pie(vendors_df, names='Vendor Name', values=col_chosen)
+                fig = px.pie(filtered_df, names='Vendor Name', values=col_chosen)
     
-    return fig
+    return fig, data, columns
 
 # Callback for the vendors classification section
 @callback(
@@ -1304,7 +1559,6 @@ def update_graph(chart_type, col_chosen):
                 fig = px.pie(vendors_classification_df, names='Category', values=col_chosen)
     
     return fig
-
 
 # Callback for the vendors purchase time section
 @callback(
@@ -1466,7 +1720,6 @@ def update_histogram(selected_category, selected_metric):
     fig.update_layout(title_text=f"Mean of {selected_metric} for {selected_category}")
     return fig
 
-
 # Callback for the items classification section
 @callback(
     Output('items-classification-chart', 'figure'),
@@ -1524,6 +1777,58 @@ def update_graph(chart_type, col_chosen):
                 fig = px.pie(items_classification_df, names='Item Category', values=col_chosen)
     
     return fig
+
+
+# Callback for custom time section
+@callback(
+    [Output('custom-time-chart', 'figure'),
+     Output('custom-time-table', 'data'),
+     Output('custom-time-table', 'columns')],
+    [Input('custom-time-start-date', 'value'),
+     Input('custom-time-end-date', 'value'),
+     Input('custom-time-start-time', 'value'),
+     Input('custom-time-end-time', 'value')]
+)
+def update_histogram(start_date, end_date, start_time, end_time):
+    
+    # Parsing TIME period
+    if start_time is None:
+        start_time = str_to_time('00:00')
+    else:
+        start_time = str_to_time(start_time)
+    if end_time is None:
+        end_time = str_to_time('23:59')
+    else:
+        end_time = str_to_time(end_time)
+        
+    # Parsing DATE period
+    if start_date is None:
+        start_date = vendors_time_df['Date'].min()
+    else:
+        start_date = str_to_date(start_date)
+    if end_date is None:
+        end_date = vendors_time_df['Date'].max()
+    else:
+        end_date = str_to_date(end_date)
+    
+    
+    filtered_df = vendors_time_df[(vendors_time_df['Time'] >= start_time) & (vendors_time_df['Time'] <= end_time)]
+    filtered_df = filtered_df[(filtered_df['Date'] >= start_date) & (filtered_df['Date'] <= end_date)]
+    
+    fig = px.histogram(filtered_df, x='Vendor Name', y='Number of Items')
+    
+    data = filtered_df.to_dict('records')
+    columns = [{"name": i, "id": i, 'sortable': True} for i in filtered_df.columns]
+    return fig, data, columns
+
+    # # Create a histogram based on the selected metric
+    # if selected_metric == 'Number of Items':
+    #     fig = px.histogram(filtered_df, x='Vendor Name', y=selected_metric)
+    # else:  # selected_metric == 'Total Price ($)'
+    #     fig = px.histogram(filtered_df, x='Vendor Name', y=selected_metric)
+
+    # fig.update_layout(title_text=f"Histogram of {selected_metric} at {selected_hour}:00")
+    # return fig
 
 
 if __name__ == '__main__':
