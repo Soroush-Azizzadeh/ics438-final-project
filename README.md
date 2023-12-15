@@ -7,6 +7,6 @@ Group Members:
 - Aaron Nonaka
 
 
-Instruction:
+Instructions:
 1. In order to run on your own samples, copy the receipts txt files to the 'receipts' folder.
 2. Enter the API key in the 'Receipt Parsing and Classification .ipynb' notebook
