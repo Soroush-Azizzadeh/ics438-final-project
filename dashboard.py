@@ -3,39 +3,56 @@ import dash_bootstrap_components as dbc
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, State
 from dash import dcc
 import plotly.express as px
-
 import pandas as pd
-
 from datetime import datetime
+
+#############################################
+# Check the file paths before running
+#############################################
+config = {
+    'process_table_path': 'datasets/process_table.csv',
+    'vendors_dataset_path': 'datasets/vendors_dataset.csv',
+    'items_dataset_path': 'datasets/items_dataset.csv'
+}
 
 # For the time analysis
 def is_weekday_or_weekend(input_date):
 
-    if input_date.weekday() < 5:
-        return "Weekday"
-    else:
-        return "Weekend"
+    try:
+        input_date = datetime.strptime(input_date, '%m/%d/%Y')
+
+        if input_date.weekday() < 5:
+            return "Weekday"
+        else:
+            return "Weekend"
+    except:
+        return 'DATE NOT APPROPRIATE'
 
 # Which day of week -> for weekday/weekend analysis   
 def day_of_week(input_date):
-    if input_date.weekday() == 0:
-        return "Monday"
-    elif input_date.weekday() == 1:
-        return "Tuesday"
-    elif input_date.weekday() == 2:
-        return "Wednesday"
-    elif input_date.weekday() == 3:
-        return "Thursday"
-    elif input_date.weekday() == 4:
-        return "Friday"
-    elif input_date.weekday() == 5:
-        return "Saturday"
-    elif input_date.weekday() == 6:
-        return "Sunday"
+    try:
+        input_date = datetime.strptime(input_date, '%m/%d/%Y')
+
+        if input_date.weekday() == 0:
+            return "Monday"
+        elif input_date.weekday() == 1:
+            return "Tuesday"
+        elif input_date.weekday() == 2:
+            return "Wednesday"
+        elif input_date.weekday() == 3:
+            return "Thursday"
+        elif input_date.weekday() == 4:
+            return "Friday"
+        elif input_date.weekday() == 5:
+            return "Saturday"
+        elif input_date.weekday() == 6:
+            return "Sunday"
+    except:
+        return 'DATE NOT APPROPRIATE'
 
 # Time str to datetime.time
 def str_to_time(input_time):
-    return datetime.strptime(input_time, '%H:%M').time()
+    return datetime.strptime(input_time, '%H:%M:%S').time()
 
 # Time str to datetime.date
 def str_to_date(input_date):
@@ -45,11 +62,11 @@ def str_to_date(input_date):
 def df_filterer(start_time, end_time, start_date, end_date, df):
     # Parsing TIME period
     if start_time is None:
-        start_time = str_to_time('00:00')
+        start_time = str_to_time('00:00:00')
     else:
         start_time = str_to_time(start_time)
     if end_time is None:
-        end_time = str_to_time('23:59')
+        end_time = str_to_time('23:59:59')
     else:
         end_time = str_to_time(end_time)
         
@@ -70,15 +87,18 @@ def df_filterer(start_time, end_time, start_date, end_date, df):
     return filtered_df
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app.title = 'Receipts Analysis'
+
 app.config.suppress_callback_exceptions = True
 server = app.server
 
 # Incorporating Datasets
-receipts_info_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/test_receipt_information.csv')
+receipts_info_df = pd.read_csv(config['process_table_path'])
 
-vendors_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_vendors_dataset.csv')
+vendors_df_full = pd.read_csv(config['vendors_dataset_path'])
+vendors_df = vendors_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
-vendors_classification_df_full = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_category.csv')
+vendors_classification_df_full = vendors_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)', 'Category']]
 
 vendor_name_count = vendors_classification_df_full['Vendor Name'].value_counts()
 vendor_name_count_df = vendor_name_count.reset_index()
@@ -90,33 +110,24 @@ vendor_category_count_df.columns = ['Vendor Category', 'Number of Receipts']
 
 vendors_classification_df = vendors_classification_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
-vendors_time_df_full = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
-vendors_time_df_full['Date'] = pd.to_datetime(vendors_time_df_full['Time']).dt.date
-vendors_time_df_full['Hour'] = pd.to_datetime(vendors_time_df_full['Time']).dt.hour
-vendors_time_df_full['Time'] = pd.to_datetime(vendors_time_df_full['Time']).dt.time
-vendors_time_df = vendors_time_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Date', 'Time', 'Hour']]
 
+vendors_time_df = vendors_df_full
 vendors_weekday_df = vendors_time_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
+vendors_weekday_df = vendors_weekday_df[vendors_weekday_df['Time'] != '<unknown>']
 vendors_weekday_df['Day of Week'] = vendors_weekday_df['Date'].apply(lambda x: day_of_week(x))
 vendors_weekday_df['Weekday or Weekend'] = vendors_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
-categories_time_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
-categories_time_df['Date'] = pd.to_datetime(categories_time_df['Time']).dt.date
-categories_time_df['Hour'] = pd.to_datetime(categories_time_df['Time']).dt.hour
-categories_time_df['Time'] = pd.to_datetime(categories_time_df['Time']).dt.time
-categories_time_df = categories_time_df[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time', 'Hour']]
+categories_time_df = vendors_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time', 'Hour']]
+categories_time_df = categories_time_df[categories_time_df['Time'] != '<unknown>']
 
-categories_weekday_df = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_receipts_dataset_with_time.csv')
-categories_weekday_df['Date'] = pd.to_datetime(categories_weekday_df['Time']).dt.date
-categories_weekday_df['Time'] = pd.to_datetime(categories_weekday_df['Time']).dt.time
-categories_weekday_df = categories_weekday_df[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
+categories_weekday_df = vendors_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
+categories_weekday_df = categories_weekday_df[categories_weekday_df['Time'] != '<unknown>']
+categories_weekday_df = categories_weekday_df.copy()
 categories_weekday_df['Day of Week'] = categories_weekday_df['Date'].apply(lambda x: day_of_week(x))
 categories_weekday_df['Weekday or Weekend'] = categories_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
-items_df_full = pd.read_csv('https://raw.githubusercontent.com/Soroush-Azizzadeh/ics438-final-project/main/datasets/synthetic_items_dataset.csv')
-items_df_full['Date'] = pd.to_datetime(items_df_full['Time']).dt.date
-items_df_full['Hour'] = pd.to_datetime(items_df_full['Time']).dt.hour
-items_df_full['Time'] = pd.to_datetime(items_df_full['Time']).dt.time
+items_df_full = pd.read_csv(config['items_dataset_path'])
+
 items_df = items_df_full[['Item Name', 'Unit Price ($)', 'Discount ($)']]
 
 items_classification_df = items_df_full[['Item Category', 'Unit Price ($)', 'Discount ($)']]
@@ -1610,7 +1621,7 @@ def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_d
 )
 def update_histogram(selected_hour, selected_metric):
     # Filter the DataFrame based on the selected hour
-    filtered_df = vendors_time_df[vendors_time_df['Hour'] == selected_hour]
+    filtered_df = vendors_time_df[vendors_time_df['Hour'].astype(int) == selected_hour]
 
     data = filtered_df.to_dict('records')
     columns = [{"name": i, "id": i, 'sortable': True} for i in filtered_df.columns]
@@ -1659,7 +1670,7 @@ def update_histogram(selected_weekday, selected_metric):
 )
 def update_histogram(selected_hour, selected_metric):
     # Filter the DataFrame based on the selected hour
-    filtered_df = categories_time_df[categories_time_df['Hour'] == selected_hour]
+    filtered_df = categories_time_df[categories_time_df['Hour'].astype(int) == selected_hour]
 
     data = filtered_df.to_dict('records')
     columns = [{"name": i, "id": i, 'sortable': True} for i in filtered_df.columns]
