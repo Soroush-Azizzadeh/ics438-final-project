@@ -4,6 +4,7 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input, State
 from dash import dcc
 import plotly.express as px
 import pandas as pd
+import datetime as dt
 from datetime import datetime
 
 #############################################
@@ -19,7 +20,6 @@ config = {
 def is_weekday_or_weekend(input_date):
 
     try:
-        input_date = datetime.strptime(input_date, '%m-%d-%Y').date()
 
         if input_date.weekday() < 5:
             return "Weekday"
@@ -30,11 +30,8 @@ def is_weekday_or_weekend(input_date):
 
 # Which day of week -> for weekday/weekend analysis   
 def day_of_week(input_date):
-
-    
+ 
     try:
-        input_date = datetime.strptime(input_date, '%m-%d-%Y').date()
-
         if input_date.weekday() == 0:
             return "Monday"
         elif input_date.weekday() == 1:
@@ -54,22 +51,43 @@ def day_of_week(input_date):
 
 # Time str to datetime.time
 def str_to_time(input_time):
-    try:
-        return datetime.strptime(input_time, '%H:%M:%S').time()
-    except:
+
+    if isinstance(input_time, str):
+        try:
+            return datetime.strptime(input_time, '%H:%M:%S').time()
+        except:
+            return '<unknown>'
+    elif isinstance(input_time, dt.time):
+        return input_time
+    else:
         return '<unknown>'
 
 # Time str to datetime.date
 def str_to_date(input_date):
+    return datetime.strptime(input_date, '%Y-%m-%d').date()
+
+# date field cleanser
+def time_formatter(input_time):
+    try:
+        if input_time.count(':') == 1:
+            input_time += ':00'
+            return datetime.strptime(input_time, '%H:%M:%S').time()
+        return datetime.strptime(input_time, '%H:%M:%S').time()
+    except:
+        return None
+
+
+# date field cleanser
+def date_formatter(input_date):
     try:
         month, day, year = input_date.split('/')
 
         if len(year) == 2:
             year = f'20{year}'
 
-        input_date = f'{month}-{day}-{year}'
+        input_date = f'{year}-{month}-{day}'
 
-        return input_date
+        return datetime.strptime(input_date, '%Y-%m-%d').date()
     except:
         return '<unknown>'
 
@@ -111,7 +129,7 @@ server = app.server
 receipts_info_df = pd.read_csv(config['process_table_path'])
 
 vendors_df_full = pd.read_csv(config['vendors_dataset_path'])
-vendors_df_full['Date'] = vendors_df_full['Date'].apply(lambda x: str_to_date(x))
+vendors_df_full['Date'] = vendors_df_full['Date'].apply(lambda x: date_formatter(x))
 vendors_df_full['Time'] = vendors_df_full['Time'].apply(lambda x: str_to_time(x))
 vendors_df_full = vendors_df_full[vendors_df_full['Date'] != '<unknown>']
 vendors_df_full = vendors_df_full[vendors_df_full['Time'] != '<unknown>']
@@ -130,7 +148,6 @@ vendor_category_count_df.columns = ['Vendor Category', 'Number of Receipts']
 vendors_classification_df = vendors_classification_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
 vendors_time_df = vendors_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)', 'Date', 'Time', 'Hour']]
-
 vendors_weekday_df = vendors_time_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
 vendors_weekday_df['Weekday or Weekend'] = vendors_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
@@ -142,7 +159,7 @@ categories_weekday_df['Day of Week'] = categories_weekday_df['Date'].apply(lambd
 categories_weekday_df['Weekday or Weekend'] = categories_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
 items_df_full = pd.read_csv(config['items_dataset_path'])
-items_df_full['Date'] = items_df_full['Date'].apply(lambda x: str_to_date(x))
+items_df_full['Date'] = items_df_full['Date'].apply(lambda x: date_formatter(x))
 items_df_full['Time'] = items_df_full['Time'].apply(lambda x: str_to_time(x))
 items_df_full = items_df_full[items_df_full['Date'] != '<unknown>']
 items_df_full = items_df_full[items_df_full['Time'] != '<unknown>']
@@ -1506,14 +1523,14 @@ def update_modal_body(active_cell, data):
 )
 def update_graph(graph_type, start_time, end_time, start_date, end_date):
     
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df)
+    filtered_df = df_filterer(time_formatter(start_time), time_formatter(end_time), start_date, end_date, vendors_time_df)
     
     vendor_name_count = filtered_df['Vendor Name'].value_counts()
     vendor_name_count_df = vendor_name_count.reset_index()
     vendor_name_count_df.columns = ['Vendor Name', 'Number of Receipts']
     
     if graph_type == 'hist':
-        fig = px.bar(vendor_name_count, x=vendor_name_count.index, y=vendor_name_count.values, labels={'y':'Number of Receipts', 'index':'Vendor Name'})
+        fig = px.bar(vendor_name_count_df, x='Vendor Name', y='Number of Receipts', labels={'y':'Number of Receipts', 'index':'Vendor Name'})
     elif graph_type == 'pie':
         fig = px.pie(vendor_name_count, names=vendor_name_count.index, values=vendor_name_count.values, labels={'values':'Number of Receipts', 'index':'Vendor Name'})
     
@@ -1535,14 +1552,15 @@ def update_graph(graph_type, start_time, end_time, start_date, end_date):
 )
 def update_graph(graph_type, start_time, end_time, start_date, end_date):
     
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_df_full)
+    filtered_df = df_filterer(time_formatter(start_time), time_formatter(end_time), start_date, end_date, vendors_df_full)
     
     vendor_category_count = filtered_df['Category'].value_counts()
     vendor_category_count_df = vendor_category_count.reset_index()
     vendor_category_count_df.columns = ['Vendor Category', 'Number of Receipts']
     
     if graph_type == 'hist':
-        fig = px.bar(vendor_category_count, x=vendor_category_count.index, y=vendor_category_count.values, labels={'y':'Number of Receipts', 'index':'Vendor Category'})
+        # fig = px.bar(vendor_category_count, x=vendor_category_count.index, y=vendor_category_count.values, labels={'y':'Number of Receipts', 'index':'Vendor Category'})
+        fig = px.bar(vendor_category_count_df, x='Vendor Category', y='Number of Receipts', labels={'y':'Number of Receipts', 'index':'Vendor Category'})
     elif graph_type == 'pie':
         fig = px.pie(vendor_category_count, names=vendor_category_count.index, values=vendor_category_count.values, labels={'values':'Number of Receipts', 'index':'Vendor Category'})
     
@@ -1565,7 +1583,7 @@ def update_graph(graph_type, start_time, end_time, start_date, end_date):
 def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_date):
     ctx_vendor_info = dash.callback_context
     
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df)
+    filtered_df = df_filterer(time_formatter(start_time), time_formatter(end_time), start_date, end_date, vendors_time_df)
     filtered_df = filtered_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
     
     data = filtered_df.to_dict('records')
@@ -1603,7 +1621,7 @@ def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_d
 def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_date):
     ctx_vendor_classification = dash.callback_context
 
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_df_full)
+    filtered_df = df_filterer(time_formatter(start_time), time_formatter(end_time), start_date, end_date, vendors_df_full)
     filtered_df = filtered_df[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
     data = filtered_df.to_dict('records')
@@ -1845,7 +1863,7 @@ def update_histogram(selected_category, selected_metric):
 def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_date):
     ctx_item_classification = dash.callback_context
 
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, items_df_full)
+    filtered_df = df_filterer(time_formatter(start_time), time_formatter(end_time), start_date, end_date, items_df_full)
     filtered_df = filtered_df[['Item Name', 'Unit Price ($)', 'Discount ($)']]
 
     data = filtered_df.to_dict('records')
@@ -1883,7 +1901,7 @@ def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_d
 def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_date):
     ctx_item_categories_classification = dash.callback_context
 
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, items_df_full)
+    filtered_df = df_filterer(time_formatter(start_time), time_formatter(end_time), start_date, end_date, items_df_full)
     filtered_df = filtered_df[['Item Category', 'Unit Price ($)', 'Discount ($)']]
 
     data = filtered_df.to_dict('records')
