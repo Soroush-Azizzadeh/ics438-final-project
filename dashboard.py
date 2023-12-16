@@ -19,19 +19,21 @@ config = {
 def is_weekday_or_weekend(input_date):
 
     try:
-        input_date = datetime.strptime(input_date, '%m/%d/%Y')
+        input_date = datetime.strptime(input_date, '%m-%d-%Y').date()
 
         if input_date.weekday() < 5:
             return "Weekday"
         else:
             return "Weekend"
     except:
-        return 'DATE NOT APPROPRIATE'
+        return 'NOT AVAILABLE'
 
 # Which day of week -> for weekday/weekend analysis   
 def day_of_week(input_date):
+
+    
     try:
-        input_date = datetime.strptime(input_date, '%m/%d/%Y')
+        input_date = datetime.strptime(input_date, '%m-%d-%Y').date()
 
         if input_date.weekday() == 0:
             return "Monday"
@@ -48,15 +50,28 @@ def day_of_week(input_date):
         elif input_date.weekday() == 6:
             return "Sunday"
     except:
-        return 'DATE NOT APPROPRIATE'
+        return 'NOT AVAILABLE'
 
 # Time str to datetime.time
 def str_to_time(input_time):
-    return datetime.strptime(input_time, '%H:%M:%S').time()
+    try:
+        return datetime.strptime(input_time, '%H:%M:%S').time()
+    except:
+        return '<unknown>'
 
 # Time str to datetime.date
 def str_to_date(input_date):
-    return datetime.strptime(input_date, '%Y-%m-%d').date()
+    try:
+        month, day, year = input_date.split('/')
+
+        if len(year) == 2:
+            year = f'20{year}'
+
+        input_date = f'{month}-{day}-{year}'
+
+        return input_date
+    except:
+        return '<unknown>'
 
 # To filter the dataframe based on the period selected
 def df_filterer(start_time, end_time, start_date, end_date, df):
@@ -96,6 +111,10 @@ server = app.server
 receipts_info_df = pd.read_csv(config['process_table_path'])
 
 vendors_df_full = pd.read_csv(config['vendors_dataset_path'])
+vendors_df_full['Date'] = vendors_df_full['Date'].apply(lambda x: str_to_date(x))
+vendors_df_full['Time'] = vendors_df_full['Time'].apply(lambda x: str_to_time(x))
+vendors_df_full = vendors_df_full[vendors_df_full['Date'] != '<unknown>']
+vendors_df_full = vendors_df_full[vendors_df_full['Time'] != '<unknown>']
 vendors_df = vendors_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
 vendors_classification_df_full = vendors_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)', 'Category']]
@@ -110,23 +129,23 @@ vendor_category_count_df.columns = ['Vendor Category', 'Number of Receipts']
 
 vendors_classification_df = vendors_classification_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
+vendors_time_df = vendors_df_full[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)', 'Date', 'Time', 'Hour']]
 
-vendors_time_df = vendors_df_full
 vendors_weekday_df = vendors_time_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
-vendors_weekday_df = vendors_weekday_df[vendors_weekday_df['Time'] != '<unknown>']
-vendors_weekday_df['Day of Week'] = vendors_weekday_df['Date'].apply(lambda x: day_of_week(x))
 vendors_weekday_df['Weekday or Weekend'] = vendors_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
 categories_time_df = vendors_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time', 'Hour']]
-categories_time_df = categories_time_df[categories_time_df['Time'] != '<unknown>']
 
 categories_weekday_df = vendors_df_full[['Category', 'Number of Items', 'Total Price ($)', 'Date', 'Time']]
-categories_weekday_df = categories_weekday_df[categories_weekday_df['Time'] != '<unknown>']
 categories_weekday_df = categories_weekday_df.copy()
 categories_weekday_df['Day of Week'] = categories_weekday_df['Date'].apply(lambda x: day_of_week(x))
 categories_weekday_df['Weekday or Weekend'] = categories_weekday_df['Date'].apply(lambda x: is_weekday_or_weekend(x))
 
 items_df_full = pd.read_csv(config['items_dataset_path'])
+items_df_full['Date'] = items_df_full['Date'].apply(lambda x: str_to_date(x))
+items_df_full['Time'] = items_df_full['Time'].apply(lambda x: str_to_time(x))
+items_df_full = items_df_full[items_df_full['Date'] != '<unknown>']
+items_df_full = items_df_full[items_df_full['Time'] != '<unknown>']
 
 items_df = items_df_full[['Item Name', 'Unit Price ($)', 'Discount ($)']]
 
@@ -1398,10 +1417,6 @@ def display_page(pathname):
         return html.Div([
             individual_category_weekday_content
         ])
-    elif pathname == '/purchase-time-analysis/custom-time':
-        return html.Div([
-            custom_time_content
-        ])
     else:
         return html.Div([
             html.H3('404 :/')
@@ -1491,7 +1506,7 @@ def update_modal_body(active_cell, data):
 )
 def update_graph(graph_type, start_time, end_time, start_date, end_date):
     
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df_full)
+    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df)
     
     vendor_name_count = filtered_df['Vendor Name'].value_counts()
     vendor_name_count_df = vendor_name_count.reset_index()
@@ -1520,7 +1535,7 @@ def update_graph(graph_type, start_time, end_time, start_date, end_date):
 )
 def update_graph(graph_type, start_time, end_time, start_date, end_date):
     
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df_full)
+    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_df_full)
     
     vendor_category_count = filtered_df['Category'].value_counts()
     vendor_category_count_df = vendor_category_count.reset_index()
@@ -1550,7 +1565,7 @@ def update_graph(graph_type, start_time, end_time, start_date, end_date):
 def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_date):
     ctx_vendor_info = dash.callback_context
     
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df_full)
+    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df)
     filtered_df = filtered_df[['Vendor Name', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
     
     data = filtered_df.to_dict('records')
@@ -1588,7 +1603,7 @@ def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_d
 def update_graph(chart_type, col_chosen, start_time, end_time, start_date, end_date):
     ctx_vendor_classification = dash.callback_context
 
-    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_time_df_full)
+    filtered_df = df_filterer(start_time, end_time, start_date, end_date, vendors_df_full)
     filtered_df = filtered_df[['Category', 'Number of Items', 'Total Price ($)', 'Discount ($)', 'Tax ($)']]
 
     data = filtered_df.to_dict('records')
